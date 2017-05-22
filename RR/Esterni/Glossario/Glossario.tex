@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+
+\usepackage{../../../KerpanStyle/kerpan}
+\usepackage[automake,section,shortcuts,nonumberlist,toc]{glossaries}
+
+\newglossarystyle{myaltlistgroup}{
+  \setglossarystyle{altlistgroup}
+  \renewcommand*{\glsgroupheading}[1]{
+    \pagebreak
+    \item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}
+    \vspace*{-\baselineskip}
+    \item\makebox[\linewidth]{\hspace*{4cm}\hrulefill\hspace*{4cm}}
+  }
+}
+
+\intestazioni{Glossario}
+\pagenumbering{gobble}
+
+\loadglsentries{Termini}
+\makeglossaries
+\date{\today}
+\pagestyle{empty}
+ 
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \glossarioi\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill\textbf{Versione}} 			& 1.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-01-02 		\\ 
+			{\hfill\textbf{Redazione}} 			& Marco Franceschini \\ & Antonino Macrì \\ & Giacomo Zecchin \\ 
+			{\hfill\textbf{Verifica}} 			& Filippo Berto \\ & Edoardo Zanon \\ 
+			{\hfill\textbf{Approvazione}} 		& Daniele Favaro				\\
+			{\hfill\textbf{Uso}} 				& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+		\include{DiarioModificheG}	
+	
+	\label{LastFrontPage}
+		\newpage
+			\pagestyle{mymain}
+			\glsaddall
+			% title è il titolo che do al glossario, toc è il nome che appare nell'indice
+			\printglossary[style=myaltlistgroup, title=, toctitle=Glossario dei termini] 
+
+	\label{LastPage}
+
+\end{document}

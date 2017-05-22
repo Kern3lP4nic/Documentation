@@ -1,0 +1,29 @@
+\documentclass[../StudioDiFattibilita.tex]{subfiles}
+
+\begin{document}
+\section{Studio di fattibilità del capitolato C3}
+	\subsection{Descrizione}
+	Il capitolato \gl{DeGeOP}, acronimo di A Designer and Geo-localizer Web App for Organizational Plants, proposto da Risk App, consiste nel creare un'applicazione web che rappresenti i processi produttivi di varie aziende e ne fornisca una mappatura geografica, analizzandone i possibili scenari di danno e comunicandoli ad un server che ne terrà traccia. Il proponente desidera che l'applicativo sia fruibile specialmente su tablet, con relative funzioni touch, e possibilmente che salvi i dati localmente in modo che possa essere utilizzato anche offline.
+	
+	\subsection{Studio di dominio}	
+	  	\subsubsection{Dominio applicativo}
+		Il prodotto si rivolge all'industria assicurativa, collezionando, analizzando e fornendole i dati di aziende che vogliono proteggere il loro processo produttivo da agenti esterni e pericoli naturali, valutando i rischi in base alla loro posizione geografica.
+		
+	 	\subsubsection{Dominio tecnologico}
+		Il proponente lascia libera scelta per quanto riguarda lo stack tecnologico. Richiede solamente che il prodotto venga ospitato in cloud presso AWS. Risk App presenta a titolo conoscitivo le attuali tecnologie utilizzate:
+		\begin{itemize}
+			\item \textbf{HTML5, CSS3 e JavaScript:} sviluppo struttura e interfaccia grafica dell'applicazione web;
+			\item \textbf{Bootstrap3, \gl{React}, hammer.js e Yeoman:} framework per la parte front-end;
+			\item \textbf{\gl{Django}:} sviluppo back-end;
+			\item \textbf{\gl{Python3}:} linguaggio di programmazione attuale del prodotto;
+			\item \textbf{\gl{PostgreSQL}:} SQL Database;
+			\item \textbf{\gl{RStudio} e \gl{Shiny}:} analisi ed elaborazione dati raccolti.
+		\end{itemize}
+		
+		\subsection{Potenziali criticità}
+		Il team crede che lasciare libera scelta per quanto riguarda le tecnologie da utilizzare potrebbe portare a scegliere strumenti errati e quindi a sviluppare un prodotto non consistente con le aspettative. Inoltre il funzionamento offline per l'applicazione richiede una base logica ben robusta, che se non sviluppata a dovere potrebbe causare malfunzionamenti. Lo stesso vale per la conversione in output dei dati nello stesso formato dell'input.
+
+	\subsection{Valutazione finale}  
+	\kpanic\ ha deciso di scartare questo capitolato in quanto non ne è stato molto colpito durante la presentazione, per altro avvenuta da parte del proponente da remoto e quindi poco chiara. Inoltre come già citato, il rischio di fallire lasciando libera scelta delle tecnologie da utilizzare non è basso.
+	
+\end{document}

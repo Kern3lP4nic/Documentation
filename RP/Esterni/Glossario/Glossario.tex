@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{../../../KerpanStyle/kerpan}
+\usepackage[automake,section,shortcuts,nonumberlist,toc]{glossaries}
+
+%pacchetti per personalizzazione titolo e sezioni nella toc
+\usepackage{titletoc}
+\usepackage{titlesec}
+
+\newglossarystyle{myaltlistgroup}{
+\setcounter{page}{1}
+  \setglossarystyle{altlistgroup}
+  \renewcommand*{\glsgroupheading}[1]{
+    \newpage
+    \section{##1}%
+    %\item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}
+    \vspace*{-\baselineskip}
+    \item\makebox[\linewidth]{\hspace*{6.5cm}\hrulefill\hspace*{4cm}}
+  }
+}
+
+%comando che crea una sottosezione linkabile nella toc con nome del termine
+\newcommand\invisiblesection[1]{
+	\refstepcounter{subsection}
+	\addcontentsline{toc}{subsection}{\protect\numberline{\thesection}#1}
+	\sectionmark{#1}
+}
+
+\renewcommand{\glossarysection}[2][]{}
+
+\intestazioni{Glossario}
+\pagenumbering{gobble}
+
+\loadglsentries{Termini}
+
+\makeglossaries
+\date{\today}
+\pagestyle{empty}
+ 
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \glossarioi\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill\textbf{Versione}} 				& 2.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-03-05 		\\ 
+			{\hfill\textbf{Redazione}} 			& Filippo Berto \\ & Antonino Macrì \\ & Edoardo Zanon \\ & Francesco Fasolato \\ 
+			{\hfill\textbf{Verifica}} 				& Daniele Favaro \\ & Giacomo Zecchin \\ 
+			{\hfill\textbf{Approvazione}} 		& Marco Franceschini				\\
+			{\hfill\textbf{Uso}} 						& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+		\include{DiarioModificheG}
+
+		\newpage		
+		\titlecontents{section}[1em]
+		{\vskip 0.7cm}
+		{\scshape\bfseries\fontsize{2em}{2em}\selectfont}
+		{\itshape}
+		{}
+		\titlecontents{subsection}[2em]
+		{}
+		{}
+		{}
+		{\titlerule\contentspage}
+		\tableofcontents
+	
+		\label{LastFrontPage}
+		\pagebreak
+			\pagestyle{mymain}
+
+			%Change size of section, subsection, subsubsection ...
+			\titleformat{\section}[block]{\bfseries\filcenter\fontsize{23pt}{20pt}\selectfont}{}{1em}{}
+
+			% title è il titolo che do al glossario, toc è il nome che appare nell'indice
+			\printglossary[style=myaltlistgroup, title=, toctitle=Glossario dei termini]
+			\glsaddall
+
+		\label{LastPage}
+
+\end{document}

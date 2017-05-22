@@ -1,0 +1,464 @@
+\documentclass[../AnalisiDeiRequisiti.tex]{subfiles}
+
+\begin{document}
+
+\section{Requisiti}
+In questa sezione verranno presentanti i requisiti individuati dal gruppo durante l'attività di analisi del capitolato e dei casi d'uso, discussi con il proponente durante le riunioni esterne e decisi dai componenti nelle riunioni interne. I requisiti saranno separati in diverse tabelle in base alla categoria di appartenenza e saranno classificati per tipo e per importanza. Per rappresentarli verrà impiegata la seguente sintassi:
+\begin{equation*}
+	R[Importanza][Tipo][Codice]
+\end{equation*}
+dove:
+\begin{itemize}
+	\item \textbf{Importanza}: può assumere uno tra i seguenti valori:
+	\begin{itemize}
+		\item \textbf{O}: requisito obbligatorio;
+		\item \textbf{F}: requisito facoltativo.
+	\end{itemize}
+	\item \textbf{Tipo}: può assumere uno tra i seguenti valori:
+	\begin{itemize}
+		\item \textbf{F}: funzionale;
+		\item \textbf{P}: prestazionale;
+		\item \textbf{Q}: di qualità;
+		\item \textbf{V}: vincolo.
+	\end{itemize}	
+	\item \textbf{Codice}: è il codice gerarchico univoco per ogni requisito, espresso in numeri.
+\end{itemize}
+Inoltre, per ogni requisito verranno riportate:
+\begin{itemize}
+	\item \textbf{Descrizione}: piccola descrizione del requisito in esame;
+	\item \textbf{Fonte}: potrà essere una tra le seguenti:
+	\begin{itemize}
+		\item \textbf{Capitolato}: deriva direttamente dal testo del capitolato; 
+		\item \textbf{Verbale}: deriva da un incontro verbalizzato;
+		\item \textbf{Interno}: deriva da discussioni interne al team;
+		\item \textbf{Casi d'uso}: deriva da uno o più casi d'uso.
+	\end{itemize}
+\end{itemize}
+	
+\newpage
+\subsection{Elenco dei requisiti}
+	\subsubsection{Requisiti funzionali}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	R2F1&Funzionale\newline Obbligatorio & L'utente deve poter attivare il sistema tramite comando vocale & UC1 \\
+	R0F2&Funzionale\newline Opzionale & L'utente deve poter attivare il sistema tramite pulsante & Riunione interna in data 2016-12-19 \\
+	R0F3&Funzionale\newline Obbligatorio & Il sistema deve poter disattivarsi in automatico per timeout & UC2 \\
+	R0F4&Funzionale\newline Obbligatorio & L'utente deve poter disattivare il sistema in qualsiasi momento tramite comando vocale & UC2 \\
+	R2F5&Funzionale\newline Opzionale & L'utente deve poter disattivare il sistema in qualsiasi momento tramite pulsante & UC2 \\
+	R0F6&Funzionale\newline Obbligatorio & L'utente deve poter identificarsi nel sistema per usufruirne & UC3 \\
+	R0F7&Funzionale\newline Obbligatorio & Il sistema deve poter chiede all'ospite il proprio nome e cognome & UC3.1 \\
+	R0F8&Funzionale\newline Obbligatorio & Il sistema deve rimanere in ascolto del nome e del cognome dell'ospite per un periodo di tempo prefissato & UC3.1 \\
+	R0F9&Funzionale\newline Obbligatorio & L'utente deve poter rispondere vocalmente indicando il proprio nome e cognome & UC3.1 \\
+	R2F10&Funzionale\newline Opzionale & L'utente deve poter confermare nome e cognome inseriti vocalmente & UC3.1 \\
+	R0F11&Funzionale\newline Obbligatorio & Un amministratore deve poter effettuare il login al sistema & UC4 \\
+	R0F12&Funzionale\newline Obbligatorio & Un amministratore deve poter inserire la propria email per effettuare il login nel sistema & UC4.1 \\
+	R0F13&Funzionale\newline Obbligatorio & Un amministratore deve poter confermare la propria email per effettuare il login nel sistema & UC4.1 \\
+	R0F14&Funzionale\newline Obbligatorio & Un amministratore deve poter recuperare la propria password & UC4.2 \\
+	R0F15&Funzionale\newline Obbligatorio & Un amministratore deve poter inserire la propria email per recuperare la propria password & UC4.2 \\
+	R0F16&Funzionale\newline Obbligatorio & Un amministratore deve poter confermare la propria email per recuperare la propria password & UC4.2 \\
+	R0F17&Funzionale\newline Obbligatorio & Un amministratore deve poter inserire la password inserita per effettuare il login nel sistema & UC4.3 \\
+	R0F18&Funzionale\newline Obbligatorio & Un amministratore deve poter confermare la password inserita per effettuare il login nel sistema & UC4.3 \\
+	R0F19&Funzionale\newline Obbligatorio & La password deve essere alfanumerica e deve essere lunga almeno 8 caratteri & UC4.3 \\
+	R0F20&Funzionale\newline Obbligatorio & Un amministratore deve poter visualizzare un messaggio di errore se la password inserita non è corretta & UC4.3.1 \\
+	R0F21&Funzionale\newline Obbligatorio & Un amministratore deve poter visualizzare un messaggio di errore se la email inserita non è presente nel sistema & UC4.4 \\
+	R0F22&Funzionale\newline Obbligatorio & L'ospite deve poter interagire con il sistema rispondendo alle domande che gli vengono poste & UC5 \\
+	R0F23&Funzionale\newline Obbligatorio & L'ospite deve poter interagire con il sistema vocalmente & UC5 \\
+	R0F24&Funzionale\newline Obbligatorio & Il sistema deve poter verificare se un ospite è già registrato o meno & Riunione interna in data 2016-12-19 \\
+	R0F25&Funzionale\newline Obbligatorio & Il sistema deve poter adattare le domande in base al numero di presenze precedenti dell'ospite & Riunione interna in data 2016-12-19 \\
+	R0F26&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere all'ospite l'azienda di appartenenza & UC5.1 \\
+	R0F27&Funzionale\newline Obbligatorio & Il sistema deve poter rimanere in ascolto del nome dell'azienda dell'ospite per un periodo di tempo prefissato & UC5.1 \\
+	R2F28&Funzionale\newline Opzionale & L'utente deve poter confermare l'azienda inserita vocalmente & UC3.1 \\
+	R0F29&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere all'ospite l'interlocutore ricercato & UC5.2 \\
+	R0F30&Funzionale\newline Obbligatorio & Il sistema deve poter rimanere in ascolto del nome della persona cercata da parte dell'ospite per un periodo di tempo prefissato & UC5.2 \\
+	R2F31&Funzionale\newline Opzionale & L'utente deve poter confermare il nome dell'interlocutore inserito vocalmente & UC3.1 \\
+	R0F32&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere all'ospite se desidera un caffè & UC5.3 \\
+	R0F33&Funzionale\newline Obbligatorio & Il sistema deve poter rimanere in ascolto di una risposta da parte dell'ospite per un periodo di tempo prefissato & UC5.3 \\
+	R0F34&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere all'ospite se necessita di qualche materiale & UC5.4 \\
+	R0F35&Funzionale\newline Obbligatorio & Il sistema deve poter rimanere in ascolto di una risposta da parte dell'ospite per un periodo di tempo prefissato & UC5.4 \\
+	R0F36&Funzionale\newline Obbligatorio & Il sistema deve poter intrattenere l'ospite con determinati argomenti & UC5.5 \\
+	R0F37&Funzionale\newline Obbligatorio & Il sistema deve poter intrattenere l'ospite con il meteo di una località scelta & UC5.5.1 \\
+	R0F38&Funzionale\newline Obbligatorio & Il sistema deve poter intrattenere l'ospite con alcune news & UC5.5.2 \\
+	R0F39&Funzionale\newline Obbligatorio & Il sistema deve poter intrattenere l'ospite con alcune barzellette & UC5.5.3 \\
+	R2F40&Funzionale\newline Opzionale & Il sistema deve poter visualizzare a schermo le possibili aziende di appartenenza & UC5.6 \\
+	R0F41&Funzionale\newline Obbligatorio & Un amministratore deve poter effettuare il logout dal sistema solo se loggato & UC6 \\
+	R0F42&Funzionale\newline Obbligatorio & Il sistema deve poter essere gestito da un pannello di amministrazione & UC7 \\
+	ROF43&Funzionale\newline  & L'Admin deve poter gestire gli ospiti & UC7.1 \\
+	ROF44&Funzionale\newline  & L'Admin deve poter scegliere un ospite da rinominare & UC7.1.1 \\
+	ROF45&Funzionale\newline  & L'Admin deve poter rinominare un ospite & UC7.1.1 \\
+	ROF46&Funzionale\newline  & L'Admin deve poter confermare la rinomina di un ospite & UC7.1.1 \\
+	ROF47&Funzionale\newline  & L'Admin deve poter scegliere un'azienda da rinominare & UC7.1.2 \\
+	ROF48&Funzionale\newline  & L'Admin deve poter rinominare un'azienda & UC7.1.2 \\
+	ROF49&Funzionale\newline  & L'Admin deve poter confermare la rinomina di un'azienda & UC7.1.2 \\
+	ROF50&Funzionale\newline  & L'Admin deve poter visualizzare il profilo di un ospite & UC7.1.3 \\
+	ROF51&Funzionale\newline  & L'Admin deve poter gestire le domande & UC7.2 \\
+	ROF52&Funzionale\newline  & L'Admin deve poter aggiungere una domanda & UC7.2.1 \\
+	ROF53&Funzionale\newline  & L'Admin deve poter confermare l'inserimento di una domanda & UC7.2.1 \\
+	ROF54&Funzionale\newline  & L'Admin deve poter scegliere una domanda da rimuovere & UC7.2.2 \\
+	ROF55&Funzionale\newline  & L'Admin deve poter confermare la rimozione di una domanda & UC7.2.2 \\
+	ROF56&Funzionale\newline  & L'Admin deve poter scegliere una domanda da modificare & UC7.2.3 \\
+	ROF57&Funzionale\newline  & L'Admin deve poter gestire le risposte & UC7.2.4 \\
+	ROF58&Funzionale\newline  & L'Admin deve poter aggiungere una risposta & UC7.2.4.1 \\
+	ROF59&Funzionale\newline  & L'Admin deve poter confermare l'inserimento di una risposta & UC7.2.4.1 \\
+	ROF60&Funzionale\newline  & L'Admin deve poter modificare una risposta & UC7.2.4.2 \\
+	ROF61&Funzionale\newline  & L'Admin deve poter confermare la modifica di una risposta & UC7.2.4.2 \\
+	ROF62&Funzionale\newline  & L'Admin deve poter scegliere una risposta da rimuovere & UC7.2.4.3 \\
+	ROF63&Funzionale\newline  & L'Admin deve poter confermare la rimozione di una risposta & UC7.2.4.3 \\
+	ROF64&Funzionale\newline  & L'Admin deve poter scegliere una ACTION da associare ad una risposta & UC7.2.4.4 \\
+	ROF65&Funzionale\newline  & L'Admin deve poter modificare il testo di una risposta & UC7.2.4.5 \\
+	ROF66&Funzionale\newline  & L'Admin deve poter inserire una risposta lunga almeno N caratteri, con N un numero predefinito dal sistema & UC7.2.4.5 \\
+	ROF67&Funzionale\newline  & L'Admin deve poter modificare l'associazione di un domanda successiva & UC7.2.4.6 \\
+	ROF68&Funzionale\newline  & L'Admin deve poter modificare il testo di una domanda base & UC7.2.5 \\
+	ROF69&Funzionale\newline  & L'Admin deve poter inserire una domanda base lunga almeno N caratteri, con N un numero predefinito dal sistema & UC7.2.5 \\
+	ROF70&Funzionale\newline  & L'Admin deve poter modificare il testo di una domanda ricorrente & UC7.2.6 \\
+	ROF71&Funzionale\newline  & L'Admin deve poter inserire una domanda ricorrente lunga almeno N caratteri, con N un numero predefinito dal sistema & UC7.2.6 \\
+	ROF72&Funzionale\newline  & L'Admin deve poter gestire le impostazioni di Slack & UC7.3 \\
+	ROF73&Funzionale\newline  & L'Admin deve poter gestire una lista di interlocutori di default per i canali \#azienda che vengono creati & UC7.3.1 \\
+	ROF74&Funzionale\newline  & L'Admin deve poter scegliere un interlocutore da associare alla lista di default & UC7.3.1.1 \\
+	ROF75&Funzionale\newline  & L'Admin deve poter confermare un interlocutore da associare alla lista di default & UC7.3.1.1 \\
+	ROF76&Funzionale\newline  & L'Admin deve poter scegliere un interlocutore da disassociare dalla lista di default & UC7.3.1.2 \\
+	ROF77&Funzionale\newline  & L'Admin deve poter confermare un interlocutore da disassociare dalla lista di default & UC7.3.1.2 \\
+	ROF78&Funzionale\newline  & L'Admin deve poter aggiornare la lista di interlocutori & UC7.3.2 \\
+	ROF79&Funzionale\newline  & L'Admin deve poter gestire il proprio account & UC7.4 \\
+	ROF80&Funzionale\newline  & L'Admin deve poter modificare la propria password di accesso & UC7.4.1 \\
+	ROF81&Funzionale\newline  & L'Admin deve poter inserire una nuova password di accesso (alfanumerica e di almeno 8 caratteri) & UC7.4.1 \\
+	ROF82&Funzionale\newline  & L'Admin deve poter confermare la modifica della password di accesso & UC7.4.1 \\
+	R0F83&Funzionale\newline Obbligatorio & Il Super Admin deve poter aver accesso a tutte le funzionalità di un normale Admin & Riunione interna in data 2016-12-19 \\
+	ROF84&Funzionale\newline  & Il Super Admin deve poter modificare le email di accesso di un qualsiasi Admin & UC8.1.2.1 \\
+	ROF85&Funzionale\newline  & Il Super Admin deve poter confermare la modifica della email di accesso di un qualsiasi Admin & UC8.1.2.1 \\
+	ROF86&Funzionale\newline  & Il Super Admin deve poter modificare le password di accesso di un qualsiasi Admin & UC8.1.2.2 \\
+	ROF87&Funzionale\newline  & Il Super Admin deve poter confermare la modifica della password di accesso di un qualsiasi Admin & UC8.1.2.2 \\
+	ROF88&Funzionale\newline  & Il Super Admin non deve poter visualizzare la password di accesso di un qualsiasi Admin & Riunione interna in data 2016-12-19 \\
+	ROF89&Funzionale\newline  & Il Super Admin deve poter aggiungere un nuovo Admin al sistema & UC8.1.1 \\
+	ROF90&Funzionale\newline  & Il Super Admin deve poter confermare l'aggiunta un nuovo Admin al sistema & UC8.1.1 \\
+	ROF91&Funzionale\newline  & Il Super Admin deve poter rimuovere un qualsiasi Admin dal sistema & UC8.1.3 \\
+	ROF92&Funzionale\newline  & Il Super Admin deve poter confermare la rimozione di un qualsiasi Admin dal sistema & UC8.1.3 \\
+	\rowcolor{white}
+	\caption{Tracciamento requisiti funzionali}
+	\end{longtable}
+
+	\newpage
+	\subsubsection{Requisiti qualitativi}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	ROQ1&Qualitativo\newline  & Devono essere utilizzate le issue di GitHub per segnalazione di bug & Riunione interna in data 2016-12-19 \\
+	ROQ2&Qualitativo\newline  & Devono essere utilizzate le issue di GitHub per suggerimenti di miglioramenti & Riunione interna in data 2016-12-19 \\
+	ROQ3&Qualitativo\newline  & Deve essere fornita la documentazione delle API & Riunione interna in data 2016-12-19 \\
+	ROQ4&Qualitativo\newline  & Deve essere fornita la documentazione delle API utilizzando Swagger & Riunione interna in data 2016-12-19 \\
+	R0Q5&Qualitativo\newline Obbligatorio & Devono essere tracciati i test di unità per il sistema utilizzando Trender & Riunione interna in data 2016-12-19 \\
+	R0Q6&Qualitativo\newline Obbligatorio & Deve essere prodotta la documentazione dei test di unità & Riunione interna in data 2016-12-19 \\
+	ROQ7&Qualitativo\newline  & Deve essere prodotta la documentazione relative alla struttura del database & Riunione interna in data 2016-12-19 \\
+	R2Q8&Qualitativo\newline Desiderabile & Il pannello amministrativo può essere acceduto solo da network locale per ragioni di sicurezza & Riunione interna in data 2016-12-19 \\
+	\rowcolor{white}
+	\caption{Tracciamento requisiti qualitativi}
+	\end{longtable}
+
+	\newpage
+	\subsubsection{Requisiti di vincolo}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	R0V1&Vincolo\newline Obbligatorio & Devono essere documentate e motivate le scelte riguardanti il database scelto & Capitolato \\
+	R0V2&Vincolo\newline Obbligatorio & Devono essere documentate e motivate le scelte riguardanti le tecnologie utilizzate & Capitolato \\
+	R0V3&Vincolo\newline Obbligatorio & L'applicazione deve essere fruibile su Chrome e Firefox (vedi tabella Versioni browser supportati) & Capitolato \\
+	R1V4&Vincolo\newline Desiderabile & L'applicazione deve essere fruibile su altri browser compatibili con HTML5, CCS3, JavaScript (vedi tabella Versioni browser supportati) & Capitolato \\
+	R2V5&Vincolo\newline Opzionale & L'applicazione deve essere fruibile su altri browser anche non compatibili con HTML5, CCS3, JavaScript (vedi tabella Versioni browser supportati) & Capitolato \\
+	R0V6&Vincolo\newline Obbligatorio & Il sistema deve disporre di un microfono & Capitolato \\
+	R0V7&Vincolo\newline Obbligatorio & Il sistema deve essere abilitato alla registrazione di audio & Capitolato \\
+	R0V8&Vincolo\newline Obbligatorio & Il sistema deve disporre di casse audio & Capitolato \\
+	R0V9&Vincolo\newline Obbligatorio & Il sistema deve essere abilitato alla riproduzione di audio & Capitolato \\
+	R0V10&Vincolo\newline Obbligatorio & Il sistema deve disporre di dispositivi di input quali schermo touch & Capitolato \\
+	R2V11&Vincolo\newline Opzionale & Il sistema deve disporre di dispositivi di input quali mouse e tastiera & Capitolato \\
+	R0V12&Vincolo\newline Obbligatorio & Il sistema deve poter interagire con i servizi AWS & Capitolato \\	\rowcolor{white}
+	\caption{Tracciamento requisiti di vincolo}
+	\end{longtable}
+
+\newpage
+\subsection{Tracciamento fonte-requisito}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{4cm}!{\VRule[1pt]}p{4cm}}
+\rowcolor{I}
+\color{white} \textbf{Fonte} & \color{white} \textbf{Requisito} \\ 
+\endfirsthead 
+\rowcolor{I} 
+\color{white} \textbf{Fonte} & \color{white} \textbf{Requisito} \\ 
+\endhead 
+Capitolato & R0V1 \\
+Capitolato & R0V10 \\
+Capitolato & R0V12 \\
+Capitolato & R0V2 \\
+Capitolato & R0V3 \\
+Capitolato & R0V6 \\
+Capitolato & R0V7 \\
+Capitolato & R0V8 \\
+Capitolato & R0V9 \\
+Capitolato & R1V4 \\
+Capitolato & R2V11 \\
+Capitolato & R2V5 \\
+Riunione interna in data 2016-12-19 & R0F24 \\
+Riunione interna in data 2016-12-19 & R0F25 \\
+Riunione interna in data 2016-12-19 & R0F83 \\
+Riunione interna in data 2016-12-19 & R0Q5 \\
+Riunione interna in data 2016-12-19 & R0Q6 \\
+Riunione interna in data 2016-12-19 & R1Q8 \\
+Riunione interna in data 2016-12-19 & R2F2 \\
+Riunione interna in data 2016-12-19 & ROF88 \\
+Riunione interna in data 2016-12-19 & ROQ1 \\
+Riunione interna in data 2016-12-19 & ROQ2 \\
+Riunione interna in data 2016-12-19 & ROQ3 \\
+Riunione interna in data 2016-12-19 & ROQ4 \\
+Riunione interna in data 2016-12-19 & ROQ7 \\
+UC1 & R0F1 \\
+UC2 & R0F3 \\
+UC2 & R0F4 \\
+UC2 & R2F5 \\
+UC3 & R0F6 \\
+UC3.1 & R0F7 \\
+UC3.1 & R0F8 \\
+UC3.1 & R0F9 \\
+UC3.1 & R2F10 \\
+UC3.1 & R2F28 \\
+UC3.1 & R2F31 \\
+UC4 & R0F11 \\
+UC4.1 & R0F12 \\
+UC4.1 & R0F13 \\
+UC4.2 & R0F14 \\
+UC4.2 & R0F15 \\
+UC4.2 & R0F16 \\
+UC4.3 & R0F17 \\
+UC4.3 & R0F18 \\
+UC4.3 & R0F19 \\
+UC4.3.1 & R0F20 \\
+UC4.4 & R0F21 \\
+UC5 & R0F22 \\
+UC5 & R0F23 \\
+UC5.1 & R0F26 \\
+UC5.1 & R0F27 \\
+UC5.2 & R0F29 \\
+UC5.2 & R0F30 \\
+UC5.3 & R0F32 \\
+UC5.3 & R0F33 \\
+UC5.4 & R0F34 \\
+UC5.4 & R0F35 \\
+UC5.5 & R0F36 \\
+UC5.5.1 & R0F37 \\
+UC5.5.2 & R0F38 \\
+UC5.5.3 & R0F39 \\
+UC5.6 & R2F40 \\
+UC6 & R0F41 \\
+UC7 & R0F42 \\
+UC7.1 & ROF43 \\
+UC7.1.1 & ROF44 \\
+UC7.1.1 & ROF45 \\
+UC7.1.1 & ROF46 \\
+UC7.1.2 & ROF47 \\
+UC7.1.2 & ROF48 \\
+UC7.1.2 & ROF49 \\
+UC7.1.3 & ROF50 \\
+UC7.2 & ROF51 \\
+UC7.2.1 & ROF52 \\
+UC7.2.1 & ROF53 \\
+UC7.2.2 & ROF54 \\
+UC7.2.2 & ROF55 \\
+UC7.2.3 & ROF56 \\
+UC7.2.4 & ROF57 \\
+UC7.2.4.1 & ROF58 \\
+UC7.2.4.1 & ROF59 \\
+UC7.2.4.2 & ROF60 \\
+UC7.2.4.2 & ROF61 \\
+UC7.2.4.3 & ROF62 \\
+UC7.2.4.3 & ROF63 \\
+UC7.2.4.4 & ROF64 \\
+UC7.2.4.5 & ROF65 \\
+UC7.2.4.5 & ROF66 \\
+UC7.2.4.6 & ROF67 \\
+UC7.2.5 & ROF68 \\
+UC7.2.5 & ROF69 \\
+UC7.2.6 & ROF70 \\
+UC7.2.6 & ROF71 \\
+UC7.3 & ROF72 \\
+UC7.3.1 & ROF73 \\
+UC7.3.1.1 & ROF74 \\
+UC7.3.1.1 & ROF75 \\
+UC7.3.1.2 & ROF76 \\
+UC7.3.1.2 & ROF77 \\
+UC7.3.2 & ROF78 \\
+UC7.4 & ROF79 \\
+UC7.4.1 & ROF80 \\
+UC7.4.1 & ROF81 \\
+UC7.4.1 & ROF82 \\
+UC8.1.1 & ROF89 \\
+UC8.1.1 & ROF90 \\
+UC8.1.2.1 & ROF84 \\
+UC8.1.2.1 & ROF85 \\
+UC8.1.2.2 & ROF86 \\
+UC8.1.2.2 & ROF87 \\
+UC8.1.3 & ROF91 \\
+UC8.1.3 & ROF92 \\
+\rowcolor{white}
+\caption{Tracciamento fonti-requisito}
+\end{longtable}
+		
+\newpage
+\subsection{Tracciamento requisito-fonte}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{4cm}!{\VRule[1pt]}p{4cm}}
+\rowcolor{I}
+\color{white} \textbf{Requisito} & \color{white} \textbf{Fonte} \\ 
+\endfirsthead 
+\rowcolor{I} 
+\color{white} \textbf{Requisito} & \color{white} \textbf{Fonte} \\ 
+\endhead 
+R0F1 & UC1 \\
+R2F2 & Riunione interna in data 2016-12-19 \\
+R0F3 & UC2 \\
+R0F4 & UC2 \\
+R2F5 & UC2 \\
+R0F6 & UC3 \\
+R0F7 & UC3.1 \\
+R0F8 & UC3.1 \\
+R0F9 & UC3.1 \\
+R2F10 & UC3.1 \\
+R0F11 & UC4 \\
+R0F12 & UC4.1 \\
+R0F13 & UC4.1 \\
+R0F14 & UC4.2 \\
+R0F15 & UC4.2 \\
+R0F16 & UC4.2 \\
+R0F17 & UC4.3 \\
+R0F18 & UC4.3 \\
+R0F19 & UC4.3 \\
+R0F20 & UC4.3.1 \\
+R0F21 & UC4.4 \\
+R0F22 & UC5 \\
+R0F23 & UC5 \\
+R0F24 & Riunione interna in data 2016-12-19 \\
+R0F25 & Riunione interna in data 2016-12-19 \\
+R0F26 & UC5.1 \\
+R0F27 & UC5.1 \\
+R2F28 & UC3.1 \\
+R0F29 & UC5.2 \\
+R0F30 & UC5.2 \\
+R2F31 & UC3.1 \\
+R0F32 & UC5.3 \\
+R0F33 & UC5.3 \\
+R0F34 & UC5.4 \\
+R0F35 & UC5.4 \\
+R0F36 & UC5.5 \\
+R0F37 & UC5.5.1 \\
+R0F38 & UC5.5.2 \\
+R0F39 & UC5.5.3 \\
+R2F40 & UC5.6 \\
+R0F41 & UC6 \\
+R0F42 & UC7 \\
+ROF43 & UC7.1 \\
+ROF44 & UC7.1.1 \\
+ROF45 & UC7.1.1 \\
+ROF46 & UC7.1.1 \\
+ROF47 & UC7.1.2 \\
+ROF48 & UC7.1.2 \\
+ROF49 & UC7.1.2 \\
+ROF50 & UC7.1.3 \\
+ROF51 & UC7.2 \\
+ROF52 & UC7.2.1 \\
+ROF53 & UC7.2.1 \\
+ROF54 & UC7.2.2 \\
+ROF55 & UC7.2.2 \\
+ROF56 & UC7.2.3 \\
+ROF57 & UC7.2.4 \\
+ROF58 & UC7.2.4.1 \\
+ROF59 & UC7.2.4.1 \\
+ROF60 & UC7.2.4.2 \\
+ROF61 & UC7.2.4.2 \\
+ROF62 & UC7.2.4.3 \\
+ROF63 & UC7.2.4.3 \\
+ROF64 & UC7.2.4.4 \\
+ROF65 & UC7.2.4.5 \\
+ROF66 & UC7.2.4.5 \\
+ROF67 & UC7.2.4.6 \\
+ROF68 & UC7.2.5 \\
+ROF69 & UC7.2.5 \\
+ROF70 & UC7.2.6 \\
+ROF71 & UC7.2.6 \\
+ROF72 & UC7.3 \\
+ROF73 & UC7.3.1 \\
+ROF74 & UC7.3.1.1 \\
+ROF75 & UC7.3.1.1 \\
+ROF76 & UC7.3.1.2 \\
+ROF77 & UC7.3.1.2 \\
+ROF78 & UC7.3.2 \\
+ROF79 & UC7.4 \\
+ROF80 & UC7.4.1 \\
+ROF81 & UC7.4.1 \\
+ROF82 & UC7.4.1 \\
+R0F83 & Riunione interna in data 2016-12-19 \\
+ROF84 & UC8.1.2.1 \\
+ROF85 & UC8.1.2.1 \\
+ROF86 & UC8.1.2.2 \\
+ROF87 & UC8.1.2.2 \\
+ROF88 & Riunione interna in data 2016-12-19 \\
+ROF89 & UC8.1.1 \\
+ROF90 & UC8.1.1 \\
+ROF91 & UC8.1.3 \\
+ROF92 & UC8.1.3 \\
+ROQ1 & Riunione interna in data 2016-12-19 \\
+ROQ2 & Riunione interna in data 2016-12-19 \\
+ROQ3 & Riunione interna in data 2016-12-19 \\
+ROQ4 & Riunione interna in data 2016-12-19 \\
+R0Q5 & Riunione interna in data 2016-12-19 \\
+R0Q6 & Riunione interna in data 2016-12-19 \\
+ROQ7 & Riunione interna in data 2016-12-19 \\
+R1Q8 & Riunione interna in data 2016-12-19 \\
+R0V1 & Capitolato \\
+R0V2 & Capitolato \\
+R0V3 & Capitolato \\
+R1V4 & Capitolato \\
+R2V5 & Capitolato \\
+R0V6 & Capitolato \\
+R0V7 & Capitolato \\
+R0V8 & Capitolato \\
+R0V9 & Capitolato \\
+R0V10 & Capitolato \\
+R2V11 & Capitolato \\
+R0V12 & Capitolato \\
+\rowcolor{white}
+\caption{Tracciamento requisiti-fonti}
+\end{longtable}
+
+\newpage
+\subsection{Riepilogo}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{3cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{2.5cm}}
+\rowcolor{I}
+\color{white} \textbf{Tipologia} & \color{white} \textbf{Obbligatorio} & \color{white} \textbf{Desiderabile} & \color{white} \textbf{Opzionale} \\ 
+\endfirsthead 
+\rowcolor{I} 
+\color{white} \textbf{Tipologia} & \color{white} \textbf{Obbligatorio} & \color{white} \textbf{Desiderabile} & \color{white} \textbf{Opzionale} \\ 
+\endhead 
+Funzionali & 86 & 0 & 6\\Qualitativi & 7 & 1 & 0\\Vincolo & 9 & 1 & 2\\Performance & 0 & 0 & 0\\\rowcolor{white}
+\caption{Riepilogo dei requisiti}
+\end{longtable}
+
+\end{document}

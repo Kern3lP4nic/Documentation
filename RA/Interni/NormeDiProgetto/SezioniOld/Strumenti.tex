@@ -1,0 +1,89 @@
+\documentclass[../NormeDiProgetto.tex]{subfiles}
+\begin{document}
+
+\section{Strumenti}
+	\subsection{Strumenti per documenti}
+
+
+	\subsection{Strumenti per sviluppo}
+			\subsubsection{Trender}
+            Per mantenere univoco il modello con il quale i requisiti e i casi d'uso vengono descritti, si è deciso di utilizzare un software con \gl{licenza MIT} chiamato \gl{Trender}.
+            Quest'ultimo è un software di supporto sia per la parte di analisi del problema, sia nella parte di progettazione logica.
+            Quest'ultimo permette di tracciare e descrivere:
+            \begin{itemize}
+                  \item \gl{Casi d'uso};
+                  \item \gl{Requisiti};
+                  \item \gl{Attori};
+                  \item \gl{Classi};
+                  \item \gl{Package}.
+            \end{itemize}
+            e di legarli tra loro. In seguito può essere effettuata la stampa in \gl{\LaTeX} di tutti gli elementi sopra descritti con le relative tabelle che ne mostrano i legami. É possibile inoltre tracciare i verbali in modo da averne un'indicizzazione conforme.
+		
+			\paragraph{Obiettivi di qualità}
+			L'infrastruttura, per tutta la durata del progetto, dovrà raggiungere determinati obiettivi, in particolare:
+			\begin{itemize}
+				\item Tutte le procedure riguardanti le attività svolte più frequentemente durante lo sviluppo del progetto sono descritte esaustivamente nella sezione \textit{Processo di sviluppo};
+				\item Tutti i riferimenti normativi e informativi saranno completi di informazioni utili al loro reperimento;
+				\item La piattaforma Trender sarà disponibile all'uso ogniqualvolta un componente di \kpanic\ avesse bisogno di accedere ai dati in essa contenuti;
+				\item I dati ottenuti ed inseriti su Trender saranno sempre coerenti ed aggiornati.
+			\end{itemize}
+			
+			\paragraph{Strategie}
+			L'infrastruttura necessaria allo svolgimento del progetto dovrà essere mantenuta costantemente aggiornata; l'utilizzo delle metriche, in particolare, sotto elencate permetterà l'individuazione di eventuali errori all'interno degli strumenti utilizzati, la cui correzione permetterà di ripristinare l'erogazione di dati corretti e coerenti.
+			
+			\paragraph{Metriche}\mbox{}\\
+			\paragraph{Disponibilità di Trender}
+			É una metrica usata per conoscere la percentuale di disponibilità di utilizzo della piattaforma Trender rispetto alle richieste di accesso.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					D = \frac{A}{R} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{A}: indica il numero di accessi avvenuti correttamente alla pagine di login di Trender;
+					\item \textbf{R}: indica il numero totale di richieste di accesso alla pagina di login inoltrate a Trender.
+				\end{itemize}
+			
+			\paragraph{Tempo di correzione di Trender}
+			Serve per indicare il periodo (misurato in giorni) medio intercorso fra l'individuazione di un'incoerenza nella piattaforma Trender da parte di un verificare ed il suo aggiornamento da parte di un altro componente di \kpanic.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					T =\frac{\sum_{i=1}^n C_{i}}{n}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$C_{i}$}: indica il tempo trascorso fra il momento di individuazione dell'incoerenza \textit{i} in Trender e l'istante in cui tale dato viene corretto;
+					\item \textbf{n}: indica il numero totale di incoerenze.
+				\end{itemize}
+
+            \subsubsection{Astah}
+            \gl{Astah} è l'editor scelto dal team per la modellazione nel linguaggio UML. Astah è un editor gratuito, scaricabile online sia per Microsoft Windows, sia per Linux che per MacOS. È un editor abbastanza semplice e user-fiendly. Infatti ad un primo utilizzo, è facile capire come muoversi nell'ambiente di sviluppo, come aggiungere classi, diagrammi e relazioni. Strumento molto utile che l'editor mette a disposizione è quello di poter esportare il diagramma realizzato in un file immagine per una rapida visualizzazione. Astah supporta la funzionalità per la codifica dei diagrammi delle classi in un linguaggio di programmazione. Dunque, è possibile disegnare un diagramma delle classi, generare il codice e poi sistemare a mano le varie molteplicità delle relazioni.
+
+            \subsubsection{Microsoft Excel}
+            \gl{Excel} è un programma di fogli di calcolo che permette di gestire dati di vario genere, eseguire operazioni su di essi e mostrarli attraverso grafici. L'utilizzo di Excel sarà limitato alla produzione di grafici per la documentazione.
+            
+            \subsubsection{Gantt Chart}
+            \gl{Gantt Chart} o diagramma di Gantt è uno strumento di supporto alla gestione dei progetti che permette di visualizzare in un solo schema l'insieme dei task in cui un progetto è suddiviso e il tempo previsto e impiegato nella loro realizzazione. L'utilizzo di questo tipo di diagramma facilita la suddivisione dei task tra i membri del team e permette di identificare più facilmente l'andamento del progetto e il soddisfacimento delle date di consegna dei contenuti.
+            
+            \subsubsection{GanttProject}
+            \gl{GanttProject} è un software di modellazione di diagrammi di Gantt open source, rilasciato sotto licenza \gl{GNU GPL 3}. Questo software viene utilizzato per l'organizzazione dei task all'interno del team e la previsione dei tempi di sviluppo.
+
+
+metriche da mettere nela gestione del lavoro
+			\subparagraph{Produttività di codifica}
+				É una metrica utilizzata per indicare la produttività media delle attività di codifica. Una bassa produzione di righe di codice non denota uno scarso impegno, bensì sottolinea l'efficienza di produttività impiegata. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Produttivit\grave{a} \ di \ codifica = \frac{LOCs}{Ore \ persona}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{LOCs}: indica il numero di linee di codice prodotte;
+					\item \textbf{Ore persona}: indica il numero di ore produttive dei componenti del gruppo.
+				\end{itemize}
+
+
+
+\end{document}
+
+
+
+
+

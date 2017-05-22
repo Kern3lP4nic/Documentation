@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{../../../KerpanStyle/kerpan}
+\titlepage{}
+
+\author{Daniele Favaro, Marco Franceschini}
+\date{aaaa/mm/gg}
+\intestazioni{Studio di Fattibilità}
+\pagestyle{empty}
+\pagenumbering{gobble}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \studiodifattibilitai\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 1.0.0					\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-12-20 		\\
+			{\hfill\textbf{Redazione}} 			& Daniele Favaro \\ & Filippo Berto \\
+			{\hfill\textbf{Verifica}} 		    & Edoardo Zanon 	\\
+			{\hfill\textbf{Approvazione}} 		& Antonino Macrì	\\
+			{\hfill\textbf{Uso}} 						& Interno 					\\
+			{\hfill\textbf{Distribuzione}} 		& Tullio Vardanega\\ & Riccardo Cardin \\ & \kpanic\				\\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+		\include{DiarioModificheSF}
+	\newpage		
+		\tableofcontents
+
+	\label{LastFrontPage}
+		\newpage
+			\pagestyle{mymain}	
+			\subfile{Sezioni/Introduzione}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC1}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC2}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC3}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC4}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC5}
+		\newpage	
+			\subfile{Sezioni/StudioDiFattibilitaDelCapitolatoC6}
+	\label{LastPage}
+
+\end{document}

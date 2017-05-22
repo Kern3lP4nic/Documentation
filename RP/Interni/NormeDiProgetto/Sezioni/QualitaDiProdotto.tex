@@ -1,0 +1,217 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+	\section{Qualità di prodotto}
+	Oltre che nei processi, \kpanic\ si prefigge di mantenere una buona qualità del prodotto cercando di seguire al meglio lo standard di qualità ISO/IEC 9126. Con prodotto, il team intende l'insieme di documenti e del software realizzato.
+	
+		\paragraph{Misure}
+			Ogni misura che viene attuata sui processi o sui prodotti deve essere rapportata in una scala. I valori di quest'ultima che si intendo perseguire sono riportati nel documento \pianodiqualificav. 
+			
+		\paragraph{Qualità del software}
+			Assimilato lo standard ISO/IEC 9126, gli obiettivi di qualità riguardanti il software che il gruppo Kern3lP4nic desidera raggiungere nell'arco dell'intero progetto sono i seguenti:
+			\begin{itemize}
+				\item Funzionalità: il prodotto funzionerà sulla base dei requisiti indicati nel documento \analisideirequisitiv;
+				\item Affidabilità: il prodotto dovrà essere robusto in presenza di eventuali situazioni di difficoltà;
+				\item Usabilità: il prodotto dovrà risultare semplice nell'utilizzo per gli utenti a cui è destinato;
+				\item Efficienza: il prodotto dovrà essere performante e rispondere alle richieste dell'utente utilizzando il minor numero di risorse e tempo;
+				\item Manutenibilità: il prodotto dovrà essere verificato, stabile e testato ad ogni estensione o modifica;
+				\item Portabilità: il prodotto si adatterà con facilità ad ogni trasferimento in diversi sistemi.
+			\end{itemize}
+
+			\subsection{Funzionalità}
+				\subsubsection{Obiettivi di qualità}
+				Il gruppo \kpanic\ si impegnerà affinché vi siano:
+				\begin{itemize}
+					\item \textbf{Adeguatezza}: le funzionalità fornite sono conformi alle aspettative;
+					\item \textbf{Accuratezza}: il prodotto fornisce i risultati attesi, con il livello di dettaglio richiesto;
+					\item \textbf{Sicurezza}: il prodotto protegge le informazioni e i dati da accessi e modifiche non autorizzate.
+				\end{itemize}
+			
+			\subsubsection{Metriche}
+				\paragraph{Completezza dell'implementazione funzionale}
+				Indica la percentuale di requisiti funzionali coperti dall'implementazione.
+				È possibile calcolarla con la formula seguente:
+				\begin{equation*}
+					C = (1 - \frac{N_{FM}}{N_{FI}}) * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FM}$}: rappresenta il numero di funzionalità mancanti nell'implementazione;
+					 \item \textbf{$N_{FI}$}: indica il numero di funzionalità individuate nell'attività di analisi.
+				\end{itemize}
+
+				\paragraph{Accuratezza rispetto alle attese}
+				Serve per rilevare la percentuale di risultati che rispecchiano le attese.
+				Si può calcolare con la seguente formula:
+				\begin{equation*}
+					A = (1 - \frac{N_{RD}}{N_{TE}})*100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{RD}$}: rappresenta il numero di test che producono risultati discordanti rispetto alle attese;
+					\item \textbf{$N_{TE}$}: indica il numero di test eseguiti.
+				\end{itemize}
+				
+
+				\paragraph{Controllo degli accessi}
+				Permette di conoscere la percentuale di operazioni illegali non bloccate.
+				É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					I = \frac{N_{IE} * 100}{N_{II}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{IE}$}: rappresenta il numero di operazioni illegali eseguibili dal test;
+					\item \textbf{$N_{II}$}: indica il numero di operazioni illegali individuate.
+				\end{itemize}
+
+			\paragraph{Copertura requisiti desiderabili}
+			Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti desiderabili. Essa controlla infatti il rapporto percentuale tra i requisiti desiderabili soddisfatti e il numero totale dei requisiti desiderabili richiesti.\\
+			É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					Copertura \ requisiti \ desiderabili = \frac{Numero \ di \ requisiti \ desiderabili \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ desiderabili}
+				\end{equation*}
+				
+	
+			\subsection{Affidabilità}
+				\subsubsection{Obiettivi di qualità}
+				Il prodotto software durante la sua esecuzione dovrà avere le seguenti caratteristiche:
+				\begin{itemize}
+					\item \textbf{Maturità}: evitare che si verifichino malfunzionamenti, operazioni illegali e restituzione di risultati errati (\gl{failure}) in seguito a \gl{fault};
+					\item \textbf{Tolleranza agli errori}: nell'eventualità in cui si verifichino degli errori, a causa di guasti o per un uso scorretto dell'applicativo, questi dovranno essere gestiti in modo da non avere cali di prestazione.
+				\end{itemize}
+
+				\subsubsection{Metriche}
+				\paragraph{Densità di failure}
+				Questa metrica serve per indicare la percentuale di operazioni di testing che si sono concluse in failure. \\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					F = \frac{N_{FR} * 100}{N_{TE}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FR}$}: indica il numero di failure rilevati durante la fase di test;
+					\item \textbf{$N_{TE}$}: indica il numero di test eseguiti.
+				\end{itemize}
+				
+				\paragraph{Blocco di operazioni non corrette}
+				Serve per indicare la percentuale di funzionalità in grado di gestire correttamente i fault che potrebbero verificarsi.
+				\begin{equation*}
+					B = \frac{N_{FE}}{N_{ON}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FE}$}: indica il numero di failure evitati durante la fase di test;
+					\item \textbf{$N_{ON}$}: indica il numero di test eseguiti che prevedono l'esecuzione di operazioni non corrette e che possono causare failure.
+				\end{itemize}
+			
+			
+			\subsection{Usabilità}
+				\subsubsection{Obiettivi di qualità}
+				Il team punterà a garantire al prodotto, i seguenti obiettivi di usabilità:
+				\begin{itemize}
+					\item \textbf{Comprensibilità}: le funzionalità offerte saranno riconoscibili dall'utente, che dovrà essere in grado di comprenderne le modalità di utilizzo per poter raggiungere i risultati attesi;
+					\item \textbf{Apprendibilità}: l'utente dovrà avere la possibilità di impararne l'utilizzo senza troppo impegno;
+					\item \textbf{Operabilità}: le funzionalità presenti dovranno essere coerenti con le aspettative dell'utente;
+					\item \textbf{Attrattiva}: dovrà essere piacevole durante il suo utilizzo.
+				\end{itemize}
+
+				\subsubsection{Metriche}
+				\paragraph{Comprensibilità delle funzioni offerte}
+				Questa metrica indica la percentuale di operazioni che l'utente riesce a comprendere in modo immediato, senza la consultazione di un manuale.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					S = \frac{N_{FC} * 100}{N_{FO}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FC}$}: indica il numero di funzionalità comprese in modo immediato dall'utente durante l'attività di test del prodotto;
+					\item \textbf{$N_{FO}$}: indica il numero di versioni di funzionalità offerte dal sistema.
+				\end{itemize}
+				
+				\paragraph{Facilità di apprendimento delle funzionalità}
+				Serve per indicare il tempo medio impiegato dall'utente per imparare ad usare correttamente una data funzionalità del software.\\
+			Per il calcolo di questa metrica viene preso in considerazione il tempo, espresso in minuti, che l'utente impiega per apprendere il corretto funzionamento di una funzionalità offerta dal prodotto.
+				
+				\paragraph{Consistenza operazionale in uso}
+				Indica la percentuale di funzionalità offerte all'utente che rispettano le sue aspettative. La misurazione viene effettuata con la seguente formula:
+				\begin{equation*}
+					C = (1 - \frac{N_{MFI}}{N_{MFO}}) * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{MFI}$}:  rappresenta il numero di funzionalità che non rispettano le aspettative dell'utente;
+					\item \textbf{$	N_{MFO}$}:  indica le funzionalità offerte dal sistema.
+				\end{itemize}
+				
+			\subsection{Efficienza}
+				\subsubsection{Obiettivi di qualità}
+				Il prodotto dovrà essere efficiente. In particolare:
+				\begin{itemize}
+					\item \textbf{Utilizzo delle risorse}: il software, nell'utilizzo delle sue funzionalità, dovrà utilizzare un appropriato numero e tipo di risorse.
+				\end{itemize}
+			
+	
+			\subsection{Manutenibilità}
+				\subsubsection{Obiettivi di qualità}
+				Per garantire il più possibile l'agevolezza delle operazioni di manutenzione verranno adottate le seguenti caratteristiche:
+				\begin{itemize}
+					\item \textbf{Analizzabilità}: deve essere permessa dal software una rapida identificazione delle possibili cause di errori e malfunzionamenti;
+					\item \textbf{Modificabilità}: devono essere permessi, dal software, dei possibili cambianti in alcune sue parti;
+					\item \textbf{Stabilità}: dopo delle modifiche al software non devono insorgere degli effetti indesiderati;
+					\item \textbf{Testabilità}: il software, dopo eventuali modifiche, deve poter essere facilmente testato.
+				\end{itemize}
+				
+				\subsubsection{Metriche}
+					\paragraph{Capacità di analisi di failure}
+					È la percentuale di failure registrate delle quali sono state individuate le cause. Si calcola con la seguente formula:
+					\begin{equation*}
+						I = (\frac{N_{FI}}{N_{FR}}) * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$	N_{FI}$}: rappresenta il numero di failure di cui sono state individuate le cause;
+						\item \textbf{$N_{FR}$}: indica il numero di failure rilevate.
+					\end{itemize}
+
+				\paragraph{Impatto delle modifiche}
+					È la percentuale di modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. Si calcola con la seguente formula:
+					\begin{equation*}
+						I = (\frac{N_{FRF}}{N_{FR}}) * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$	N_{FRF}$}: rappresenta il numero di failure risolte, ma che hanno introdotto nuove failure;
+						\item \textbf{$N_{RF}$}: indica il numero di failure risolte.
+					\end{itemize}
+
+
+			\subsection{Portabilità}
+				\subsubsection{Obiettivi di qualità}
+				Il gruppo agevolerà la portabilità del prodotto software adottando quanto segue:
+				\begin{itemize}
+					\item \textbf{Adattabilità}: il prodotto dovrà adattarsi a tutti gli ambienti di lavoro nei quali è stato previsto un suo utilizzo, senza la necessità di dover apportare modifiche allo stesso;
+					\item \textbf{Sostituibilità}: il prodotto deve poter sostituire un altro software che ha lo stesso scopo e lavora nel medesimo ambiente.
+				\end{itemize}
+
+				\subsubsection{Metriche}
+					\paragraph{Versioni dei browser supportate}
+					Questa metrica serve per indicare la percentuale di versioni di \gl{browser} attualmente supportate, fra quelle individuate dai requisiti. \\La formula per calcolarne il valore è la seguente:
+					\begin{equation*}
+						S = \frac{N_{VS} * 100}{N_{VS}}
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$N_{VS}$}: rappresenta il numero di versioni di browser supportare dal prodotto;
+						\item \textbf{$N_{TE}$}: indica il numero di versioni di browser che devono essere supportare dal prodotto.
+					\end{itemize}
+					
+					\paragraph{Inclusione di funzionalità da altri prodotti}
+					Questa metrica serve per indicare la percentuale di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto da sviluppare. La formula per calcolare questo valore è la seguente:
+					\begin{equation*}
+						I = \frac{N_{FPA}}{N_{FPP}} * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$N_{FPA}$}: indica il numero di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto in sviluppo;
+						\item \textbf{$N_{FPP}$}: indica il numero di funzionalità offerte dal software utilizzato in precedenza dall'utente.
+					\end{itemize}		
+\end{document}

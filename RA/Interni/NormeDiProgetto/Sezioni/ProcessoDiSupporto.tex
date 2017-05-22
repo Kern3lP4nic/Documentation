@@ -1,0 +1,508 @@
+\documentclass[../NormeDiProgetto_v4.0.0.tex]{subfiles}
+
+\begin{document}
+\section{Processi di supporto}
+	\subsection{Documentazione}
+		\subsubsection{Sviluppo documenti}
+			\paragraph{Descrizione}
+				L'attività di documentazione è di supporto a tutti le altre attività, difatti ogni cosa deve essere tracciata e documentata.
+				I documenti verranno classificati in due categorie che vengono distinte a scopi puramente semplificativi:
+				\begin{itemize}
+					\item Interni: documenti riguardati l'organizzazione e le regole imposte ai membri del team e destinati quindi ad un uso interno;
+					\item Esterni: documenti destinati al committente.
+				\end{itemize}
+
+			\paragraph{Obiettivi di qualità}
+				Durante la documentazione devono essere perseguiti i seguenti obiettivi di qualità:
+				\begin{itemize}
+					\item I documenti devono essere corretti grammaticalmente e sintatticamente;
+					\item I documenti devono essere leggibili dal più largo numero di persone possibile, basandosi sulla metrica Gulpease;
+					\item I documenti non devono presentare ambiguità di gergo, per ottenere ciò ci sarà un glossario comune a tutti i documenti.
+					\item La struttura dei documenti deve essere uniforme.
+				\end{itemize}
+
+
+			\paragraph{Strategie}
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item Durante la stesura della documentazione, ogni termine con significato ambiguo deve essere indicato e definito nel \glossario. Gli script automatici provvederanno alla sua segnalazione all'interno del documento.
+					\item Il redattore deve sfruttale la metrica Gulpease come riferimento durante la stesura;
+					\item L'utilizzo di tabelle ove esistono elenchi superiori a dieci voci elenchi è obbligatori
+					\item Quando il redattore utilizza parole che possono contenere ambiguità deve verificarne il significato sul glossario e, se non presente, specificarlo.
+					\item Durante la stesura il redattore deve rispettare le normative sotto indicate. 
+				\end{itemize}
+
+
+			\paragraph{Denominazione}
+				I documenti approvati devono avere il nome strutturato nel seguente modo:
+				\begin{itemize}
+				\item Il nome deve essere scritto seguendo la forma \gl{PascalCase} ovvero con la prima lettera maiuscola per ogni parola del nome inclusa la prima;
+				\item Ogni documento durante lo sviluppo deve avere un con estensione "tex" che unisce tutte le sezioni e, ogni sezione, deve essere un file assestante;
+				\item Il documento prodotto deve essere nel formato "PDF".
+				\end{itemize}
+
+			\paragraph{Directory}
+				Le cartelle relative alla documentazione devono avere il nome scritto nello stesso modo dei file, ma non hanno versione. La forma da seguire è sempre la PascalCase.
+				L'organizzazione sarà ad albero: il primo livello rappresenterà le consegne e saranno:
+				\begin{itemize}
+				\item RR;
+				\item RP;
+				\item RQ;
+				\item RA.				
+				\end{itemize}
+				Il secondo livello sarà invece la documentazione, ci sarà quindi una cartella per ogni documento.
+				In ogni cartella del documento, sarà presente un file \LaTeX\ che rappresenta l'intero documento e una sottodirectory che contiene le sezioni.
+
+			\paragraph{Ciclo di vita dei documenti}
+				I documenti in tutto il loro ciclo di vita avranno uno dei seguenti stati:
+				\begin{itemize}
+				\item Sviluppo: sono quelli in fase di stesura dal relativo redattore;
+				\item Verifica: sono quelli del quale è terminata la stesura e sono in attesa di verifica che verrà effettuata dal \responsabilediprogetto;
+				\item Approvati: è la versione finale del documento che verrà presentata in via ufficiale.
+				\end{itemize}
+				Ad ognuno di questi passaggi deve corrispondere un cambio di versione di secondo livello.
+
+			\paragraph{Documenti finali}
+				\begin{itemize}
+				\item \textbf{Studio di fattibilità}: questo documento riporta l'analisi dei punti principali del progetto, per verificarne la fattibilità nei tempi prestabiliti, cercando anche eventuali soluzioni tecniche già presenti nel mercato, per ridurne costi e tempi di sviluppo;
+				\item \textbf{Norme di progetto}: questo documento riporta tutte le convenzioni, strumenti e norme che si dovranno usare durante lo sviluppo di un qualsiasi progetto del team;
+				\item \textbf{Piano di Progetto}: questo documento descrive come i membri del team hanno intenzione di gestire le risorse umane e temporali al fine dello sviluppo del progetto;
+				\item \textbf{Piano di Qualifica}: l'obbiettivo di questo documento è descrivere il modo in cui l'intero team punta a soddisfare gli obiettivi di qualità. Questo documento è utilizzato anche esternamente e la lista di distribuzione
+				comprende committenti e proponente;
+				\item \textbf{Analisi dei Requisiti}: questo documento ha lo scopo di dare una visione generale dei requisiti e dei casi d'uso del progetto.
+				Esso conterrà quindi la lista di tutti i casi d'uso, i diagrammi delle attività e di interazione tra utente e sistema sviluppato e i servizi offerti dal prodotto finale. Questo documento è utilizzato anche esternamente e la lista di distribuzione comprende committenti e proponente;
+				\item \textbf{Definizione del prodotto}: in questo documento verrà fornita una progettazione dettagliata del prodotto. Verranno quindi forniti i dettagli implementativi che comprenderanno diagrammi UML delle classi e i relativi metodi;
+				\item \textbf{Glossario}: questo documento dovrà dare una definizione dettagliata di tutti i termini tecnici e acronimi utilizzati nell'intera documentazione. Questo documento è utilizzato anche esternamente e la lista di distribuzione comprende committenti e proponente.
+				\item \textbf{Manuale Utente}: questo documento dovrà fornire una guida di tutte le funzionalità del prodotto sviluppato.
+				Come linea interna, la verifica finale, sarà definita verificando che tutti i casi d'uso siano nel manuale.
+				\item \textbf{Verbali}: questo documento ha lo scopo di riassumere in modo formale le discussioni effettuate e le decisioni prese durante le riunioni. I verbali, come le riunioni, sono classificati in: interni ed esterni. In particolare i verbali esterni, essendo documenti ufficiali, devono essere redatti dal \responsabilediprogetto.
+				Ogni verbale dovrà essere denominato nel seguente modo:
+				\begin{equation*}
+					Verbale-Data\ del\ Verbale
+				\end{equation*}
+				dove Data del Verbale identifica la data nella quale si è svolta la riunione corrispondente al verbale con i formato
+				\begin{equation*}
+					YYYY-MM-DD
+				\end{equation*}
+
+				Nella parte introduttiva del verbale devono essere specificate le seguenti informazioni:
+					\begin{itemize}
+					\item \textbf{Data incontro};
+					\item \textbf{Ora inizio incontro};
+					\item \textbf{Ora termine incontro};
+					\item \textbf{Luogo incontro};
+					\item \textbf{Oggetto};
+					\item \textbf{Segretario};
+					\item \textbf{Partecipanti}.
+					\end{itemize}
+				\end{itemize}
+			
+			\paragraph{Struttura del documento}
+				\subparagraph{Prima pagina}
+				In ogni prima pagina di ogni documento, devono essere contenute le seguenti informazioni per chiarezza:
+				\begin{itemize}
+				\item Nome del gruppo;
+				\item Logo del progetto;
+				\item Nome del progetto;
+				\item Nome del documento;
+				\item Versione del documento;
+				\item Data di creazione del documento;
+				\item Data di ultima modifica del documento;
+				\item Stato del documento;
+				\item Nome e cognome del redattore del documento;
+				\item Nome e cognome del \verificatore\ del documento;
+				\item Nome e cognome del \responsabilediprogetto\ approvatore del documento;
+				\item Uso del documento;
+				\item Lista di distribuzione del documento;
+				\item Destinatari del documento;
+				\item Un sommario contenente una breve descrizione del documento.
+				\end{itemize}
+
+				\subparagraph{Diario delle modifiche}
+				La seconda sezione del documento è assegnata al diario delle modifiche. Questa sezione contiene il report di tutte le versioni del documento, in quale data ne è stata cambiata la versione e cosa è stato modificato. I dati verranno espressi in maniera tabulare, con i seguenti campi:
+				\begin{itemize}
+				\item \textbf{Versione}: versione del documento;
+				\item \textbf{Descrizione}: descrizione della modifica;
+				\item \textbf{Autore e Ruolo}: autore della modifica e ruolo che esso ricopre;
+				\item \textbf{Data}: data dell'approvazione.
+				\end{itemize}
+				Questa operazione di versionamento verrà fatta automaticamente da uno \gl{script} \gl{Perl} elaborato dal team.
+
+				\subparagraph{Indice}
+				In ogni documento come terza sezione, dopo il diario delle modifiche, deve essere presente l'indice di tutte le sezioni, sottosezioni, tabelle e paragrafi.
+				L'indice verrà generato automaticamente dal compilatore di \LaTeX .
+
+				\subparagraph{Formattazione generale delle pagine}
+				Nella formattazione delle pagine è previsto un header e un piè di pagina.
+				L'header della pagina contiene:
+				\begin{itemize}
+					\item Logo del gruppo;
+					\item Nome del documento.
+				\end{itemize}
+				Il piè di pagina contiene:
+				\begin{itemize}
+				\item Il nome del gruppo;
+				\item Nome del progetto;
+				\item Numero della pagina corrente.
+				\end{itemize}
+
+			\paragraph{Norme tipografiche}
+				Le seguenti norme tipografiche indicano i criteri riguardanti la tipografia dei documenti.
+
+				\subparagraph{Stili}
+				\begin{itemize}
+				\item \textbf{Grassetto}: il grassetto deve essere utilizzato per evidenziare parole importanti;
+				\item \textbf{Corsivo}: il corsivo deve essere utilizzato nelle seguenti
+				situazioni:
+				\begin{itemize}
+					\item Citazioni: ogni citazione va scritta in corsivo;
+					\item Nomi di capitolati: ogni capitolato preso in esame, deve avere il nome scritto in corsivo.
+				\end{itemize}
+				\end{itemize}
+
+				\subparagraph{Punteggiatura}
+				\begin{itemize}
+				\item \textbf{Punteggiatura}: non deve seguire spazi;
+				\item \textbf{Lettere maiuscole}: vanno utilizzate dopo il punto, il punto interrogativo,
+				il punto esclamativo e all'inizio di ogni elemento di un elenco puntato.
+				\end{itemize}
+
+				\subparagraph{Composizione del testo}
+				\begin{itemize}
+				\item \textbf{Elenchi puntati}: all'inizio di ogni punto, la lettera deve essere maiuscola. Ogni punto termina con il punto e virgola, tranne l'ultima che deve terminare con il punto;
+				\item \textbf{Glossario}: ogni termine presente nel \glossario\ deve essere munito di pedice utilizzando la segnatura \verb|\gl{parola}|, quest'ultimo termine si troverà nell'apposito documento.
+				\end{itemize}
+
+				\subparagraph{Formati}
+				\begin{itemize}
+				\item \textbf{Date}: le date presenti nei documenti devono seguire lo standard \textit{ISO 8601:2004}:\\
+				\begin{equation*}
+					YYYY-MM-DD
+				\end{equation*}
+				Corrispondenti alla data americana, con anno-mese-giorno;
+				\item \textbf{Ore}: le ore presenti nei documenti devono seguire lo standard \textit{ISO 8601:2004}
+				con il sistema a 24 ore:\\
+					\begin{equation*}
+							hh:mm
+					\end{equation*}
+				\item \textbf{Link}: i link presenti nei documenti devono avere indicata la data corrispondente all'ultimo controllo di effettiva presenza dei contenuti con il seguente formato:\\
+				\begin{equation*}
+					https://www.example.com/example.pdf(YYYY-MM-DD)
+					\end{equation*}
+				\end{itemize}
+
+				\subparagraph{Componenti grafiche}
+				\begin{itemize}
+
+				\item \textbf{Tabelle}: tutte le tabelle presenti devono avere una descrizione ed un indice univoco nel documento per il loro tracciamento;
+				\item \textbf{Immagini}: l'inserimento di immagini nel documento è sconsigliato quando è possibile evitarne l'uso, ma nel caso sia necessario per rendere chiaro un concetto come diagrammi o screenshot, il formato deve essere PNG.
+				\end{itemize}
+
+			\paragraph{Composizione email}
+				In questo paragrafo verranno descritte le norme da applicare nella
+				composizione delle email.
+				\begin{itemize}
+					\item \textbf{Destinatario}:
+					\begin{itemize}
+						\item Interno: l'indirizzo da utilizzare è \textit{kern3lp4nic.team@gmail.com} che, mediante l'inoltro, arriverà a tutti i componenti del team;
+						\item Esterno: l'indirizzo del destinatario è variabile.
+					\end{itemize}
+					\item \textbf{Mittente}:
+					\begin{itemize}
+						\item Interno: l'indirizzo è di colui che scrive e spedisce la email;
+						\item Esterno: l'indirizzo da utilizzare è \textit{kern3lp4nic.team@gmail.com} ed è utilizzabile unicamente dal \responsabilediprogetto.
+					\end{itemize}
+					\item \textbf{Oggetto}: l'oggetto della mail deve essere breve e contenere la motivazione dell'invio della mail in forma breve;
+					\item \textbf{Corpo}: il testo deve essere chiaro, e deve riguardare esclusivamente l'oggetto;
+					\item \textbf{Allegati}: è sconsigliato inviare allegati attraverso l'email, è invece richiesto, ove possibile, di condividere il file in \gl{Google Drive} e di inserire il link al file nel corpo dell'email.
+				\end{itemize}
+
+			\paragraph{Strumenti}
+				\subparagraph{Texmaker}
+				L'editor scelto dal team per sviluppare i documenti in \LaTeX\ è \gl{Texmaker}. Texmaker è un editor gratuito, moderno e multi-piattaforma per \gl{Linux}, sistemi \gl{MacOS} e \gl{Microsoft Windows} che integra molti strumenti utili per sviluppare documenti in \LaTeX. Texmaker include il supporto \gl{Unicode}, il controllo ortografico, il completamento automatico, il raggruppamento del codice e un visore incorporato \gl{PDF} con il supporto \gl{SyncTex} e modalità di visualizzazione continua. Texmaker è uno strumento facile da usare e da configurare.
+
+				\subparagraph{GloMaker}
+				GloMaker è un applicativo realizzato dal team per l'inserimento automatico dei termini, prelevati dai documenti, che vanno inseriti nel \glossario.
+			
+				\subparagraph{gedit-plugin-gulpease}
+				Viene utilizzato per il controllo dell'indice gulpease all'interno di ogni documento dop le altre verifiche, sviluppato da ilmanzo.
+				
+
+			\paragraph{Metriche}
+				\subparagraph{Indice di leggibilità}
+				Per poter stimare la qualità di un documento si è deciso di utilizzare una metrica per misurare l'indice di leggibilità. Quindi verrà preso in considerazione l'indice Gulpease, impiegabile per documenti in lingua italiana. Questo indice si basa sulla lunghezza delle parole e sulla lunghezza delle frasi rispetto al numero di lettere.\\
+				La formula per il suo calcolo è la seguente:
+				\begin{equation*}
+					Indice \ Gulpease = 89 + \frac{300*numeroFrasi - 10*numeroLettere}{numeroParole}
+				\end{equation*}
+				Tipicamente il risultato di questa equazione è compreso tra 0 e 100, dove i valori elevati indicano un'alta leggibilità o viceversa.\\
+
+
+
+	\subsection{Verifica}
+
+		\subsubsection{Verifica documenti}
+			\paragraph{Descrizione}
+			La verifica dei documenti deve essere eseguita dai \verificatori\ assegnati a ciascun documento. Qualsiasi tipo di errore, incongruenza o dubbio dovrà essere segnalato nel sistema di gestione dei task interno \gl{Teamwork} nel seguente modo:
+			\begin{itemize}
+				\item Se non presente, aggiungere una tasklist con nome:\\
+				\begin{equation*}
+					Verifica [TitoloDelDocumento] vX.X.X
+				\end{equation*}
+				dove X.X.X indica la versione del documento in esame;
+				\item Ciascun problema dovrà essere segnalato con un subtask identificato dalla frase in cui si trova e una breve descrizione del problema;
+				\item La tasklist dovrà essere assegnata ai redattori del documento, al fine di applicare le modifiche, dopo attenta valutazione;
+				\item Se ci fossero dubbi su come risolvere un subtask, il redattore deve richiedere maggiori chiarimenti ai \verificatori\ tramite lo strumento di comunicazione interna Slack nell'apposito canale \#documenti.
+			\end{itemize}
+
+			\paragraph{Obiettivi di qualità}
+			Gli obiettivi di qualità riguardanti i documenti che il gruppo \kpanic\ desidera raggiungere nell'arco dell'intero progetto sono i seguenti:
+			\begin{itemize}
+				\item Eliminazione di tutti gli errori ortografici e semantici;
+				\item Corrispondenza tra glossario e documentazione;
+				\item Attinenza dei documenti alle norme di progetto.
+			\end{itemize}
+			
+			\paragraph{Strategie}
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item Prima di procedere alla verifica manuale, si deve utilizzare l'apposito strumento per rimuovere eventuali errori grammaticali;
+					\item Durante le attività di verifica della documentazione, gli errori più frequenti saranno riportati in un documento, in modo tale da diventare uno dei punti chiavi delle successive attività di \gl{Inspection};
+					\item Durante le modalità di verifica della documentazione il \verificatore deve controllare l'attinenza alle normative;
+					\item Devono essere controllati anche i link.
+				\end{itemize}
+
+			\paragraph{Modalità}
+				L'analisi statica è una tecnica che permette di trovare eventuali anomalie nella
+				documentazione. Ci sono due modi con la quale essa viene
+				impiegata:
+				\begin{itemize}
+				\item \textbf{\gl{Walkthrough}}: questa tecnica consiste nella lettura a largo spettro del documento o del codice, al fine di trovare anomalie, senza avere un'idea precisa degli errori da cercare.
+				Questa tecnica risulta molto utile nel periodo iniziale dello sviluppo del prodotto data la scarsa esperienza. Il \verificatore\ dovrà stilare una lista degli errori più frequenti trovati nel documento da lui analizzato. Quando la lista sarà abbastanza corposa, potrà essere allegata ad una versione di questo documento come indice per l'utilizzo della più sottile tecnica \gl{Inspection};		
+				\item \textbf{Inspection}: questa tecnica di analisi statica consiste in una lettura più mirata dei documenti o del codice, utilizzando come supporto fondamentale la lista di controllo contenente gli errori più frequenti. Questa tecnica è migliorativa grazie al continuo aggiornamento della lista degli errori, e può essere implementata in un algoritmo per quanto riguarda il codice.
+				\end{itemize}
+
+			\paragraph{Lista di controllo}
+				Per controllare i documenti è stata adottata la tecnica del Walkthrough.
+				Durante i controlli gli errori più frequentemente trovati, sono stati:
+				\begin{itemize}
+					\item Punteggiatura;
+					\item Mancanza di termini nel glossario;
+					\item Mancanza di lettere maiuscole all'inizio degli elementi delle liste;
+					\item Link rotti o mal formattati.
+				\end{itemize}
+
+			\paragraph{Metriche}
+
+				\subparagraph{Errori ortografici rilevati e non corretti}
+				Per capire quando un documento è corretto dal punto di vista ortografico è necessario l'impiego di questa metrica. Supponendo, infatti, che gli strumenti automatici siano in grado di rilevare tutti, o almeno la maggior parte, degli errori ortografici di un testo, la correttezza ortografica deve quindi basarsi sul numero di errori rinvenuti ma non successivamente corretti. Per errori corretti si intende un errore revisionato manualmente da un \verificatore, in quanto le correzioni automatiche non sono attendibili. Inoltre non è accettabile che vi siano errori segnalati ma non corretti da qualche componente del team.
+
+				\subparagraph{Errori concettuali rilevati e non corretti}
+				Per capire quando un documento è corretto dal punto di vista concettuale è necessario l'impiego di questa metrica. Supponendo, infatti, che dopo delle revisioni siano stati trovati tutti, o almeno la maggior parte, i maggiori errori di questo tipo, la correttezza concettuale deve quindi basarsi sul numero di errori rinvenuti e segnalati, ma non corretti successivamente. Per errori corretti si intende un errore fatto notare dal committente o da qualche \verificatore\ (con conseguente approvazione del \responsabilediprogetto) e successivamente corretto (sulla base di discussioni interne o con il committente).\\
+
+			\paragraph{Strumenti}
+				\subparagraph{Aspell}
+				Viene usata per controllare automaticamente l'ortografia di un testo \LaTeX\ tramite un dizionario di lingua italiana.
+
+		\subsubsection{Verifica del codice}
+			\paragraph{Descrizione}					
+				L'attività verrà effettuata mediante analisi dinamica, questo tipo di analisi, viene applicata solamente al codice, dato che ne richiede la compilazione per un'esecuzione. Essa serve a verificare che il software prodotto produca il risultato aspettato.
+
+			\paragraph{Obiettivi di qualità}
+				Obiettivi di qualità da ricercare durante l'attività:
+				\begin{itemize}
+					\item I test dinamici effettuati sui vari elementi saranno il più possibile automatizzabili;
+					\item I test dinamici effettuati sui vari elementi del software copriranno una grande parte delle possibili casistiche d'utilizzo.
+				\end{itemize}
+			
+			\paragraph{Strategie}
+				Per poter garantire qualità nell'attuazione della qualità:
+				\begin{itemize}
+					\item Prima della release, il codice verrà controllato con lo strumento Instabull.
+				\end{itemize}
+
+			\paragraph{Strumenti}
+				Gli strumenti a disposizione per quel'arttività sono:
+				\begin{itemize}
+					\item textbf{Istanbul}: uno strumento che permette di effettuare statement coverage e branch coverage per codice JavaScript.  
+				\end{itemize}
+
+			\paragraph{Metriche}\mbox{}\\
+				\paragraph{Statement coverage}
+				Questa metrica permette di identificare quante righe di codice, per ogni unità, sono state eseguite almeno una volta nell'esecuzione di un test.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					Statement \ coverage = \frac{linee \ eseguite * 100}{linee \ totali}
+				\end{equation*}
+				
+				\paragraph{Branch coverage}
+				Permette di identificare quanti rami di flusso sono stati attraversati almeno una volta durante i test.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					Branch \ coverage = \frac{rami \ attraversati* 100}{rami totali}
+				\end{equation*}
+
+		\subsection{Gestione della configuarazione}
+			\subsubsection{Versionamento dei documenti}
+				\subparagraph{Descrizione}
+					Quest'attività ha lo scopo di fornire sempre una versione ufficiale dei documenti prima della modifica, e di tracciare le modifiche a questi ultimi.
+				
+				\paragraph{Strategie}
+				Ogni documento prodotto deve essere identificato, oltre che dal nome, dal numero
+				di versione nel seguente modo:
+				\begin{equation*}
+					vA.B.C
+				\end{equation*}
+				dove:
+				\begin{itemize}
+				\item \textbf{A}: indica il numero di uscite formali del documento e viene
+				incrementato in seguito all'approvazione finale da parte del \responsabilediprogetto.
+				L'incremento dell'indice \textbf{A} comporta l'azzeramento degli indici
+				\textbf{B} e \textbf{C};
+				\item \textbf{B}: indica il numero crescente delle verifiche. L'incremento viene eseguito dal \verificatore\ e comporta l'azzeramento dell'indice \textbf{C};
+				\item \textbf{C}: indica il numero di modifiche minori ma percepibili apportate al documento prima della sua verifica.
+				\end{itemize}
+				Una volta verificato il documento dovrà essere disposto nell'apposita cartella su Google Drive.
+
+				\paragraph{Diario delle modifiche}
+				Ogni documento deve essere fornito di un'apposito diario delle modifiche nel quale dovrà apprire ogni cambio di versione, con la data di aggiornamento e una descrizione accurata delle modifiche effettuate. Questo sarà presente tra le prime pagine di ogni documento nella posizione indicata nella soprastante struttura.
+
+				\paragraph{Strumenti}
+					\subparagraph{Google Drive}
+					Drive è un servizio di \gl{cloud storage} offerto da Google.
+
+
+			\subsubsection{Versionamento del codice}
+				\paragraph{Descrizione}
+				Il versionamento del codice del software e del \LaTeX\ dei documenti avverrà mediante lo strumento GIT.
+				I \gl{branch} di Git saranno sempre almeno due:
+				\begin{itemize}
+					\item \textbf{Master}: dovrà contenere i \gl{commit} delle sole \gl{release} principali dopo l'approvazione del \responsabilediprogetto;
+					\item \textbf{Dev}: può essere utilizzato da tutti e i commit sono liberi.
+				\end{itemize}
+				Entrambi i branch della repository saranno sottoposti ad analisi statica e dinamica nel caso del codice e, se non conformi, verranno rigettati.
+				Per questa operazione chiamata \gl{integrazione continua} verrà utilizzato uno strumento centralizzato chiamato Jenkins, che ogni qualvolta verrà effettuato un commit provvederà alla verifica.
+				Per ottimizzare la produzione si è scelto di creare un nuovo branch ad ogni modifica rilevante al codice. Una volta che l'incremento sarà stato completato si procederà al \gl{merge}. \\
+				Per evitare conflitti ed errori deve essere richiesto il merge tramite l'apposita funzione offerta dall'applicativo di versionamento Gitlab utilizzando le apposite \gl{pull request} assegnando la verifica ad un membro verificatore del team. Il \verificatore\ assegnato alle modifiche dovrà procedere alla verifica e successivamente accettare il merge o riportare gli errori tramite Teamwork.
+			
+				\paragraph{Strumenti}
+					\subparagraph{Git}
+						Tool di versionamento OpenSourse che permette a più persone di lavorare contemporaneamente anche sullo stesso file, tracciando le modifiche dei file effettuate ad ogni commit.
+					\subparagraph{Gitlab}
+						Servizio di repository per Git offerto in modo gratuito per progetti open OpenSourse.
+
+		\subsection{Assicurazione della qualità}
+			\subsubsection{Assicurazione qualità di processo}
+			\paragraph{Descrizione}
+			La qualità dei processi è un fattore fondamentale durante lo svolgimento del progetto. Per favorire quest'ultima, il gruppo \kpanic\ utilizza gli standard ISO/IEC 15504, denominato \gl{Spice}, e lo standard \gl{PDCA} (Plan-Do-Check-Act).
+
+			\paragraph{Standard ISO/IEC 15504}
+				Questo standard permette di valutare e classificare il livello di maturità dei processi e di verificare l'adeguatezza secondo il relativo obiettivo. Il livello di maturità viene valutato secondo attributi di \gl{processo}, ed è definito secondo questa scala:
+				\begin{itemize}
+					\item Level 0 - Incompleto: il processo non è implementato o non raggiunge i suoi obiettivi;
+					\item Level 1 - Eseguito: il processo è implementato e raggiunge i suoi obiettivi.
+					Misurato secondo:
+						\begin{itemize}
+							\item Performance: capacità di ottenere risultati identificabili.
+						\end{itemize}
+					\item Level 2 - Gestito: il processo agisce in base ad una pianificazione ed ogni sua azione è tracciata.
+					Misurato secondo:
+						\begin{itemize}
+							\item Gestione delle performance: capacità di elaborare un prodotto coerente con gli obiettivi attesi;
+							\item Gestione delle performance: capacità di elaborare un prodotto documentato, controllato e verificato.
+						\end{itemize}
+					\item Level 3 - Stabilito: il processo agisce in base a linee guida uniformi nell'intera organizzazione.
+					Misurato secondo:
+						\begin{itemize}
+							\item Definizione: capacità di elaborare un prodotto seguendo gli standard preposti;
+							\item Risorse: capacità di sfruttare le risorse a disposizione così da venir attuato al meglio.
+						\end{itemize}
+					\item Level 4 - Predicibile: il processo agisce entro certi limiti.
+					Misurato secondo:
+						\begin{itemize}
+							\item Misurazioni: capacità di sfruttare le misure ricavate durante l'esecuzione così da raggiungere i propri obiettivi;
+							\item Controllo: capacità di sfruttare le misure ricavate durante l'esecuzione così da migliorarsi e correggersi, se necessario.
+						\end{itemize}
+					\item Level 5 - Ottimizzato: il processo viene misurato e quindi ottimizzato.
+					Misurato secondo:
+						\begin{itemize}
+							\item Cambiamenti: capacità di supportare cambiamenti strutturali e di esecuzione;
+							\item Miglioramento continuo: capacità di sfruttare i cambiamenti strutturali e di esecuzione così da migliorarsi continuamente nel raggiungimento dei propri obiettivi.
+						\end{itemize}
+					\end{itemize}
+					Ogni attributo di un processo viene valutato in una scala metrica di quattro unità:
+					\begin{itemize}
+						\item N - Non posseduto [0 - 15\%]
+						\item P - Parzialmente posseduto ]15\% - 50\%]
+						\item L - Largamente posseduto ]50\% - 85\%]
+						\item F - Completamente posseduto ]85\% - 100\%]
+					\end{itemize}
+					
+					\paragraph{PDCA}
+					Sulla base delle metriche di maturità precedentemente descritte, viene applicata una strategia di miglioramento continuo della qualità dei processi di sviluppo utilizzando il modello PDCA, noto anche come Ciclo di Deming. In questo modo il team cerca di ottimizzare l'uso delle risorse durante l'intero ciclo di vita del prodotto puntando ad un risultato di qualità. Questo modello si suddivide in quattro iterazioni, e assicura un miglioramento progressivo ad ogni ciclo. Nello specifico: 
+					\begin{itemize}
+						\item Plan: vengono stabiliti obiettivi e processi necessari per raggiungere i risultati aspettati;
+						\item Do: implementazione del punto precedente ed attuazione dei processi, il tutto finalizzato alla creazione del prodotto;
+						\item Check: vengono comparati i risultati ottenuti con quelli attesi, e raccolti in grafici e tabelle per uno studio approfondito del traguardo raggiunto. Se si sono raggiunti gli obiettivi preposti si può passare alla fase successiva, altrimenti è necessario ripetere il ciclo PDCA tenendo conto delle cause che hanno contribuito al fallimento;
+						\item Act: vengono attuate azioni di aggiustamento e correzione. La soluzione individuata diventa la nuova baseline, e si può quindi ripetere l'intero ciclo.
+					\end{itemize}
+					L'operazioni di Do e Check sono di competenza dei \verificatori\ che ne avranno completa responsabilità, e potranno riferire agli \amministratori\ per implementazioni software e integrazione norme.
+					Le attività di Act e Plan dovranno essere invece discusse in presenza del \responsabilediprogetto, che ne deve approvare le decisioni secondo budget, ore persona impiegate e utilità.
+			
+			\subsubsection{Assicurazione qualità del prodotto}
+				\paragraph{Descrizione}
+					Qust'attività deve asicurare che il prodotto rispetti le caratteristiche di qualità concordate con il commitente, ma lo deve fare durante lo sviluppo e non al suo termine.
+				\paragraph{Strategie}
+				Per assicurare la qualità del software i \verificatori:
+				\begin{itemize}
+					\item Devono controllare che il sistema di testing e verifica rispettino i parametri descritti nel \pianodiqualifica e nelle norme. Questo deve essere fatto dopo ogni aggiornamento dei documenti precedentemente citati o ogni qualvolta avviene una modifica alla configurazione di sistema.  
+					\item Devono controllare periodicamente che il versionamento avvenga secondo le specifiche delle \normediprogetto, e che i relativi strumenti vengano utilizzati correttamente.
+					\item Nel caso che uno dei fattori, precedentemente descritti, non fosse regolare deve venire avvisato il \responsabilediprogetto\ e il componente del team che ha commesso l'infrazione, per porvi rimedio.
+					\item Non deve e non ha le competenze necessarie per porre rimedio all'attività mal gestita.
+				\end{itemize}
+
+%		\subsection{Revisione congiunta}
+%			\subsubsection{Revisione di avanzamento}
+%			\paragraph{Descrizione}
+%				L'attività di revisione di avanzamento consiste nella consegna ed esposizione di tutto il materiale prodotto fino a quel momento. 
+%			\paragraph{Strategie}
+
+%			\paragraph{Metriche}
+
+		
+		\subsection{Validazione}
+			\subsubsection{Validazione documenti}
+				\paragraph{Descrizione}
+					L'attività di validazione è l'ultima prima di rilasciare una vesione ufficiale del documento, e viene eseguita dal \responsabilediprogetto\ in carica.
+					Prevede una lettura del documento. 
+				\paragraph{Obiettivi di qualità}
+				Gli obiettivi di qualità da perseguire sono:
+				\begin{itemize}
+					\item I documenti ufficiali distribuiti devono essere coerenti tra loro;
+					\item I documenti approvati devono essere corretti logicamente.
+				\end{itemize}
+
+				\paragraph{Strategie}
+					Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+					\begin{itemize}
+						\item Lettura con il metodo Walkthrough del documento, prestando attenzione al contenuto per approvare le decisioni incluse.
+						\item Se dopo la lettura il documento è considerato valido, e in ordine, con anche i dati proveninti dall'analisi Gulpease eseguita dai \verificatori, la versione può essere incrementata e il documento distribuito.
+						\item Se dopo la lettura il documento non viene considerato valido, questo verrà reinviato alla fase di produzione, e quindi a chi lo ha reddatto, con una lista delle caratteritiche errate.
+					\end{itemize}
+
+			\subsubsection{Validazione software}
+				\paragraph{Descrizione}
+				L'attività di validazione del codice prevede una valutazione manuale dei requisiti obbligatori del software e il controllo dell'attinenza delle funzionalità ai casi d'uso.
+				
+				\paragraph{Obiettivi di qualità}
+				Gli obiettivi di qualità da perseguire sono:
+				\begin{itemize}
+					\item Il software rilasciato, deve rispettare pienamente tutti i requisiti;
+					\item Il manuale utente deve essere coerente con i casi d'uso.
+				\end{itemize}
+				\paragraph{Strategie}
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item Il controllo verrà inoltre effettuato seguendo le istruzioni descritte nel \manualeutente, se presente.
+					\item Se il software supera la fase di validazione verrà distribuito, altrimenti, verrà elencato l'insieme delle problematiche programmato un nuovo incremento per lo sviluppo.
+				\end{itemize}	
+					
+\end{document}

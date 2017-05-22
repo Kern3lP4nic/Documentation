@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{../../../KerpanStyle/kerpan}
+\titlepage{}
+\usepackage{graphicx}
+\graphicspath{{../}}
+
+\date{2017/04/10}
+\intestazioni{\manualeutenteRQ}
+\pagenumbering{gobble}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \manualeutenteRQ\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 1.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-04-10 		\\ 
+			{\hfill\textbf{Redazione}} 			& Daniele Favaro \\ & Francesco Fasolato \\ & Antonino Macrì \\
+			{\hfill\textbf{Verifica}} 			& Giacomo Zecchin \\ & Filippo Berto \\ 
+			{\hfill\textbf{Approvazione}} 		& Edoardo Zanon \\
+			{\hfill\textbf{Uso}} 				& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage	
+		\include{DiarioModificheMU}	
+
+	\newpage
+		\tableofcontents 	% produce l'indice delle sezioni del documento
+	\newpage
+		\listoftables 		% produce l'indice delle tabelle del documento
+	\newpage	
+		\listoffigures		% produce l'indice delle figure del documento	
+	
+	\label{LastFrontPage}
+		\newpage
+		\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}
+		\newpage
+		\subfile{Sezioni/RequisitiDiSistema}
+		\newpage
+		\subfile{Sezioni/ModalitaDiUtilizzo}
+		\newpage
+		\subfile{Sezioni/AreaAmministrativa}
+		\newpage
+		\subfile{Sezioni/AreaOspiti}
+		\newpage
+		\subfile{Sezioni/Errori}
+	\label{LastPage}
+
+\end{document}

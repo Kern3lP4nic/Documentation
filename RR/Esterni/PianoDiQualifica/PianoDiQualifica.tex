@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{../../../KerpanStyle/kerpan}
+\titlepage{}
+
+\author{Daniele Favaro, Marco Franceschini}
+\date{2016-12-09}
+\intestazioni{Piano di Qualifica}
+\pagestyle{empty}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \pianodiqualificai\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 1.0.0				\\
+			{\hfill\textbf{Data Redazione}} 	& 2017-01-02 		\\
+			{\hfill\textbf{Redazione}} 			& Giacomo Zecchin \\ & Francesco Fasolato \\
+			{\hfill\textbf{Verifica}} 			& Daniele Favaro				\\
+			{\hfill\textbf{Approvazione}} 			& Antonino Macrì				\\
+			{\hfill\textbf{Uso}} 				& Esterno 					\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega\ \\ & \cardin\ \\ & \prop\ \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+		\include{DiarioModifichePQ}
+	
+	\newpage
+		\tableofcontents 	% produce l'indice delle sezioni del documento
+	\newpage
+		\listoftables 		% produce l'indice delle tabelle del documento
+	
+	\label{LastFrontPage}
+	
+	\newpage	
+	\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}		
+	\newpage	
+		\subfile{Sezioni/VisioneGeneraleDellaStrategiaDiGestioneDellaQualita}
+	\newpage	
+		\subfile{Sezioni/LaStrategiaDiGestioneDellaQualitaNelDettaglio}	
+	\newpage	
+		\subfile{Sezioni/ResocontoDelleAttivitaDiVerifica}
+		
+	\label{LastPage}
+
+\end{document}

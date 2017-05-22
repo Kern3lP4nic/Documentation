@@ -1,0 +1,35 @@
+\documentclass[../ManualeSviluppatore_v2.0.0.tex]{subfiles}
+
+\begin{document}
+
+\section{Aggiunta di Action e QuestionAction a Skill}
+	
+	Per aggiungere un nuovo file di tipo Action come prima cosa recarsi al seguente percorso:\\
+	\textbf{Back-End/LambdaSkill/QuestionActions/QuestionActionModules} (per le QuestionAction)\\
+	\textbf{Back-End/LambdaSkill/Actions/ActionModules} (per le Action)\\
+	Per sintetizzare, da ora in avanti si farà riferimento solo alle Action, ma il procedimento per le QuestionAction differisce solo per quanto riguarda il percorso dei file sopraindicato.\\
+	Il file contenente l'Action appena creata deve avere estensione \underline{.js} e rispettare il seguente template:
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  module.exports = {
+  id: 5,
+  executeAction: function (sessionAttributes, callback) {}}
+}
+	\end{lstlisting}
+	Per evitare inconsistenze fra i file, bisogna assicurarsi, prima di assegnare un numero al campo \underline{id} del template precedente, che quello stesso numero non sia stato già assegnato ad un'Action od una QuestionAction create in precedenza (deve essere univoco per entrambe le cartelle).\\
+	A questo punto è necessario caricare l'Action sul Database.\\
+	Per terminare, una Action deve richiamare una Callback di tipo:
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  callback(err,res)
+}
+	\end{lstlisting}
+	che esegue la funzione che era stata passata precedentemente.
+	Il risultato che un'Action restituisce deve essere strutturato nel seguente modo:
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  res:{ok:boolean,info:""}
+}
+	\end{lstlisting}
+	
+\end{document}

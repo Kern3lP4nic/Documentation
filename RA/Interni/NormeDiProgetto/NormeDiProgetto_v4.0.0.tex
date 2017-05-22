@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{../../../KerpanStyle/kerpan}
+\setcounter{secnumdepth}{4} % fino ai paragraph
+\setcounter{tocdepth}{4}
+
+\date{2017/05/04}
+\intestazioni{\normediprogettoRA}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\huge\bfseries AtAVi\par}
+	Accoglienza tramite Assistente Virtuale \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%deve essere cambiato il titolo ogni volta
+	{\scshape\Large \normediprogettoRA\ \par}
+	\logo
+	\newpage
+	%devono essere compilati questi campi ogni volta
+	\begin{tabular}{c|c}
+		{\hfill \textbf{Versione}} 			& 4.0.0								\\
+		{\hfill\textbf{Data Redazione}} 	& 2017-05-04 						\\
+		{\hfill\textbf{Redazione}} 			& Antonino Macrì \\ & Francesco Fasolato \\
+		{\hfill\textbf{Verifica}} 			& Marco Franceschini \\
+		{\hfill\textbf{Approvazione}} 		& Giacomo Zecchin	\\
+		{\hfill\textbf{Uso}} 				& Interno 							\\
+		{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop\	\\
+	\end{tabular}
+\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+		\subfile{DiarioModificheNP}
+	\newpage
+		\tableofcontents
+	
+	\label{LastFrontPage}	
+		\newpage	
+		\pagestyle{mymain}		
+			\subfile{Sezioni/Introduzione}
+		\newpage
+			\subfile{Sezioni/ProcessiPrimari}
+		\newpage		
+			\subfile{Sezioni/ProcessoDiSupporto}
+		\newpage		
+			\subfile{Sezioni/ProcessoOrganizzativo}
+		
+	\label{LastPage}
+
+\end{document}\grid

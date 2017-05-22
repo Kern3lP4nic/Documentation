@@ -1,0 +1,65 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{../../../KerpanStyle/kerpan}
+\usepackage[htt]{hyphenat}
+\titlepage{}
+\usepackage{graphicx}
+\graphicspath{{../}}
+
+
+\author{}
+\date{2017-04-03}
+\intestazioni{\definizionediprodottoRQ}
+\pagenumbering{gobble}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \definizionediprodottoRQ\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 2.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-04-03 		\\ 
+			{\hfill\textbf{Redazione}} 			& Giacomo Zecchin \\ & Marco Franceschini \\ & Francesco Fasolato\\ 
+			{\hfill\textbf{Verifica}} 				& Francesco Fasolato \\ & Antonino Macrì \\ & Filippo Berto \\ & Daniele Favaro \\  
+			{\hfill\textbf{Approvazione}} 		& Edoardo Zanon			\\
+			{\hfill\textbf{Uso}} 						& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage	
+		\include{DiarioModificheDP}	
+
+	\newpage
+		\tableofcontents 	% produce l'indice delle sezioni del documento
+	\newpage
+		\listoftables 		% produce l'indice delle tabelle del documento
+	\newpage	
+		\listoffigures		% produce l'indice delle figure del documento	
+	
+	\label{LastFrontPage}
+		\newpage
+		\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}	
+		\newpage
+			\subfile{Sezioni/DescrizioneArchitetturale}
+		\newpage
+			\subfile{Sezioni/SpecificaComponenti}
+		\newpage
+			\subfile{Sezioni/DiagrammiSequenza}
+		\newpage
+			\subfile{Sezioni/DiagrammiAttivita}
+		\newpage
+			\subfile{Sezioni/Tracciamento}
+
+	\label{LastPage}
+
+\end{document}

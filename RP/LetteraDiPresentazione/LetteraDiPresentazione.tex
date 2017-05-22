@@ -1,0 +1,133 @@
+\documentclass{letter}
+
+% IMPORTO STILE PERSONALIZZATO TEAM
+\usepackage{../../KerpanStyle/kerpan}
+
+% Uso margini pagina A4
+\usepackage[a4paper]{geometry}
+
+% specifica con quale codifica bisogna leggere il file
+\usepackage[utf8]{inputenc}
+
+% per scrivere in italiano e in inglese;
+% l'ultima lingua (l'italiano) risulta predefinita
+\usepackage[italian]{babel}
+
+% permetti di calcolare la larghezza facendo sottrazioni
+\usepackage{calc}
+
+% importa il simbolo dell'euro
+\usepackage{eurosym}
+
+% permetti di includere le immagini
+\usepackage{graphicx}
+
+\usepackage{float}
+
+% personalizzazione dell'header e del footer
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[R]{\huge{\emph{\textbf{Gruppo Kern3lP4nic}}}\vspace{2em}}
+	\fancyhead[L] {
+		\vspace{0em}
+		\includegraphics[scale=0.2]{res/images/LogoNoSfondo.png}
+	}
+	\cfoot{\small{
+			Gruppo: \kpanic \\
+			\vspace{1pt}
+			Email: \mail{kern3lp4nic.team@gmail.com}}
+	}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.9pt}
+
+%reimposta stile lettera
+\pagestyle{plain}
+
+\makeatletter
+\let\ps@empty\ps@plain
+\let\ps@firstpage\ps@plain
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	SIGNATURE
+%----------------------------------------------------------------------------------------
+
+\signature{
+	\textit{
+	\begin{center}
+		Il responsabile di progetto \\
+		Marco Franceschini\\\vspace{1em}
+		\includegraphics[scale=0.35]{res/images/mfrances_firma.png} 
+	\end{center}
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	DATE 
+%----------------------------------------------------------------------------------------
+
+\date{Padova, 6 Marzo 2017}
+
+%---------------------------------------------------------------------------------------------------
+%-----------------------------------------INIZIO DOCUMENTO------------------------------------------
+%---------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Indirizzo del destinatario
+\begin{letter}{
+	Alla C. Att.ne del committente: \\
+	Prof. Vardanega Tullio \\
+	Prof. Cardin Riccardo \\
+	Università degli Studi di Padova \\
+	Dipartimento di Matematica Pura ed Applicata \\
+	Via Trieste, 63 \\
+	35121 Padova
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Egregio Professor Tullio Vardanega,}
+
+% Enclosing the entire letter contents in a quotation gives it a narrow centered appearance
+\begin{quotation}
+
+	Con la presente il gruppo \kpanic\ intende comunicarLe ufficialmente la partecipazione alla \textbf{\revisionediprogettazionemax} per la realizzazione del prodotto da Lei commissionato, denominato \textbf{\atavi} (\textbf{\acratavi}), proposto dall'azienda \textbf{\prop}.\\\\
+	Può trovare tutti i dettagli relativi all'offerta all'interno dei seguenti documenti, forniti in allegato:\vspace{0.5em}
+
+	\begin{itemize}
+		\item \analisideirequisitiv;
+		\item \definizionediprodottov;
+		\item \glossariov;
+		%\item \ManualeAdminv;
+		%\item \ManualeSviluppatorev;
+		%\item \manualeUtentev;
+		\item \normediprogettov;
+		\item \pianodiprogettov;
+		\item \pianodiqualificav;
+		%\item \specificatecnicav;
+		%\item \studiodifattibilitav;
+		\item \emph{Verbale esterno del 2017-02-07};
+		\item \emph{Verbale interno del 2017-02-16};
+		\item \emph{Verbale interno del 2017-02-21};
+		\item \emph{Verbale interno del 2017-02-28};
+		\vspace{0.5em}
+	\end{itemize}
+	
+	Come analizzato nel \pianodiprogettov, il gruppo \kpanic\ ha stimato di consegnare il prodotto richiesto entro la data prevista per la partecipazione alla \textbf{\revisionediaccettazione} del 08 maggio 2017, con un preventivo di costo pari a \euro 13.883,00.
+
+	Rimango a Sua completa disposizione per ogni ulteriore chiarimento ringraziandoLa anticipatamente per la Sua disponibilità.
+
+\end{quotation}
+
+\closing{Distinti saluti,}
+
+\end{letter}
+
+\end{document}
+

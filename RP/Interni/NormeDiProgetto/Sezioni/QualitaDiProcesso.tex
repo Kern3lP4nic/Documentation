@@ -1,0 +1,469 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+\section{Qualità di processo}
+
+	La qualità dei processi è un fattore fondamentale durante lo svolgimento del progetto. Per favorire quest'ultima, il gruppo \kpanic\ utilizza gli standard ISO/IEC 15504, denominato \gl{Spice}, e lo standard \gl{PDCA} (Plan-Do-Check-Act).
+	
+	\subsection{Standard ISO/IEC 15504}
+	Questo standard ci permette di valutare e classificare il livello di maturità dei processi e di verificare l'adeguatezza secondo il relativo obiettivo. Il livello di maturità viene valutato secondo attributi di \gl{processo}, ed è definito secondo questa scala:
+		\begin{itemize}
+			\item Level 0 - Incompleto: il processo non è implementato o non raggiunge i suoi obiettivi;
+			\item Level 1 - Eseguito: il processo è implementato e raggiunge i suoi obiettivi.
+			Misurato secondo:
+				\begin{itemize}
+					\item Performance: capacità di ottenere risultati identificabili.
+				\end{itemize}
+			\item Level 2 - Gestito: il processo agisce in base ad una pianificazione ed ogni sua azione è tracciata.
+			Misurato secondo:
+				\begin{itemize}
+					\item Gestione delle performance: capacità di elaborare un prodotto coerente con gli obiettivi attesi;
+					\item Gestione delle performance: capacità di elaborare un prodotto documentato, controllato e verificato.
+				\end{itemize}
+			\item Level 3 - Stabilito: il processo agisce in base a linee guida uniformi nell'intera organizzazione.
+			Misurato secondo:
+				\begin{itemize}
+					\item Definizione: capacità di elaborare un prodotto seguendo gli standard preposti;
+					\item Risorse: capacità di sfruttare le risorse a disposizione così da venir attuato al meglio.
+				\end{itemize}
+			\item Level 4 - Predicibile: il processo agisce entro certi limiti.
+			Misurato secondo:
+				\begin{itemize}
+					\item Misurazioni: capacità di sfruttare le misure ricavate durante l'esecuzione così da raggiungere i propri obiettivi;
+					\item Controllo: capacità di sfruttare le misure ricavate durante l'esecuzione così da migliorarsi e correggersi, se necessario.
+				\end{itemize}
+			\item Level 5 - Ottimizzato: il processo viene misurato e quindi ottimizzato.
+			Misurato secondo:
+				\begin{itemize}
+					\item Cambiamenti: capacità di supportare cambiamenti strutturali e di esecuzione;
+					\item Miglioramento continuo: capacità di sfruttare i cambiamenti strutturali e di esecuzione così da migliorarsi continuamente nel raggiungimento dei propri obiettivi.
+				\end{itemize}
+			\end{itemize}
+			Ogni attributo di un processo viene valutato in una scala metrica di quattro unità:
+			\begin{itemize}
+				\item N - Non posseduto [0 - 15\%]
+				\item P - Parzialmente posseduto ]15\% - 50\%]
+				\item L - Largamente posseduto ]50\% - 85\%]
+				\item F - Completamente posseduto ]85\% - 100\%]
+			\end{itemize}
+			
+		\subsection{PDCA}
+		Kern3lP4nic attua una strategia di miglioramento continuo della qualità dei processi di sviluppo utilizzando il modello PDCA, noto anche come Ciclo di Deming. In questo modo il team cerca di ottimizzare l'uso delle risorse durante l'intero ciclo di vita del prodotto puntando ad un risultato di qualità. Questo modello si suddivide in quattro iterazioni, e assicura un miglioramento progressivo ad ogni ciclo. Nello specifico: 
+			\begin{itemize}
+				\item Plan: vengono stabiliti obiettivi e processi necessari per raggiungere i risultati aspettati;
+				\item Do: implementazione del punto precedente ed attuazione dei processi, il tutto finalizzato alla creazione del prodotto;
+				\item Check: vengono comparati i risultati ottenuti con quelli attesi, e raccolti in grafici e tabelle per uno studio approfondito del traguardo raggiunto. Se si sono raggiunti gli obiettivi preposti si può passare alla fase successiva, altrimenti è necessario ripetere il ciclo PDCA tenendo conto delle cause che hanno contribuito al fallimento;
+				\item Act: vengono attuate azioni di aggiustamento e correzione. La soluzione individuata diventa la nuova baseline, e si può quindi ripetere l'intero ciclo.
+			\end{itemize}
+			
+		\subsection{Infrastructure Management Process}
+		L'obiettivo di questo processo è quello di fornire, mantenere ed aggiornare l'infrastruttura ed i servizi necessari allo svolgimento del progetto nell'arco di tutto il suo ciclo di vita. Con infrastruttura si intendono elementi hardware, software, metodi, strumenti, tecniche e standard impiegati nello sviluppo del prodotto.
+		
+			\subsubsection{Obiettivi di qualità}
+			L'infrastruttura, per tutta la durata del progetto, dovrà raggiungere determinati obiettivi, in particolare:
+			\begin{itemize}
+				\item Tutte le procedure riguardanti le attività svolte più frequentemente durante lo sviluppo del progetto sono descritte esaustivamente nella sezione \textit{Processo di sviluppo};
+				\item Tutti i riferimenti normativi e informativi saranno completi di informazioni utili al loro reperimento;
+				\item La piattaforma Trender sarà disponibile all'uso ogniqualvolta un componente di \kpanic\ avesse bisogno di accedere ai dati in essa contenuti;
+				\item I dati ottenuti ed inseriti su Trender saranno sempre coerenti ed aggiornati.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			L'infrastruttura necessaria allo svolgimento del progetto dovrà essere mantenuta costantemente aggiornata; l'utilizzo delle metriche, in particolare, sotto elencate permetterà l'individuazione di eventuali errori all'interno degli strumenti utilizzati, la cui correzione permetterà di ripristinare l'erogazione di dati corretti e coerenti.
+			
+			\subsubsection{Metriche}
+			\paragraph{Disponibilità di Trender}
+			É una metrica usata per conoscere la percentuale di disponibilità di utilizzo della piattaforma Trender rispetto alle richieste di accesso.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					D = \frac{A}{R} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{A}: indica il numero di accessi avvenuti correttamente alla pagine di login di Trender;
+					\item \textbf{R}: indica il numero totale di richieste di accesso alla pagina di login inoltrate a Trender.
+				\end{itemize}
+			
+			\paragraph{Tempo di correzione di Trender}
+			Serve per indicare il periodo (misurato in giorni) medio intercorso fra l'individuazione di un'incoerenza nella piattaforma Trender da parte di un verificare ed il suo aggiornamento da parte di un altro componente di \kpanic.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					T =\frac{\sum_{i=1}^n C_{i}}{n}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$C_{i}$}: indica il tempo trascorso fra il momento di individuazione dell'incoerenza \textit{i} in Trender e l'istante in cui tale dato viene corretto;
+					\item \textbf{n}: indica il numero totale di incoerenze.
+				\end{itemize}
+			
+		\subsection{Project Planning, Assessment \& Control Process}
+		Questo macro processo (ricavato dall'unione dei processi Project Planning Process e Project Assessment \& Control Process) ha lo scopo di produrre dei piani di sviluppo per il progetto, comprendenti: la scelta del modello di ciclo di vita del prodotto, descrizioni delle attività e dei compiti da svolgere, pianificazione temporale del lavoro e dei costi da sostenere, allocazione di compiti e responsabilità e misurazioni per rilevare lo stato del progetto rispetto alle pianificazioni prodotte.
+		
+			\subsubsection{Obiettivi di qualità}
+			L'intero sviluppo del progetto dovrà seguire la pianificazione prodotta, in particolare:
+			\begin{itemize}
+				\item Ogni attività verrà svolta da colui al quale è stata assegnata, rispettando le tempistiche fissate e svolgendo tutti i compiti nei quali essa è stata suddivisa;
+				\item Il costo necessario allo svolgimento di un periodo in cui è stata suddivisa la realizzazione del progetto non dovrà eccedere quanto preventivato per essa.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Durante tutta l'attività di sviluppo del progetto la pianificazione effettuata dovrà essere aggiornata costantemente per essere sempre coerente con la situazione corrente. Qualsiasi eventuale valore negativo a livello di Schedule Variance o Budget Variance rilevato in un periodo di lavoro dovrà essere assolutamente compensato entro la fine dell'attività di progetto, in quanto non è assolutamente ammesso eccedere le ore di lavoro finali e il preventivo dei costi finale indicato nella pianificazione.
+						
+		\subsection{Risk Management Process}
+		L'obiettivo del processo è quello di identificare, analizzare, trattare e monitorare continuamente i rischi che possono insorgere durante l'intera attività di  sviluppo.
+		
+			\subsubsection{Obiettivi di qualità}
+			Il gruppo dovrà gestire correttamente i rischi, in particolare:
+			\begin{itemize}
+				\item All'inizio dell'attività di progetto, verranno individuati i principali fattori di rischio riguardanti l'organizzazione delle attività;
+				\item All'inizio di ogni periodo, l'analisi dei rischi porterà all'individuazione di nuovi rischi specifici per ognuna di esse;
+				\item I rischi analizzati che si incontreranno saranno trattati secondo le strategie individuate in fase di individuazione e il loro impatto sarà controllato.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Dovrà sempre essere tenuto sotto controllo il livello di probabilità dei rischi analizzati. Anche se con basso livello di pericolosità, in caso il rischio di manifestasse, il team dovrà attuare le contromisure previste al fine di mitigare i suoi effetti ed evitare che la sua pericolosità aumenti.
+			
+			\subsubsection{Metriche}
+				\paragraph{Rischi non preventivati}
+				Serve per evidenziare i rischi non preventivati.
+				\begin{equation*}
+				\begin{split}
+					&Indice \ numerico \ che \ viene \ incrementato \ nel \ momento \ in \ cui \ si \ manifesta \ un \ rischio \\ 
+					&non \ individuato \ nell'attivit\grave{a} \ di \ analisi \ dei \ rischi
+				\end{split}
+				\end{equation*}
+								
+			
+		\subsection{System/Software Requirements Analysis Process}
+		Il processo punta a trasformare i requisiti individuati dalle fonti in un set di requisiti tecnici che fungerà da linea guida nella progettazione del sistema.
+			
+			\subsubsection{Obiettivi di qualità}
+			I requisiti identificati dovranno essere gestiti in maniera tale da raggiungere i seguenti traguardi:
+			\begin{itemize}
+				\item Per ogni requisito verrà tenuta traccia della fonte da cui è stato ricavato;
+				\item Per ogni requisito dovrà essere possibile indicare dei test, da effettuare per verificare il soddisfacimento da parte del prodotto;
+				\item Per ogni requisito sarà possibile ricostruire i cambiamenti principali effettuati nella sua formulazione, durante tutto il ciclo di sviluppo del prodotto;
+				\item Nessun requisito dovrà risultare superfluo o ambiguo;
+				\item Tutti i requisiti che il prodotto andrà a soddisfare saranno stati precedentemente approvati dai committenti.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Tutti i requisiti individuati dovranno essere correttamente inseriti nella piattaforma Trender, la quale si occuperà di mantenere traccia delle fonti dalle quali derivano e della loro implementazione nel prodotto.
+			
+			\subsubsection{Metriche}
+			\paragraph{Copertura requisiti obbligatori}
+			Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti obbligatori. Essa controlla infatti il rapporto percentuale tra i requisiti obbligatori soddisfatti e il numero totale dei requisiti obbligatori richiesti.\\
+				É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					Copertura \ requisiti \ obbligatori = \frac{Numero \ di \ requisiti \ obbligatori \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ obbligatori}
+				\end{equation*}
+
+		\subsection{System/Software Architectural Design Process}
+		Il processo si pone come obiettivo quello di rilevare una corrispondenza fra i requisiti di sistema ed elementi di quest'ultimo.
+		
+			\subsubsection{Obiettivi di qualità}
+			Durante lo svolgimento delle attività previste da questo processo, punteremo a definire un'architettura adatta agli scopi del progetto:
+			\begin{itemize}
+				\item Ogni componente progettato come parte del sistema risulterà essere necessario per il funzionamento del prodotto e costantemente tracciabile ai requisiti che soddisfa;
+				\item Il sistema dovrà presentare basso accoppiamento ed alta coesione;
+				\item Ogni componente dovrà essere progettato puntando su incapsulamento, modularizzazione e riuso di codice.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Durante l'attività di progettazione, sia ad alto livello che di dettaglio, le componenti verranno inserite nella piattaforma Trender, che si occuperà di mantenere aggiornati i tracciamenti fra esse ed i requisiti che soddisfano, oltre alle relazioni presenti fra le varie componenti.
+			\subsubsection{Metriche}
+				\paragraph{Structural Fan-In}
+				Permette di misurare, avendo come riferimento un modulo del software, quanti altri moduli lo utilizzano durante la loro esecuzione; si ottiene quindi un indice che stabilisce il livello di riuso implementato.
+				\begin{equation*}
+					\begin{split}
+						&Indice \ numerico \ che \ viene \ incrementato \ nel \ momento \ in \ cui \ viene \ identificato \\
+						&un \ modulo \ che, \ durante \ la \ sua \ esecuzione, \ chiama \ il \ modulo \ in \ oggetto
+					\end{split}
+				\end{equation*}
+				
+				\paragraph{Structural Fan-Out}
+				Permette di misurare, avendo come riferimento un modulo del software, quanti moduli vengono utilizzati durante la sua esecuzione; si ottiene quindi un indice che stabilisce il livello di accoppiamento implementato.
+				\begin{equation*}
+					\begin{split}
+						&Indice \ numerico \ che \ viene \ incrementato \ nel \ momento \ in \ cui \ viene \ identificato \\
+						&un \ modulo \ utilizzato \ dal \ modulo \ in \ esame \ durante \ la \ sua \ esecuzione
+					\end{split}
+				\end{equation*}
+
+		
+		\subsection{Software Detailed Design Process}
+		Lo scopo di questo processo è quello di fornire una progettazione di dettaglio del prodotto che andrà ad implementare i requisiti individuati.
+		
+			\subsubsection{Obiettivi di qualità}
+			Prefissiamo per le attività gli obiettivi che sono di seguito elencati:
+			\begin{itemize}
+				\item Il livello di dettaglio della progettazione dovrà essere tale da poter fare codifica e testing senza bisogno di informazioni aggiuntive, indicando i metodi con i relativi parametri e i campi dati forniti da ciascuna classe;
+				\item La struttura a basso livello dell'architettura e le relazioni fra le varie unità software concepite saranno esposte all'interno del documento \definizionediprodotto, che definirà in modo dettagliato cosa implementare;
+				\item Oltre alle unità software individuate, le attività permetteranno di definire in modo preciso le interfacce fra esse costituite.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Verrà fatta un'analisi dettagliata delle componenti individuate in progettazione architetturale, suddividendo in unità che siano facilmente codificabili e testabili per le attività successive.
+			
+			\subsubsection{Metriche}
+			\paragraph{Numero di metodi per classe}
+			Serve per indicare il numero di metodi definiti in una classe. Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione.
+			\begin{equation*}
+					Indice \ numerico \ che \ indica \ il \ numero \ di \ metodi \ definiti \ in \ una \ classe
+				\end{equation*}
+			
+			\paragraph{Numero di parametri per metodo}
+				Un elevato numero di parametri per metodo potrebbe evidenziare un metodo troppo complesso.\\
+				Non c'è una regola forte per il numero di parametri possibili in un metodo o costruttore, citando Robert Martin, in Clean Code:\\
+\textit{“The ideal number of arguments for a function is zero (niladic). Next comes one (monadic), followed closely by two (dyadic). Three arguments (triadic) should be avoided where possible. More than three (polyadic) requires very special justification – and then shouldn’t be used anyway.“}\\
+e Steve McConnell, in Code Complete:\\
+\textit{“limit the number of a routine’s parameters to about seven, seven is a magic number for people’s comprehension.”}\\
+			
+		
+		\subsection{Software Construction Process}
+		Permette di definire le attività principali per la produzione di unità software eseguibili, che riflettano quanto identificato a livello di progettazione.
+		
+			\subsubsection{Obiettivi di qualità}
+			Le unità software dovranno risultare di qualità. A questo fine ci siamo posti i seguenti obiettivi:
+			\begin{itemize}
+				\item L'implementazione delle classi e dei metodi definiti in progettazione dovrà puntare a produrre codice a bassa complessità, così che ciò che sarà prodotto sia facilmente comprensibile e testabile;
+				\item L'uso di costrutti e tecniche che creano sdoppiamenti del flusso di esecuzione verrà valutato attentamente ed attuato solo se strettamente necessario;
+				\item Il codice prodotto dovrà risultare facilmente manutenibile;
+				\item Il codice prodotto dovrà risultare privo di elementi inutilizzati;
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Durante l'attività assegnata, il \programmatore\ dovrà attenersi a quanto indicato nel documento \definizionediprodotto\, prestando attenzione nel cercare di limitare il più possibile la complessità del codice prodotto. Sarà necessario inoltre procedere con la codifica dei test individuati nell'attività di progettazione, in modo tale da consentire la verifica del corretto funzionamento delle varie unità prodotte.
+			\subsubsection{Metriche}
+			\paragraph{Complessità ciclomatica}
+			Questa metrica software serve per indicare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso. In questo grafo i nodi corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo. È possibile applicare questo indice indistintamente a singole funzioni, \gl{moduli}, metodi e \gl{package} di un programma. Questa metrica viene impiegata per limitare la complessità durante l'attività di sviluppo del prodotto software e può risultare utile durante la fase di test per determinare il numero di casi necessari di questi ultimi. L'indice di complessità, infatti, è un limite superiore al numero di test necessari per raggiungere il coverage completo del modulo testato. Inoltre, uno studio ha mostrato forti corrispondenze tra le metriche di complessità e il livello di coesione nei package presi in esame.\\
+			
+			\paragraph{Halstead difficulty per function}
+				Il livello di difficoltà di una funzione misura la propensione all'errore ed è proporzionale al numero di operatori presenti.\\
+				La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					D = \frac{n1}{2} * \frac{N2}{n2}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{n1}: indica il numero di operatori distinti;
+					\item \textbf{N2}: indica il numero totale di operandi;
+					\item \textbf{n2}: indica il numero di operandi distinti.
+				\end{itemize}
+
+			\paragraph{Halstead volume per function}
+			Il volume descrive la dimensione dell'implementazione di un algoritmo e si basa sul numero di operazioni eseguite e sugli operandi di una funzione. Il volume di una funzione senza parametri composta da una sola linea è 20, mentre un indice superiore a 1000 indica che probabilmente la funzione esegue troppe operazioni.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					V = N * \log_{2}{n}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{N}: indica il numero di operatori e di operandi;
+					\item \textbf{n}: indica il numero totale di operandi e operatori distinti.
+				\end{itemize}
+
+			\paragraph{Halstead effort per function}
+				Lo sforzo per implementare o comprendere il significato di una funzione è proporzionale al suo volume e al livello di difficoltà.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					E = V * D
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{V}: indica l'Halstead Volume;
+					\item \textbf{D}: indica l'Halstead Difficulty.
+				\end{itemize}
+				
+			\paragraph{Maintainability index}
+			Questa metrica è una scala logaritmica da -$\infty$ a 171, calcolata sulla base delle linee di codice logiche, della complessità ciclomatica e dall'indice Halstead effort e dove un valore alto indica una maggiore manutenibilità.\\
+				
+			\paragraph{Produttività di codifica}
+				É una metrica utilizzata per indicare la produttività media delle attività di codifica. Una bassa produzione di righe di codice non denota uno scarso impegno, bensì sottolinea l'efficienza di produttività impiegata. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Produttivit\grave{a} \ di \ codifica = \frac{LOCs}{Ore \ persona}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{LOCs}: indica il numero di linee di codice prodotte;
+					\item \textbf{Ore persona}: indica il numero di ore produttive dei componenti del gruppo.
+				\end{itemize}
+			
+			\paragraph{Numero di livelli di annidamento}
+				Serve per indicare il numero di funzioni o procedure chiamate all'interno di un metodo. Un valore elevato di tale indice denota un'alta complessità ed un basso livello di astrazione del codice.
+				\begin{equation*}
+					\begin{split}
+						&Indice \ numerico \ che \ indica \ il \ numero \ di \ chiamata \ a \ funzioni \ o \ procedure \ presenti \\ 								&all'interno \ di \ un \ metodo
+					\end{split}
+				\end{equation*}
+			
+			\paragraph{Variabili inutilizzate}
+				Serve per indicare la percentuale di variabili dichiarate che non vengono mai utilizzate durante l'esecuzione.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					P = \frac{N_{VI}}{N_{VD}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{VI}$}: indica il numero di variabili che non vengono mai utilizzate;
+					\item \textbf{$N_{VD}$}: indica il numero di varibili dichiarate.
+				\end{itemize}
+				
+		
+		\subsection{System/Software Integration Process}
+		Questo processo si occupa di integrare fra loro elementi del sistema, rispettando quanto stabilito nell'attività di progettazione, al fine di produrre un prodotto completo tale da soddisfare quanto espresso dai requisiti identificati.
+			
+			\subsubsection{Obiettivi di qualità}
+			Le attività previste da questo processo dovranno puntare a raggiungere un alto livello di automazione, in particolare:
+			\begin{itemize}
+				\item L'integrazione delle varie parti del sistema sarà completamente automatizzata utilizzando lo strumento di integrazione continua \gl{Jenkins};
+				\item Il livello di integrazione raggiunto dal sistema sarà sempre consultabile grazie all'utilizzo dello strumento di integrazione continua Jenkins.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Sarà necessario configurare attentamente lo strumento di integrazione continua Jenkins affinché esegua dei test di integrazione di quanto prodotto prima che le ultime modifiche diventino parte del sistema.
+			
+			\subsubsection{Metriche}
+				\paragraph{Componenti integrate}
+				Indica la percentuale di componenti progettate, attualmente implementate e correttamente integrate nel sistema.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					I = \frac{N_{CI}}{N_{CP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{CI}$}: indica il numero di componenti integrate nel sistema;
+					\item \textbf{$N_{CP}$}: indica il numero di componenti delineate nell'attività di progettazione.
+				\end{itemize}
+			
+		
+		\subsection{System/Software Qualification Testing Process}
+		Lo scopo di questo processo è quello di assicurare che ogni requisito individuato sia stato implementato nel prodotto.
+			
+			\subsubsection{Obiettivi di qualità}
+			\kpanic\ si impegnerà affinché vengano perseguiti, durante le attività, i seguenti obiettivi:
+			\begin{itemize}
+				\item Le attività di test previste dal processo verranno svolte su un sistema le cui componenti sono verificate e correttamente integrate fra loro;
+				\item Il sistema dovrà implementare tutti i requisiti obbligatori individuati nell'attività di analisi.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Bisognerà cercare di implementare il maggior livello possibile di automatizzazione nell'esecuzione dei test di sistema, in modo tale che la loro esecuzione non richieda costi eccessivi (anche in termini temporali) e sia possibile eseguirne un numero di sufficiente a garantire un'ottima copertura dei requisiti. A questo scopo sarà lo strumento di integrazione continua Jenkins, dopo un'opportuna configurazione, che eseguirà i test stabiliti.
+			
+			\subsubsection{Metriche}
+			\paragraph{Test di unità eseguiti}
+				Indica la percentuale di test di unità che sono stati eseguiti.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					UE = \frac{N_{TU}}{N_{TUP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{TU}$}: indica il numero di test di unità eseguiti;
+					\item \textbf{$N_{TUP}$}: indica il numero di test di unità pianificati.
+				\end{itemize}
+				
+				\paragraph{Test di integrazione eseguiti}
+				Indica la percentuale di test di integrazione che sono stati eseguiti.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					IE = \frac{N_{TI}}{N_{TIP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{TI}$}: indica il numero di test di integrazione eseguiti;
+					\item \textbf{$N_{TIP}$}: indica il numero di test di integrazione pianificati.
+				\end{itemize}
+				
+				\paragraph{Test di sistema eseguiti}
+				Indica la percentuale di test di sistema che sono stati eseguiti.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					SE = \frac{N_{TS}}{N_{TSP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{TS}$}: indica il numero di test di sistema eseguiti;
+					\item \textbf{$N_{TSP}$}: indica il numero di test di sistema pianificati.
+				\end{itemize}
+				
+				\paragraph{Test di validazione eseguiti}
+				Indica la percentuale di test di validazione che sono stati eseguiti.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					VE = \frac{N_{TV}}{N_{TVP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{TV}$}: indica il numero di test di validazione eseguiti;
+					\item \textbf{$N_{TVP}$}: indica il numero di test di validazione pianificati.
+				\end{itemize}
+				
+				\paragraph{Copertura dei test}
+				Questa metrica esamina la percentuale di successo dei test ricavati dai requisiti e dalle relative funzionalità che il software dovrà ottenere.\\La formula per ottenere la percentuale dei test eseguiti con successo è la seguente:
+				\begin{equation*}
+					CT = \frac{N_{TS}}{N_{TP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{TS}$}: indica il numero di test superati;
+					\item \textbf{$N_{TP}$}: indica il numero di test pianificati.
+				\end{itemize}
+				
+		
+		\subsection{Software Documentation Management Process}
+		Sono i contenuti di un documento a indicarne la qualità. Tuttavia, quest'ultima è difficilmente quantificabile allo stato attuale del progetto, ciò è dovuto all'inesperienza del team in questo ambito. È stata quindi presa la decisione di limitarsi a valutare parametri maggiormente oggettivi e misurabili automaticamente attraverso strumenti software.
+		
+			\subsubsection{Obiettivi di qualità}
+			Gli obiettivi di qualità riguardanti i documenti che il gruppo \kpanic\ desidera raggiungere nell'arco dell'intero progetto sono i seguenti:
+			\begin{itemize}
+				\item I documenti devono essere comprensibili, e per far ciò il team si appoggia all'utilizzo dell'indice \gl{Gulpease};
+				\item Ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al \glossario;
+				\item I documenti devono essere corretti a livello ortografico e semantico;
+				\item I documenti devono essere attinenti all'argomento di interesse.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Durante la stesura della documentazione, ogni termine con significato ambiguo deve essere indicato e definito nel \glossario. Gli script automatici provvederanno alla sua segnalazione all'interno del documento.
+			Ogni documento sarà dotato di un numero di versione e corredato da un diario delle modifiche che consente di prendere visione di tutte le azioni effettuate sul testo in esame.
+
+			\subsubsection{Metriche}
+			\paragraph{Indice di leggibilità}
+			Per poter stimare la qualità di un documento si è deciso di utilizzare una metrica per misurare l'indice di leggibilità. Quindi verrà preso in considerazione l'indice Gulpease, impiegabile per documenti in lingua italiana. Questo indice si basa sulla lunghezza delle parole e sulla lunghezza delle frasi rispetto al numero di lettere.\\La formula per il suo calcolo è la seguente:
+			\begin{equation*}
+				Indice \ Gulpease = 89 + \frac{300*numeroFrasi - 10*numeroLettere}{numeroParole}
+			\end{equation*}
+			Tipicamente il risultato di questa equazione è compreso tra 0 e 100, dove i valori elevati indicano un'alta leggibilità e viceversa.\\
+
+			\paragraph{Errori ortografici rilevati e non corretti}
+			Per capire quando un documento è corretto dal punto di vista ortografico è necessario l'impiego di questa metrica. Supponendo, infatti, che gli strumenti automatici siano in grado di rilevare tutti, o almeno la maggior parte, degli errori ortografici di un testo, la correttezza ortografica deve quindi basarsi sul numero di errori rinvenuti ma non successivamente corretti. Per errori corretti si intende un errore revisionato manualmente da un \verificatore, in quanto le correzioni automatiche non sono attendibili. Inoltre non è accettabile che vi siano errori segnalati ma non corretti da qualche componente del team.
+
+			\paragraph{Errori concettuali rilevati e non corretti}
+			Per capire quando un documento è corretto dal punto di vista concettuale è necessario l'impiego di questa metrica. Supponendo, infatti, che dopo delle revisioni siano stati trovati tutti, o almeno la maggior parte, i maggiori errori di questo tipo, la correttezza concettuale deve quindi basarsi sul numero di errori rinvenuti e segnalati, ma non corretti successivamente. Per errori corretti si intende un errore fatto notare dal committente o da qualche \verificatore\ (con conseguente approvazione del \textit{Responsabile di Progetto} e successivamente corretto (sulla base di discussioni interne o con il committente).\\
+
+			
+		\subsection{Software Verification Process}
+		Questo processo permette di verificare se qualsiasi elemento del sistema soddisfa completamente i requisiti ad esso correlati.
+			
+			\subsubsection{Obiettivi di qualità}
+			Per poter garantire qualità nell'attuazione del processo:
+			\begin{itemize}
+				\item La documentazione verrà verificata attraverso l'\gl{Inspection} poiché permette un risparmio in termini di tempi e costi;
+				\item I test dinamici effettuati sui vari elementi saranno il più possibile automatizzabili;
+				\item I test dinamici effettuati sui vari elementi del software copriranno una grande parte delle possibili casistiche d'utilizzo.
+			\end{itemize}
+			
+			\subsubsection{Strategie}
+			Durante le attività di correzione della documentazione, gli errori più frequenti saranno riportati in un documento, in modo tale da diventare uno dei punti chiavi delle successive attività di \gl{Inspection}.
+			
+			\subsubsection{Metriche}
+				\paragraph{Statement coverage}
+				Questa metrica permette di identificare quante righe di codice, per ogni unità, sono state eseguite almeno una volta nell'esecuzione di un test.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					Statement \ coverage = \frac{linee \ eseguite * 100}{linee \ totali}
+				\end{equation*}
+				
+				\paragraph{Branch coverage}
+				Permette di identificare quanti rami di flusso sono stati attraversati almeno una volta durante i test.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					Branch \ coverage = \frac{rami \ attraversati* 100}{rami totali}
+				\end{equation*}
+\end{document}

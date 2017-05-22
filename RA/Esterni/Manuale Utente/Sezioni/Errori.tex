@@ -1,0 +1,72 @@
+\documentclass[../ManualeUtente_v2.0.0.tex]{subfiles}
+
+\begin{document}
+
+	\section{Errori}
+		Durante l'interazione con il sistema, sia per quanto riguarda la parte di interfaccia web che quella di assistenza virtuale, un utente può imbattersi in alcuni errori, che verrano di seguito distinti secondo le categorie:
+		\begin{itemize}
+			\item Errori area ospiti;
+			\item Errori area amministrativa.
+		\end{itemize}
+
+		\subsection{Errori area ospiti}
+			Viene di seguito presentata una tabella contenente tutti i tipi di errore, con annessa descrizione, che il sistema può presentare, tramite interazione vocale o messaggi a schermo, ad un ospite:
+
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{5cm} p{10cm} }
+				\toprule
+				{\textbf{Errore}} & {\textbf{Descrizione}} \\
+				\midrule
+				\texttt{Alexa non raggiungibile} & Alexa non è raggiungibile probabilmente a causa di problemi di rete e viene quindi mostrato all’utente o all’ospite il relativo messaggio di errore \\
+		 		\addlinespace[0.3em]
+				\midrule
+				\texttt{Slack non raggiungibile} & Slack non è raggiungibile per problemi legati alla connessione e viene quindi visualizzato all’utente o all’ospite il relativo messaggio di errore \\
+				\addlinespace[0.3em]
+				\midrule
+				\texttt{Alexa non ha compreso, si prega di ripetere} & Alexa non è stata in grado di elaborare correttamente l'input vocale ricevuto e viene quindi visualizzato all’utente o all’ospite il relativo messaggio di errore \\
+		 		\addlinespace[0.3em]
+		 		\bottomrule
+		 		\caption{Lista dei possibili errori verificabili nell'area interazione ospiti-sistema}
+		 	\end{longtable}
+
+		\subsection{Errori area amministrativa}
+			Viene di seguito presentata una tabella contenente tutti i tipi di errore, con annessa descrizione, che il sistema può restituire a video ad un amministratore:
+
+			% IMMAGINE ESEMPIO ERRORE AMMINISTRAZIONE
+			% \begin{figure}[!h]
+			% 	\centering
+			% 	\includegraphics[width=\textwidth]{}
+			% 	\caption{caption}
+			% 	\label{fig:label}
+			% \end{figure}
+
+		 	\begin{longtable}[c] { >{\centering\arraybackslash}p{5cm} p{10cm} }
+				\toprule
+				{\textbf{Errore}} & {\textbf{Descrizione}} \\
+				\midrule
+				\texttt{Errore inserimento vecchia password} & Il sistema mostra un messaggio di errore perchè la vecchia password inserita dall’Admin non corrisponde \\
+		 		\addlinespace[0.3em]
+		 		\midrule
+				\texttt{Errore nuova password} & Il sistema mostra un messaggio di errore perchè la nuova password inserita e la sua conferma non corrispondono \\
+				\addlinespace[0.3em]
+		 		\midrule
+				\texttt{Password non corretta} & Il sistema comunica all’amministratore che la password inserita non è corretta, dopo che questi abbia cercato di effettuare il login presso l’area amministrativa \\
+				\addlinespace[0.3em]
+		 		\midrule
+				\texttt{Email non trovata} & L’utente amministratore sta cercando di effettuare il login presso l’area amministrativa ma nessuna email corrispondente a quella inserita è stata trovata \\
+				\addlinespace[0.3em]
+		 		\midrule
+				\texttt{Admin già presente} & Il sistema visualizza un messaggio di errore perchè il Super Admin cerca di aggiungere un nuovo Admin con email già esistente all'interno del sistema \\
+		 		\addlinespace[0.3em]
+				\bottomrule
+				\caption{Lista dei possibili errori verificabili nell'area amministrativa}
+			\end{longtable}
+
+		\subsection{Segnalazione eventuali errori o malfunzionamenti}
+			Nel caso si verifichino errori o malfunzionamenti del prodotto, si prega di contattare il nostro servizio di assistenza. Un afferente del gruppo \kpanic\ risponderà non appena possibile.
+			\newline
+			L'indirizzo di posta elettronica predisposto per il servizio di assistenza è il seguente:
+			\begin{center}
+				\mail{kern3lp4nic.team@gmail.com}
+			\end{center}
+
+\end{document}

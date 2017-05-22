@@ -1,0 +1,577 @@
+\documentclass[../AnalisiDeiRequisiti.tex]{subfiles}
+
+\begin{document}
+\section{Requisiti}
+	In questa sezione verranno presentanti i requisiti individuati dal gruppo durante la fase di di analisi del capitolato e dei casi d'uso, discussi con il proponente durante le riunioni esterne e decisi dai componenti nelle riunioni interne. I requisiti saranno separati in diverse tabelle in base alla categoria di appartenenza e saranno classificati per tipo e per importanza. Per rappresentarli verrà impiegata la seguente sintassi:
+	\begin{equation*}
+		R[Importanza][Tipo][Codice]
+	\end{equation*}
+	dove:
+	\begin{itemize}
+		\item \textbf{Importanza}: può assumere uno tra i seguenti valori:
+		\begin{itemize}
+			\item \textbf{O}: requisito obbligatorio;
+			\item \textbf{F}: requisito facoltativo.
+		\end{itemize}
+		\item \textbf{Tipo}: può assumere uno tra i seguenti valori:
+		\begin{itemize}
+			\item \textbf{F}: funzionale;
+			\item \textbf{P}: prestazonale;
+			\item \textbf{Q}: qualità;
+			\item \textbf{V}: vincolo.
+		\end{itemize}	
+		\item \textbf{Codice}: è il codice gerarchico univoco per ogni requisito, espresso in numeri.
+	\end{itemize}
+	Inoltre, per ogni requisito verranno riportate:
+	\begin{itemize}
+		\item \textbf{Descrizione}: piccola descrizione del requisito in esame;
+		\item \textbf{Fonte}: potrà essere una tra le seguenti:
+	\end{itemize}
+	
+	\newpage
+	\subsection{Elenco dei requisiti}
+	\subsubsection{Requisiti funzionali}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endhead 
+		R0F1&Funzionale\newline Obbligatorio & Il sistema deve interagire con il database NoSQL & Analisi dei Requisiti \newline UC7
+		\\
+		R0F1.1&Funzionale\newline Obbligatorio & Il sistema deve gestire gli errori causati dall'interazione col database & Analisi dei Requisiti \newline UC7.1
+		\\
+		R0F10&Funzionale\newline Obbligatorio & Il sistema deve interagire con l'utente & Capitolato \newline UC1
+		\newline UC5
+		\newline UC9
+		\\
+		R0F10.1&Funzionale\newline Obbligatorio & Il sistema deve ricevere input vocali quando richiesto & Analisi dei Requisiti \newline UC9.2
+		\\
+		R0F10.2&Funzionale\newline Obbligatorio & Il sistema deve poter riprodurre una traccia audio & Analisi dei Requisiti \newline UC9.1
+		\\
+		R0F10.3&Funzionale\newline Obbligatorio & Il sistema deve mostrare a video la traduzione da audio a testo dell'input & Analisi dei Requisiti \newline UC9.2.1
+		\\
+		R0F10.4&Funzionale\newline Obbligatorio & Il sistema deve poter registrare una traccia audio & Analisi dei Requisiti \newline UC9.2
+		\\
+		R0F10.5&Funzionale\newline Obbligatorio & L'utente deve poter reinserire l'ultimo input vocale dopo aver visto la traduzione & Analisi dei Requisiti \newline UC9.2.1
+		\newline UC9.2.2
+		\\
+		R0F12&Funzionale\newline Obbligatorio & Dopo un periodo di inattività  l'AV deve disattivarsi automaticamente per timeout
+		& Analisi dei Requisiti \\
+		R0F2&Funzionale\newline Obbligatorio & Il sistema deve poter essere gestito da un pannello amministrativo & Analisi dei Requisiti \newline UC6
+		\\
+		R0F2.1&Funzionale\newline Obbligatorio & L'amministratore deve poter accedere al pannello di amministrazione del sistema tramite username e password & Analisi dei Requisiti \newline UC6
+		\\
+		R0F2.2&Funzionale\newline Obbligatorio & L'amministratore deve poter eseguire il logout dal pannello di amministrazione & Analisi dei Requisiti \newline UC6.4
+		\\
+		R0F2.3&Funzionale\newline Obbligatorio & L'amministratore deve poter recuperare la password se dimenticata tramite Domanda di sicurezza & Analisi dei Requisiti \newline UC6.2
+		\\
+		R0F2.4&Funzionale\newline Obbligatorio & Gestione delle domande e delle risposte & Analisi dei Requisiti \newline UC6.1.1
+		\\
+		R0F2.4.1&Funzionale\newline Obbligatorio & Aggiungere domande ad una funzionalità  & Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.1
+		\\
+		R0F2.4.2&Funzionale\newline Obbligatorio & Rimuovere domande ad una funzionalità 
+		& Analisi dei Requisiti \newline UC6.1.1.1.2
+		\\
+		R0F2.4.3&Funzionale\newline Obbligatorio & Visualizzazione delle domande e delle relative risposte & Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.3
+		\\
+		R0F2.4.4&Funzionale\newline Obbligatorio & Aggiunta di un'ulteriore risposta ad una domanda & Analisi dei Requisiti \newline UC6.1.1.1.3.1
+		\\
+		R0F2.4.5&Funzionale\newline Obbligatorio & Rimozione di una risposta da una domanda & Analisi dei Requisiti \newline UC6.1.1.1.3.2
+		\\
+		R0F2.5&Funzionale\newline Obbligatorio & Gestione lista degli interlocutori & Analisi dei Requisiti \newline UC6.1.3
+		\\
+		R0F2.5.1&Funzionale\newline Obbligatorio & Aggiunta di un interlocutore & Analisi dei Requisiti \newline UC6.1.3.1
+		\\
+		R0F2.5.2&Funzionale\newline Obbligatorio & Rimozione di un interlocutore & Analisi dei Requisiti \newline UC6.1.3.2.2
+		\\
+		R0F2.5.3&Funzionale\newline Obbligatorio & Visualizzazione lista degli interlocutori & Analisi dei Requisiti \newline UC6.1.3
+		\\
+		R0F2.5.4&Funzionale\newline Obbligatorio & Modifica dei dati di un interlocutore & Analisi dei Requisiti \newline UC6.1.3.2.1
+		\\
+		R0F2.6&Funzionale\newline Obbligatorio & Visualizzare le informazioni sugli ospiti & Analisi dei Requisiti \newline UC6.1.2
+		\\
+		R0F2.6.1&Funzionale\newline Obbligatorio & Visualizzazione della lista degli ospiti & Analisi dei Requisiti \newline UC6.1.2
+		\\
+		R0F2.6.2&Funzionale\newline Obbligatorio & Visualizzazione informazioni ospite dettagliata & Analisi dei Requisiti \newline UC6.1.2.1
+		\\
+		R0F2.6.3&Funzionale\newline Obbligatorio & Visualizzazione delle informazioni di una visita di un ospite & Analisi dei Requisiti \newline UC6.1.2.2
+		\\
+		R0F2.6.3.1&Funzionale\newline Obbligatorio & Visualizzazione del log della conversazione tra l'ospite e l'AV & Analisi dei Requisiti \newline UC6.1.2.2
+		\\
+		R0F2.7&Funzionale\newline Obbligatorio & Un amministratore deve poter registrare un nuovo amministratore inserendo username, password, e risposta di sicurezza & Analisi dei Requisiti \newline UC6.1.4
+		\\
+		R0F2.8&Funzionale\newline Obbligatorio & Deve essere presente un amministratore root che può gestire tutti gli altri amministratori & Analisi dei Requisiti \\
+		R0F22&Funzionale\newline Obbligatorio & Il sistema deve poter essere attivato da input dell'utente & Capitolato \newline UC1
+		\newline UC1.1
+		\\
+		R0F22.1&Funzionale\newline Obbligatorio & Il sistema deve poter essere attivato da un pulsante a schermo & Analisi dei Requisiti \newline UC1
+		\newline UC1.1
+		\\
+		R2F22.2&Funzionale\newline Opzionale & Il sistema deve poter essere attivato da comando vocale & Analisi dei Requisiti \\
+		R0F3&Funzionale\newline Obbligatorio & Il sistema deve poter inviare un messaggio su un canale Slack (\#general o \#azienda) & Analisi dei Requisiti \newline UC4
+		\\
+		R0F3.1&Funzionale\newline Obbligatorio & Deve poter essere verificata l'esistenza di un canale  & Analisi dei Requisiti \newline UC4.2.1
+		\\
+		R0F4&Funzionale\newline Obbligatorio & Il sistema deve poter creare un nuovo canale Slack & Analisi dei Requisiti \newline UC4.2.2
+		\\
+		R0F4.1&Funzionale\newline Obbligatorio & Devono poter essere inseriti degli interlocutori al canale Slack & Analisi dei Requisiti \newline UC4.2.2.1
+		\\
+		R0F5&Funzionale\newline Obbligatorio & Deve poter essere terminata la sessione dell'Amministratore & Analisi dei Requisiti \newline UC6.4
+		\\
+		R0F5.1&Funzionale\newline Obbligatorio & Deve poter essere terminata la sessione dell'Amministratore tramite interazione con l'interfaccia Web & Analisi dei Requisiti \newline UC5.1
+		\\
+		R0F5.2&Funzionale\newline Obbligatorio & Deve poter terminare la sessione dell'Amministratore per scadenza del timeout & Analisi dei Requisiti \newline UC5.2
+		\\
+		R0F6&Funzionale\newline Obbligatorio & Il sistema deve riuscire a sostenere una conversazione con l'ospite in base alle risposte ricevute & Analisi dei Requisiti \newline UC2.2
+		\newline UC3
+		\newline UC9
+		\\
+		R0F6.1&Funzionale\newline Obbligatorio & Il sistema deve poter interagire con l'ospite tramite frasi di intrattenimento & Analisi dei Requisiti \newline UC3.3
+		\\
+		R0F6.2&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere la necessità  di materiali & Analisi dei Requisiti \newline UC3.2
+		\\
+		R0F6.3&Funzionale\newline Obbligatorio & Il sistema deve poter chiedere all'ospite se vuole un caffè & Analisi dei Requisiti \newline UC3.1
+		\\
+		R0F7&Funzionale\newline Obbligatorio & Il sistema deve identificare l'utente che sostiene la conversazione & Capitolato \newline UC2
+		\newline UC7
+		\\
+		R0F7.1&Funzionale\newline Obbligatorio & Il sistema deve memorizzare in un database tutti i visitatori per poterli identificare nel caso in cui sia già  stato presente & Capitolato \newline UC2.1
+		\\
+		R0F7.2&Funzionale\newline Obbligatorio & Il sistema deve poter vedere se l'utente esiste nel database & Analisi dei Requisiti \newline UC7
+		\\
+		R0F7.3&Funzionale\newline Obbligatorio & Il sistema deve poter richiedere il nome e cognome dell'utente & Capitolato \newline UC2
+		\\
+		R0F8&Funzionale\newline Obbligatorio & Il sistema deve riconoscere a quale azienda appartiene l'interlocutore & Capitolato \newline UC2.3
+		\\
+		R0F8.1&Funzionale\newline Obbligatorio & Il sistema deve salvare in un database a quale azienda appartiene quell'utente & Analisi dei Requisiti \newline UC2.3.2
+		\\
+		R0F8.2&Funzionale\newline Obbligatorio & Il sistema deve poter vedere se un utente ha già visitato l'azienda interrogando il database & Analisi dei Requisiti \newline UC2.3.1
+		\\
+		R0F8.3&Funzionale\newline Obbligatorio & Il sistema deve poter richiedere l'inserimento dell'azienda  di appartenenza & Analisi dei Requisiti \newline UC2.3
+		\\
+		R0F9&Funzionale\newline Obbligatorio & Il sistema deve poter Interagire con Alexa per usufruirne dei servizi & Analisi dei Requisiti \newline UC8
+		\\
+		R0F9.1&Funzionale\newline Obbligatorio & Il sistema deve poter tradurre l'impronta vocale in testo & Capitolato \newline UC8.1
+		\\
+		R0F9.2&Funzionale\newline Obbligatorio & Il sistema deve poter tradurre il testo in impronta vocale & Capitolato \newline UC8.2
+		\\
+		R1F13&Funzionale\newline Desiderabile & L'applicazione deve tener traccia delle interazioni tra utente e sistema in un file di log & Analisi dei Requisiti \newline UC2
+		\newline UC3
+		\newline UC4
+		\newline UC5
+		\newline UC7
+		\newline UC8
+		\newline UC9
+		\\
+		\rowcolor{white}
+		\caption{Tracciamento requisiti funzionali}
+	\end{longtable}
+
+	\newpage
+	\subsubsection{Requisiti qualitativi}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endhead 
+		R0Q11&Qualitativo\newline Obbligatorio & Devono essere utilizzate le issue di GitHub per la segnalazione dei bug. & Riunione interna 2016-12-19 \\
+		R0Q14&Qualitativo\newline Obbligatorio & Deve essere fornita la documentazione delle API & Riunione interna 2016-12-19 \\
+		R0Q15&Qualitativo\newline Obbligatorio & Devono essere tracciati i test di unità per il sistema utilizzando Trender & Riunione interna 2016-12-19 \\
+		R0Q15.1&Qualitativo\newline Obbligatorio & Deve essere prodotta la documentazione dei test di unità & Riunione interna 2016-12-19 \\
+		R0Q16&Qualitativo\newline Obbligatorio & Deve essere prodotta la documentazione relativa alla struttura del database NoSQL & Riunione interna 2016-12-19 \\
+		R1Q18&Qualitativo\newline Desiderabile & Il pannello di amministrazione può essere acceduto solo da network locale per ragioni di sicurezza & Riunione interna 2016-12-19 \\
+		\rowcolor{white}
+		\caption{Tracciamento requisiti qualitativi}
+	\end{longtable}
+
+	\newpage
+	\subsubsection{Requisiti di vincolo}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endhead 
+		R0V21&Vincolo\newline Obbligatorio & Il Front-End deve essere fruibile su Chrome e Firefox & Capitolato \\
+		R1V19&Vincolo\newline Desiderabile & Il Front-End deve essere fruibile su qualsiasi browser che supporti HTML5, CCS3, Javascript & Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		\\
+		R2V20&Vincolo\newline Opzionale & Il Front-End deve essere fruibile dai browser più recenti dal gennaio 2017 e che mantengono la retrocompatibilità & Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		\\
+		\rowcolor{white}
+		\caption{Tracciamento requisiti di vincolo}
+	\end{longtable}
+
+	\newpage
+	\subsubsection{Requisiti di performance}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+		\endhead 
+		R1P17&Performance\newline Desiderabile & Dopo un numero prefissato di tentativi falliti da parte dell'utente, il sistema deve procedere con l'ultimo input ricevuto & Riunione interna 2016-12-19 \newline UC9
+		\\
+		\rowcolor{white}
+		\caption{Tracciamento requisiti di performance}
+	\end{longtable}
+
+	\newpage
+	\subsection{Tracciamento fonte-requisito}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{5cm}!{\VRule[1pt]}p{5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Fonte} & \color{white} \textbf{Requisito} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Fonte} & \color{white} \textbf{Requisito} \\ 
+		\endhead 
+		Analisi dei Requisiti \newline UC7
+		& R0F1 \\
+		Analisi dei Requisiti \newline UC7.1
+		& R0F1.1 \\
+		Analisi dei Requisiti \newline UC9.2
+		& R0F10.1 \\
+		Analisi dei Requisiti \newline UC9.1
+		& R0F10.2 \\
+		Analisi dei Requisiti \newline UC9.2.1
+		& R0F10.3 \\
+		Analisi dei Requisiti \newline UC9.2
+		& R0F10.4 \\
+		Analisi dei Requisiti \newline UC9.2.1
+		\newline UC9.2.2
+		& R0F10.5 \\
+		Analisi dei Requisiti & R0F12 \\
+		Analisi dei Requisiti \newline UC6
+		& R0F2 \\
+		Analisi dei Requisiti \newline UC6
+		& R0F2.1 \\
+		Analisi dei Requisiti \newline UC6.4
+		& R0F2.2 \\
+		Analisi dei Requisiti \newline UC6.2
+		& R0F2.3 \\
+		Analisi dei Requisiti \newline UC6.1.1
+		& R0F2.4 \\
+		Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.1
+		& R0F2.4.1 \\
+		Analisi dei Requisiti \newline UC6.1.1.1.2
+		& R0F2.4.2 \\
+		Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.3
+		& R0F2.4.3 \\
+		Analisi dei Requisiti \newline UC6.1.1.1.3.1
+		& R0F2.4.4 \\
+		Analisi dei Requisiti \newline UC6.1.1.1.3.2
+		& R0F2.4.5 \\
+		Analisi dei Requisiti \newline UC6.1.3
+		& R0F2.5 \\
+		Analisi dei Requisiti \newline UC6.1.3.1
+		& R0F2.5.1 \\
+		Analisi dei Requisiti \newline UC6.1.3.2.2
+		& R0F2.5.2 \\
+		Analisi dei Requisiti \newline UC6.1.3
+		& R0F2.5.3 \\
+		Analisi dei Requisiti \newline UC6.1.3.2.1
+		& R0F2.5.4 \\
+		Analisi dei Requisiti \newline UC6.1.2
+		& R0F2.6 \\
+		Analisi dei Requisiti \newline UC6.1.2
+		& R0F2.6.1 \\
+		Analisi dei Requisiti \newline UC6.1.2.1
+		& R0F2.6.2 \\
+		Analisi dei Requisiti \newline UC6.1.2.2
+		& R0F2.6.3 \\
+		Analisi dei Requisiti \newline UC6.1.2.2
+		& R0F2.6.3.1 \\
+		Analisi dei Requisiti \newline UC6.1.4
+		& R0F2.7 \\
+		Analisi dei Requisiti & R0F2.8 \\
+		Analisi dei Requisiti \newline UC1
+		\newline UC1.1
+		& R0F22.1 \\
+		Analisi dei Requisiti \newline UC4
+		& R0F3 \\
+		Analisi dei Requisiti \newline UC4.2.1
+		& R0F3.1 \\
+		Analisi dei Requisiti \newline UC4.2.2
+		& R0F4 \\
+		Analisi dei Requisiti \newline UC4.2.2.1
+		& R0F4.1 \\
+		Analisi dei Requisiti \newline UC6.4
+		& R0F5 \\
+		Analisi dei Requisiti \newline UC5.1
+		& R0F5.1 \\
+		Analisi dei Requisiti \newline UC5.2
+		& R0F5.2 \\
+		Analisi dei Requisiti \newline UC2.2
+		\newline UC3
+		\newline UC9
+		& R0F6 \\
+		Analisi dei Requisiti \newline UC3.3
+		& R0F6.1 \\
+		Analisi dei Requisiti \newline UC3.2
+		& R0F6.2 \\
+		Analisi dei Requisiti \newline UC3.1
+		& R0F6.3 \\
+		Analisi dei Requisiti \newline UC7
+		& R0F7.2 \\
+		Analisi dei Requisiti \newline UC2.3.2
+		& R0F8.1 \\
+		Analisi dei Requisiti \newline UC2.3.1
+		& R0F8.2 \\
+		Analisi dei Requisiti \newline UC2.3
+		& R0F8.3 \\
+		Analisi dei Requisiti \newline UC8
+		& R0F9 \\
+		Analisi dei Requisiti \newline UC2
+		\newline UC3
+		\newline UC4
+		\newline UC5
+		\newline UC7
+		\newline UC8
+		\newline UC9
+		& R1F13 \\
+		Analisi dei Requisiti & R2F22.2 \\
+		Capitolato \newline UC1
+		\newline UC5
+		\newline UC9
+		& R0F10 \\
+		Capitolato \newline UC1
+		\newline UC1.1
+		& R0F22 \\
+		Capitolato \newline UC2
+		\newline UC7
+		& R0F7 \\
+		Capitolato \newline UC2.1
+		& R0F7.1 \\
+		Capitolato \newline UC2
+		& R0F7.3 \\
+		Capitolato \newline UC2.3
+		& R0F8 \\
+		Capitolato \newline UC8.1
+		& R0F9.1 \\
+		Capitolato \newline UC8.2
+		& R0F9.2 \\
+		Capitolato & R0V21 \\
+		Riunione interna 2016-12-19 & R0Q11 \\
+		Riunione interna 2016-12-19 & R0Q14 \\
+		Riunione interna 2016-12-19 & R0Q15 \\
+		Riunione interna 2016-12-19 & R0Q15.1 \\
+		Riunione interna 2016-12-19 & R0Q16 \\
+		Riunione interna 2016-12-19 \newline UC9
+		& R1P17 \\
+		Riunione interna 2016-12-19 & R1Q18 \\
+		Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		& R1V19 \\
+		Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		& R2V20 \\
+		\rowcolor{white}
+		\caption{Tracciamento fonti-requisito}
+	\end{longtable}
+	
+	\newpage
+	\subsection{Tracciamento requisito-fonte}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{5cm}!{\VRule[1pt]}p{5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Fonte} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Fonte} \\ 
+		\endhead 
+		R0F1 & Analisi dei Requisiti \newline UC7
+		\\
+		R0F1.1 & Analisi dei Requisiti \newline UC7.1
+		\\
+		R0F10.1 & Analisi dei Requisiti \newline UC9.2
+		\\
+		R0F10.2 & Analisi dei Requisiti \newline UC9.1
+		\\
+		R0F10.3 & Analisi dei Requisiti \newline UC9.2.1
+		\\
+		R0F10.4 & Analisi dei Requisiti \newline UC9.2
+		\\
+		R0F10.5 & Analisi dei Requisiti \newline UC9.2.1
+		\newline UC9.2.2
+		\\
+		R0F12 & Analisi dei Requisiti \\
+		R0F2 & Analisi dei Requisiti \newline UC6
+		\\
+		R0F2.1 & Analisi dei Requisiti \newline UC6
+		\\
+		R0F2.2 & Analisi dei Requisiti \newline UC6.4
+		\\
+		R0F2.3 & Analisi dei Requisiti \newline UC6.2
+		\\
+		R0F2.4 & Analisi dei Requisiti \newline UC6.1.1
+		\\
+		R0F2.4.1 & Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.1
+		\\
+		R0F2.4.2 & Analisi dei Requisiti \newline UC6.1.1.1.2
+		\\
+		R0F2.4.3 & Analisi dei Requisiti \newline UC6.1.1
+		\newline UC6.1.1.1.3
+		\\
+		R0F2.4.4 & Analisi dei Requisiti \newline UC6.1.1.1.3.1
+		\\
+		R0F2.4.5 & Analisi dei Requisiti \newline UC6.1.1.1.3.2
+		\\
+		R0F2.5 & Analisi dei Requisiti \newline UC6.1.3
+		\\
+		R0F2.5.1 & Analisi dei Requisiti \newline UC6.1.3.1
+		\\
+		R0F2.5.2 & Analisi dei Requisiti \newline UC6.1.3.2.2
+		\\
+		R0F2.5.3 & Analisi dei Requisiti \newline UC6.1.3
+		\\
+		R0F2.5.4 & Analisi dei Requisiti \newline UC6.1.3.2.1
+		\\
+		R0F2.6 & Analisi dei Requisiti \newline UC6.1.2
+		\\
+		R0F2.6.1 & Analisi dei Requisiti \newline UC6.1.2
+		\\
+		R0F2.6.2 & Analisi dei Requisiti \newline UC6.1.2.1
+		\\
+		R0F2.6.3 & Analisi dei Requisiti \newline UC6.1.2.2
+		\\
+		R0F2.6.3.1 & Analisi dei Requisiti \newline UC6.1.2.2
+		\\
+		R0F2.7 & Analisi dei Requisiti \newline UC6.1.4
+		\\
+		R0F2.8 & Analisi dei Requisiti \\
+		R0F22.1 & Analisi dei Requisiti \newline UC1
+		\newline UC1.1
+		\\
+		R0F3 & Analisi dei Requisiti \newline UC4
+		\\
+		R0F3.1 & Analisi dei Requisiti \newline UC4.2.1
+		\\
+		R0F4 & Analisi dei Requisiti \newline UC4.2.2
+		\\
+		R0F4.1 & Analisi dei Requisiti \newline UC4.2.2.1
+		\\
+		R0F5 & Analisi dei Requisiti \newline UC6.4
+		\\
+		R0F5.1 & Analisi dei Requisiti \newline UC5.1
+		\\
+		R0F5.2 & Analisi dei Requisiti \newline UC5.2
+		\\
+		R0F6 & Analisi dei Requisiti \newline UC2.2
+		\newline UC3
+		\newline UC9
+		\\
+		R0F6.1 & Analisi dei Requisiti \newline UC3.3
+		\\
+		R0F6.2 & Analisi dei Requisiti \newline UC3.2
+		\\
+		R0F6.3 & Analisi dei Requisiti \newline UC3.1
+		\\
+		R0F7.2 & Analisi dei Requisiti \newline UC7
+		\\
+		R0F8.1 & Analisi dei Requisiti \newline UC2.3.2
+		\\
+		R0F8.2 & Analisi dei Requisiti \newline UC2.3.1
+		\\
+		R0F8.3 & Analisi dei Requisiti \newline UC2.3
+		\\
+		R0F9 & Analisi dei Requisiti \newline UC8
+		\\
+		R1F13 & Analisi dei Requisiti \newline UC2
+		\newline UC3
+		\newline UC4
+		\newline UC5
+		\newline UC7
+		\newline UC8
+		\newline UC9
+		\\
+		R2F22.2 & Analisi dei Requisiti \\
+		R0F10 & Capitolato \newline UC1
+		\newline UC5
+		\newline UC9
+		\\
+		R0F22 & Capitolato \newline UC1
+		\newline UC1.1
+		\\
+		R0F7 & Capitolato \newline UC2
+		\newline UC7
+		\\
+		R0F7.1 & Capitolato \newline UC2.1
+		\\
+		R0F7.3 & Capitolato \newline UC2
+		\\
+		R0F8 & Capitolato \newline UC2.3
+		\\
+		R0F9.1 & Capitolato \newline UC8.1
+		\\
+		R0F9.2 & Capitolato \newline UC8.2
+		\\
+		R0V21 & Capitolato \\
+		R0Q11 & Riunione interna 2016-12-19 \\
+		R0Q14 & Riunione interna 2016-12-19 \\
+		R0Q15 & Riunione interna 2016-12-19 \\
+		R0Q15.1 & Riunione interna 2016-12-19 \\
+		R0Q16 & Riunione interna 2016-12-19 \\
+		R1P17 & Riunione interna 2016-12-19 \newline UC9
+		\\
+		R1Q18 & Riunione interna 2016-12-19 \\
+		R1V19 & Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		\\
+		R2V20 & Riunione interna 2016-12-19 \newline UC1.1
+		\newline UC6.1
+		\newline UC9.1.1
+		\newline UC9.2.1
+		\\
+		\rowcolor{white}
+		\caption{Tracciamento requisiti-fonti}
+	\end{longtable}
+	
+	\newpage
+	\subsection{Riepilogo}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+		\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{2.5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Tipologia} & \color{white} \textbf{Obbligatorio} & \color{white} \textbf{Desiderabile} & \color{white} \textbf{Opzionale} \\ 
+		\endfirsthead 
+		\rowcolor{I} 
+		\color{white} \textbf{Tipologia} & \color{white} \textbf{Obbligatorio} & \color{white} \textbf{Desiderabile} & \color{white} \textbf{Opzionale} \\ 
+		\endhead 
+		Funzionali & 55 & 1 & 1\\Qualitativi & 5 & 1 & 0\\Vincolo & 1 & 1 & 1\\Performance & 0 & 1 & 0\\\rowcolor{white}
+		\caption{Riepilogo dei requisiti}
+	\end{longtable}
+
+\end{document}

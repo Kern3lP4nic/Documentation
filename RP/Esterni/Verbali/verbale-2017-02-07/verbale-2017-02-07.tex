@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{../../../../KerpanStyle/kerpanVerbali}
+
+\author{Daniele Favaro}
+\date{08/02/2017}
+\intestazioni{Verbale 2017-02-07}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\huge\bfseries AtAVi\par}
+	Accoglienza tramite Assistente Virtuale \\*
+	\line(1,0){350} \\
+	%\includegraphics[width=0.15\textwidth]{example-image-1x1}\par\vspace{1cm}
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%deve essere cambiato il titolo ogni volta
+	{\scshape\Large Verbale Riunione esterna 2017-02-07\par}
+	\vspace{1.5cm}
+	\logo
+	\vspace{2cm}	
+	\vfill \vfill
+	%devono essere compilati questi campi ogni volta
+	\begin{tabular}{c|c}
+		{\hfill\textbf{Data Redazione}} 		& 2017-02-08		\\
+		{\hfill\textbf{Redazione}} 			& Daniele Favaro \\
+		{\hfill\textbf{Verifica}} 				& Antonino Macrì 	\\
+		{\hfill\textbf{Approvazione}} 				& Edoardo Zanon 	\\
+		{\hfill\textbf{Uso}} 					& Esterno			\\
+		{\hfill\textbf{Distribuzione}} 		& \kpanic\			\\
+	\end{tabular}
+\end{titlepage}
+
+	\pagestyle{myfront}
+	\newpage
+	\tableofcontents
+	
+	\label{LastFrontPage}
+	\newpage
+	\pagestyle{mymain}
+		\subfile{Sezioni/EstremiRiunione}
+		\subfile{Sezioni/CompitiSvolti}
+		\subfile{Sezioni/OrdineDelGiorno}
+		\subfile{Sezioni/Discussione}
+		\subfile{Sezioni/Successiva}
+	
+	\label{LastPage}
+
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[../AnalisiDeiRequisiti.tex]{subfiles}
+
+\begin{document}
+\section{Descrizione Generale}
+	\subsection{Contesto d'uso del prodotto}
+	L'applicativo dovrà essere utilizzabile su un qualsiasi \gl{browser} compatibile con la tecnologia \gl{HTML5}, \gl{CSS3} e \gl{JavaScript}, senza limitazione alcuna sul \gl{sistema} operativo utilizzato.
+	Una caratteristica particolare del front-end che il team andrà a sviluppare è il layout di tipo \gl{Flexible Box}, utile per ottenere un design di tipo responsive ed una semplificazione nel posizionamento degli elementi.
+	Abbiamo posto quindi particolare attenzione sulla compatibilità di questa funzione e, utilizzando il sito web \href{http://caniuse.com/#search=flexible}{caniuse}, abbiamo stilato una lista dei browser principali sui quali il prodotto finale dovrà funzionare.
+ 
+	\vspace{0.5cm}
+	\begin{longtabu} to \textwidth {
+	X[3,c,m] 
+	X[3,c,m]
+	X[6,c,m]}
+	\toprule
+	\textbf{Browser} & \textbf{Versione}  & \textbf{Note} \\
+	\midrule
+	\endhead
+	\arrayrulecolor{gray}
+	Safari & 9 e successive & è possibile utilizzare Safari anche dalla versione 7 con l'opportuno webkit \\
+	\addlinespace[0.4em]
+	\midrule
+	\addlinespace[0.4em]
+	Mozilla Firefox & 28 e successive & le versioni precedenti forniscono un supporto parziale \\
+	\addlinespace[0.4em]
+	\midrule
+	\addlinespace[0.4em]	
+	Internet Explorer & 11 & supporto parziale \\
+	\addlinespace[0.4em]
+	\midrule
+	\addlinespace[0.4em]
+	Edge & 14 e successive &  \\
+	\addlinespace[0.4em]
+	\midrule
+	\addlinespace[0.4em]
+	Google Chrome & 29 e successive & è possibile utilizzare Google Chrome anche dalla versione 21 con l'opportuno webkit \\
+	\addlinespace[0.4em]
+	\midrule
+	\addlinespace[0.4em]
+	Opera & 12.1 e successive & le versioni 15 e 16 di Opera necessitano dell'opportuno webkit \\
+	\arrayrulecolor{black}
+	\addlinespace[0.5em]
+	\bottomrule
+	\caption{Versioni browser supportati}
+	\label{tab:browser}
+	\end{longtabu}
+
+	\subsection{Funzioni del prodotto}
+	Il prodotto consiste in un \gl{applicativo Web} per l'accoglienza di un utente presso un’azienda. Una volta avviata l’applicazione, l’utente può iniziare ad interagire con il sistema, chiamato  AV (Assistente Virtuale). Amazon \gl{Alexa} viene utilizzato come interprete delle conversazioni, nello specifico esegue funzioni di Text-to-Speech e Speech-to-Text. Per cominciare il sistema chiede nome e cognome all'utente, identificandolo così come ospite. Nel caso in cui quest'ultimo non sia già stato precedentemente nell'azienda, gli verranno rivolte alcune apposite domande in modo da completare il suo profilo. In seguito l'ospite viene intrattenuto attraverso varie richieste, come quella di un caffè, dei materiali necessari per il meeting e la somministrazioni di notizie generiche, cercando di rimanere il più possibile nel mondo tecnologico, come previsioni meteo e barzellette. Tutte le azioni intraprese dall'ospite verranno riportate in tempo reale all'interlocutore, attraverso un apposito canale Slack, e salvate in un database, così da profilare l'utente. Il canale Slack in questione avrà il nome dell'azienda dell'ospite, e nel documento \analisideirequisitiv\ verrà chiamato "\#azienda". La sessione avviata può venir interrotta in un qualsiasi momento dall'utente tramite l'apposito pulsante o comando vocale, oppure in modo automatico per timeout se il sistema non riceve risposta entro un certo tempo.
+	Se un utente si identifica più volte in un breve periodo di tempo, il che significa ad esempio che sta ancora aspettando che qualcuno lo accolga, il sistema avviserà il personale attraverso un apposito canale di Slack di questa situazione.\\
+	Tutto il sistema può essere gestito da un'area amministrativa, a cui possono accedere solo gli amministratori, usando come credenziali la propria email e password, possibilmente solo da un network locale dell'azienda.
+	L'amministratore potrà gestire il comportamento dell'AV, quindi domande e risposte, potrà visualizzare gli ospiti registrati ed effettuare operazioni di manutenzione al database. Le domande che l'AV porrà all'ospite saranno di tipo base, nel caso in cui fosse la prima volta che visita l'azienda, o in caso contrario di tipo ricorrente. Ogni domanda comprende una o più risposte, alle quali, a loro volta, vengono associate delle azioni predefinite dal sistema, chiamate \gl{ACTION} nel documento \analisideirequisitiv, e una domanda successiva tra quelle già presenti. Esiste infine un super amministratore che potrà gestire tutti gli altri amministratori.
+	
+	\subsection{Caratteristiche degli utenti}
+	Non sono richieste competenze particolari per poter utilizzare questo prodotto, che deve risultare quindi accessibile ad un'ampia categoria di utenti. L'interazione con il sistema dovrà essere il più intuitiva e semplice possibile, senza limitare le funzionalità offerte dal \gl{software} stesso. A questo proposito verrà fornito nella fase finale dello sviluppo un \textit{Manuale Utente} contente le informazioni necessarie per consentire un utilizzo corretto ed efficace del prodotto.
+
+	\begin{comment}	
+	\subsection{Vincoli generali}
+	Tutte le domande che l'assistente virtuale farà dovranno essere predefinite.
+	
+	\subsection{Assunzione dipendenze}
+	Per avere un corretto funzionamento dell'applicazione sarà necessario l'utilizzo di un browser che sia compatibile con lo standard HTML5, CSS3 e JavaScript.
+	\end{comment}
+	
+	\subsection{Attori}
+	Di seguito verranno descritti gli attori che interagiscono con il sistema:
+	\begin{itemize}
+		\item \textbf{Utente}: è una persona che interagisce con il sistema e che deve ancora essere identificata o, nel caso di un amministratore, autenticata;
+		\item \textbf{Ospite}: è un utente identificato dall'assistente virtuale;
+		\item \textbf{Amministratore}: è un utente autenticato tramite interfaccia web che ha accesso all'area amministrativa;
+		\item \textbf{Alexa}: è il sintetizzatore vocale impiegato durante l'interazione con gli utenti/ospiti;
+		\item \textbf{Slack}: in particolare le sue API, permettono la comunicazione delle risposte dell'ospite all'interlocutore, la verifica dell'esistenza di un canale e la sua creazione;
+	\end{itemize}
+	
+\end{document}

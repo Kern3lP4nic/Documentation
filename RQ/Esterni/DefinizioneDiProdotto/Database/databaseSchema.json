@@ -1,0 +1,181 @@
+/* QUESTION */
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "baseText": {
+            "type": "string"
+        },
+        "recurrentText": {
+            "type": "string"
+        },
+        "answers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "id_nextQuestion": {
+                        "type": "integer"
+                    },
+                    "action": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "text": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "text"
+                        ]
+                    }
+                },
+                "required": [
+                    "text",
+                    "id_nextQuestion",
+                    "action"
+                ]
+            }
+        }
+    },
+    "required": [
+        "id",
+        "baseText",
+        "recurrentText",
+        "answers"
+    ]
+}
+
+/* FIRM */
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "guests": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name"
+                ]
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "guests"
+    ]
+}
+
+/* ADMIN */
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "username": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "username",
+        "email",
+        "password"
+    ]
+}
+
+/* INTERLOCUTOR */
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "id_slack": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "joinChannel": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "id_slack",
+        "name",
+        "joinChannel"
+    ]
+}
+
+/* CONVERSATION */
+{
+    "type": "object",
+    "properties": {
+        "id_session": {
+            "type": "integer"
+        },
+        "log": {
+            "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "id_guest": {
+                    "type": "integer"
+                },
+                "question": {
+                    "type": "string"
+                },
+                "answer": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                }
+                },
+                "required": [
+                    "id_guest",
+                    "question",
+                    "answer",
+                    "date"
+                ]
+            }
+        }
+    },
+    "required": [
+        "id_session",
+        "log"
+    ]
+}

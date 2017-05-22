@@ -1,0 +1,44 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+	\appendix
+	\section{Resoconto delle attività di verifica}
+	Di seguito verranno descritti e analizzati gli esiti delle attività di verifica svolte su tutti i documenti che vengono consegnati nelle varie revisioni di avanzamento del progetto.
+	
+		\subsection{Revisione dei requisiti}
+			\subsubsection{Tracciamento dei casi d'uso e dei requisiti}
+			\kpanic\ ha deciso di utilizzare l'applicativo \gl{Trender} per facilitare il tracciamento sia delle relazioni fra casi d'uso e relazioni, che delle relazioni fra requisiti e fonti.
+			
+			\subsubsection{Analisi statica dei documenti}
+			L'analisi statica dei documenti è stata fatta mediante Walkthrough che ha portato all'individuazione di alcuni errori. Tra gli errori individuati quelli più frequenti sono stati:
+			\begin{itemize}
+				\item Errori nei concetti esposti;
+				\item Violazioni di quanto stabilito nelle norme tipografiche;
+				\item Aggettivi o verbi utilizzati in modo scorretto;
+				\item Periodi troppo lunghi o complessi da capire e interpretare.
+			\end{itemize}
+			Durante la verifica manuale sono stati anche individuati i termini da aggiugere al \glossariov. Nello specifico sono stati individuati 161 termini.
+			
+			\subsubsection{Verifiche automatiche}
+			Come spiegato nelle \normediprogettov\ sono stati utilizzati degli applicativi software per l'individuazione di errori ortografici e per il calcolo dell'indice Gulpease oltre al controllo dei comandi \LaTeX\ permesso da \gl{Texmaker}.\\
+			Il primo ha permesso di individuare tutti gli errori che non sono stati individuati nell'analisi statica dei documenti.\\
+			Come spiegato alla sezione 3.4.2 "Metriche per i documenti", è stato definito un indice Gulpease da rispettare per avere un documento accettabile. In seguito ai test effettuati sui documenti sono stati ottenuti i seguenti risultati:
+			\newpage
+			\begin{table}[h]
+				\centering
+				\begin{tabular}{l * {2}{c}}
+					\toprule
+						\textbf{Documento} & \textbf{Gulpease} & \textbf{Esito} \\
+					\midrule
+						\analisideirequisitiv & 54 & Ottimale \\
+						\glossariov & 60 & Ottimale \\
+						\normediprogettov & 54 & Ottimale \\
+						\pianodiprogettov & 53 & Ottimale \\
+						\pianodiqualificav & 53 & Ottimale \\
+						\studiodifattibilitav & 57 & Ottimale \\		
+					\bottomrule
+				\end{tabular}
+				\caption{Fase 1- Indice Gulpease dei documenti}
+				\label{tab:esiti_gulpease}
+			\end{table}
+\end{document}

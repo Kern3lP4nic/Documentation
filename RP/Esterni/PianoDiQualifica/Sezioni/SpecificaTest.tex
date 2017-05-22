@@ -1,0 +1,644 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+
+\section{Specifica dei test}
+\kpanic\ ha strutturato alcuni test atti a verificare che il software prodotto sia efficace. Questi test sono basati sulle tecniche di verifica dinamica introdotte nel documento \normediprogettov. Il team ha deciso di produrre alcune tabelle per facilitare la consultazione ed il tracciamento di tutte le attività eseguite e dei risultati ottenuti.\\ Nello specifico sono stati presi in considerazione quattro tipologie di test, rispettivamente:
+\begin{itemize}
+	\item \textbf{Test di unità [TU]:} cerca di verificare la più piccola parte di lavoro prodotta da un programmatore che funzioni in modo autonomo, la quale può essere una funzione o una classe; 
+	\item \textbf{Test di integrazione [TI]:} cerca di verificare un insieme di unità, che prendono il nome di componenti di sistema, secondo diversi approcci quali, tra i più famosi:
+	\begin{itemize}
+		\item Top-down;
+		\item Bottom-up;
+		\item Umbrella, un ibrido dei due precedenti.
+	\end{itemize}
+	\item \textbf{Test di sistema [TS]:} cerca di verificare che il comportamento e il funzionamento di una o più componenti software siano corretti secondo i propri requisiti;
+	\item \textbf{Test di validazione [TV]:} chiamato anche test di accettazione, cerca di verificare che il lavoro prodotto soddisfi quanto richiesto dal proponente. Nella pratica, attraverso delle funzioni si cerca di simulare il comportamento generale dell'applicativo e dell'utente che interagisce con esso.
+\end{itemize}
+
+	\newpage
+	\subsection{Test di unità}
+	I test di unità saranno descritti nel modo seguente:
+	\begin{center}
+		\textbf{TU[IdTest]}
+	\end{center}		
+	dove:
+	\begin{itemize}
+		\item \textbf{IdComponente} rappresenta il codice identificativo crescente dell'unità considerata.
+	\end{itemize}
+	
+	\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} >{\centering\arraybackslash}p{4cm}}
+		\toprule
+		\centerline{\textbf{ID test}} & \centerline{\textbf{Descrizione}} & \centerline{\textbf{Stato}} \\
+			\midrule
+			TU0 & Verificare che il metodo addAdmin aggiunga nella lista degli admin l'utente passato come parametro sotto forma di user & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+TU1 & Verificare che il metodo updateAdmin modifichi correttamente i dati dell'admin contenuti nel Database con quelli contenuti all'interno dell'oggetto di tipo user passato come parametro & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU2 & Verificare che il metodo deleteAdmin elimini correttamente l'admin che corrisponde all'oggetto di tipo user passato come parametro all'interno del Database. & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU3 & Verificare che il metodo getAdmins restituisca correttamente un array di user contenenti tutti gli utenti che sono anche amministratori. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU4 & Verificare che il metodo sendEmail componga e spedisca una email all'indirizzo passato come parametro stringa solo nel caso in cui l'utente sia realmente presente all'interno del Database & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU5 & Verificare che il metodo logout termini correttamente la sessione dell'admin identificato dal token passato al metodo come parametro stringa & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU6 & Verificare che il metodo login controlli correttamente la presenza nel Database dell'utente il cui username coincide con il primo parametro stringa passato al metodo e, nel caso questo primo controllo vada a buon fine, procede verificando che la password che corrisponde allo username appena individuato coincida con quella passata come secondo parametro sotto forma di stringa. Se uno dei due controlli non va a buon fine viene generato un errore & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em] 
+			TU7 & Verificare che il metodo verifyLogin controlli correttamente che il token passato come parametro stringa coincida con quello presente nel Database collegato all'utente della sessione corrente e, nel caso il controllo vada a buon fine, torni TRUE, altrimenti torna FALSE & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU8 & Verificare che il metodo getFirms restituisca correttamente un array di oggetti di tipo Firm contenente tutte le aziende all'interno del Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU9 & Verificare che il metodo updateFirm modifichi correttamente i campi dati dell'oggetto di tipo Firm presente nel Database in base ai campi dati presenti all'interno dell'oggetto Firm passato come parametro il cui ID corrisponde a quello dell'oggetto presente nel Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU10 & Verificare che il metodo getGuestConversation ritorni correttamente un array di oggetti di tipo Conversation che rappresentano le conversazioni effettuate dall'utente passato come parametro Guest e che afferisce all'azienda passata come parametro Firm & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU11 & Verificare che il metodo isPresent ritorni correttamente il booleano TRUE se verifica la presenza dell'azienda con il nome che coincide a quello passato come parametro string all'interno del Database o FALSE, altrimenti & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU12 & Verificare che il metodo isGuestPresent ritorni correttamente il booleano TRUE se verifica la presenza dell'ospite con il nome che coincide a quello passato come parametro string all'interno del Database o FALSE, altrimenti & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU13 & Verificare che il metodo addInterlocutor aggiunga correttamente un oggetto di tipo Interlocutor alla lista degli interlocutori di default presente nel nostro Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU14 & Verificare che il metodo refreshInterlocutor registri correttamente all'interno del Database tutti gli interlocutori presenti all'interno del team Slack di zero12 & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU15 & Verificare che il metodo removeInterlocutor rimuova correttamente un interlocutore dalla lista degli interlocutori di default presente all'interno del Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU16 & Verificare che il metodo getInterlocutors ritorni correttamente un array contenente oggetti di tipo Interlocutor, i quali corrispondono a tutti gli interlocutori presenti all'interno del team di di zero12. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU17 & Verificare che il metodo getDefaultInterlocutors ritorni correttamente un array contenente oggetti di tipo Interlocutor, i quali corrispondono ai soli interlocutori presenti all'interno della lista degli interlocutori di default di \prop\ & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU18 & Verificare che il metodo sendMessageChannel scriva correttamente un messaggio, il cui testo viene passato come parametro stringa al metodo, nel canale il cui nome viene anch'esso passato come parametro stringa. & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU19 & Verificare che il metodo sendMessageGeneral scriva correttamente un messaggio, il cui testo viene passato come parametro stringa al metodo, nel canale General & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU20 & Verificare che il metodo addQuestion aggiunga correttamente l'oggetto di tipo Question passatogli come parametro alla lista delle domande presente nel Database. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU21 & Verificare che il metodo deleteQuestion elimini correttamente l'oggetto di tipo Question passatogli come parametro dalla lista delle domande presente nel Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU22 & Verificare che il metodo getQuestions restituisca correttamente un array di oggetti di tipo Question, le quali compongono la lista delle domande presente nel Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU23 & Verificare che il metodo updateQuestion modifichi correttamente l'oggetto di tipo Question presente nel Database il cui ID corrisponde a quello dell'oggetto passatogli come parametro, aggiornandone i campi dati con quelli del parametro & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU24 & Verificare che il metodo getActions restituisca correttamente un array di oggetti di tipo Action, le quali compongono la lista delle azioni possibili presente nel Database & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU25 & Verificare che il metodo getNextQuestion ritorni correttamente la domanda successiva all'interno della lista preconfigurata delle domande da porre all'utente da parte del nostro sistema & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU26 & Verificare che il metodo getFirstQuestion ritorni correttamente la prima domanda nella lista preconfigurata delle domande da porre all'utente da parte del nostro sistema & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU27 & Verificare che il metodo ritorni correttamente una stringa contenente il testo dell'ultima risposta data dall'utente ospite al nostro sistema e codificata da Alexa & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU28 & Verificare che i metodi usati per l'interazione col Database funzionino correttamente. In particolare, si provvederà ad aggiungere un oggetto al Database con add, a verificarne la presenza con read, a modificare lo stesso oggetto con update, verificarne le modifiche apportate con un'altra invocazione del metodo read, a rimuoverlo dal Database con delete ed infine a verificarne l'effettiva eliminazione con un'altra operazione di read, che dovrebbe generare un errore se tutti i metodi hanno svolto le proprie funzioni correttamente & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU29 & Verificare che il metodo callSkill passi correttamente il file di tipo AudioStream ricevuto come parametro ad Alexa Voice Service e restituisca un file di tipo AudioStream & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU30 & Verificare che il metodo create crei correttamente un nuovo canale Slack con il nome corrispondente alla stringa passata come parametro. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU31 & Verificare che il metodo invite inviti correttamente un utente Slack al canale corretto. I parametri passati come stringhe in input al metodo rappresentano rispettivamente il nome del canale ed il nome dell'utente che dev'essere invitato ad unirsi a quel determinato canale & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU32 & Verificare che il metodo archive archivi correttamente un canale Slack, il cui nome viene passato in input al metodo sotto forma di stringa & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU33 & Verificare che il metodo setPurpose modifichi correttamente il purpose del canale sostituendo quello già esistente oppure semplicemente inserendolo nel campo purpose del canale, nel caso fosse vuoto. Il purpose da inserire viene passato sotto forma di stringa al metodo, così come anche il nome del canale al quale deve essere applicato & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU34 & Verificare che il metodo list restituisca correttamente un oggetto di tipo jsonObject contenente la lista di tutti gli utenti Slack contenuti nel nostro sistema & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU35 & Verificare che il metodo postMessage pubblichi correttamente un messaggio passatogli sotto forma di stringa nel canale Slack corretto, passato anch'esso come stringa & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU36 & Verificare che, in base alla stringa ricevuta in input, il metodo routine invochi altri metodi, quali getLastQuestion, getFirstQuestion, matchPossibleAnswer, composeNextQuestion e logAnswerOnDB, rispettando i seguenti vincoli sull'ordinamento: getLastQuestion o getFirstQuestion devono essere invocate prima di composeNextQuestion. Il metodo routine deve decodificare la stringa passata come parametro e, in base alla informazioni in essa contenute, modellare e restituire una risposta da fornire all'utente sotto forma di stringa & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU37 & Verificare che il metodo ritorni l'ultima domanda posta dal nostro sistema all'utente & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU38 & Verificare che il metodo ritorni la prima domanda nella lista preconfigurata delle domande da porre all'utente da parte del nostro sistema. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU39 & In base ai valori ricevuti in input, ovvero una stringa che rappresenta la risposta dell'utente convertita in forma testuale ed un valore intero che identifica quale domanda, fra quelle contenute nel nostro database, risponde la stringa, bisogna verificare che il metodo matchPossibleAnswer identifichi e ritorni il valore intero che rappresenta la risposta dell'utente, fra le possibili risposte ammesse dal nostro sistema & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU40 & In base al valore intero passato come parametro, che rappresenta la domanda posta precedentemente dal nostro sistema all'utente, si deve verificare che il metodo composeNextQuestion identifichi correttamente e ritorni la successiva domanda da porre all'utente sotto forma di stringa. & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU41 & Verificare che, in base all'oggetto di tipo Action passato come parametro, questo metodo invochi il metodo action corretto fra quelli predefiniti & Non implementato \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU42 & Verificare che il metodo logAnswerOnDB salvi correttamente all'interno del Database la coppia domanda-risposta fra le coppie possibili ammesse dal nostro sistema ed identificate dai valori interi passati come parametro & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU43 & Verificare che il metodo enable attivi correttamente il sistema per l'interazione con l'ospite & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU44 & Verificare che il metodo disable disattivi correttamente il sistema. & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU45 & Verificare che il metodo call richiami l'esatta Lambda Skill in base all'oggetto di tipo AudioStream passato come parametro in input & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU46 & Verificare che la comunicazione fra il metodo e l'APIGateway funzioni correttamente e che il metodo ritorni la risposta corretta da fornire all'ospite, sotto forma di observable & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU47 & Verificare che i metodi della classe ManageAdministrator comunichino correttamente con l'APIGateway & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU48 & Verificare che i metodi della classe ManageFirm comunichino correttamente con l'APIGateway & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU49 & Verificare che i metodi della classe ManageSlack comunichino correttamente con l'APIGateway & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU50 & Verificare che i metodi della classe ManageQuestion comunichino correttamente con l'APIGateway & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TU51 & Verificare che i metodi della classe Authentication comunichino correttamente con l'APIGateway & Non implementato \\ 
+		\bottomrule
+		\caption{Specifica test di unità}
+	\end{longtable}
+	
+	\newpage
+	\subsection{Test di integrazione}
+	I test di integrazione saranno descritti nel modo seguente:
+	\begin{center}
+		\textbf{TI[IdComponente]}
+	\end{center}		
+	dove:
+	\begin{itemize}
+		\item \textbf{IdComponente} rappresenta il codice identificativo crescente del componente considerato.
+	\end{itemize}
+	È stato scelto di utilizzare un approccio top-down nel determinare i test di integrazione. Di seguito viene riportato un diagramma informale per rendere chiara la struttura dei test identificati.
+	\\	
+	\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} >{\centering\arraybackslash}p{4cm}}
+		\toprule
+		\centerline{\textbf{ID test}} & \centerline{\textbf{Descrizione}} & \centerline{\textbf{Stato}} \\
+			\midrule
+			TI1 & Viene verificato che l'applicazione Web gestisca correttamente
+il front-end del prodotto e le sue interazioni con il back-end & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI2 & Viene verificato che i Service permettano di interagire correttamente con il back-end & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI3 & Viene verificato che la View e il Controller del front-end guest-home interagiscano tra di loro correttamente & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI4 & Viene verificato che la View e il Controller del front-end amministrazione interagiscano tra di loro correttamente & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI5 & Viene verificato che il Model del front-end guest-home e amministrazione rispecchi il rispettivo Controller & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI6 & Viene verificato che l'applicazione Web gestisca correttamente il back-end del prodotto in modo tale da fornire al front-end tutte le informazioni richieste & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI7 & Viene verificato che il back-end si integri correttamente con le API Slack & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI8 & Viene verificato che il back-end si integri correttamente con il database & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI9 & Viene verificato che i Service del front-end amministrazione e guest-home riescano a chiamare le API dell'APIGateway correttamente & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]	
+			TI10 & Viene verificato che l'APIGateway chiami correttamente le function del back-end & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI11 & Viene verificato che i Controller del front-end amminsitrazione si integrino correttamente con il rispettivo Service & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI12 & Viene verificato che i Controller del front-end guest-home si integrino correttamente con il rispettivo Service & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI13 & Viene verificato che le chiamate di Interaction ad AVS siano corrette & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI14 & Viene verificato che il Service del front-end si integri correttamente con il Controller dell'AmminisitrationView che lo richiama & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI15 & Viene verificato che il Service del front-end si integri correttamente con il Controller del GuestComponents che lo richiama & Non implementato \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TI16 & Viene verificato che i Controller gestiscano correttamente le \gl{root} di AngularJS & Non implementato \\
+			\bottomrule
+			\caption{Specifica test di integrazione}
+	\end{longtable}
+	
+	\newpage
+	\subsection{Test di sistema}
+	I test di sistema saranno descritti nel modo seguente:
+	\begin{center}
+		\textbf{TS[TipoRequisito][ImportanzaRequisito][IdRequisito]}
+	\end{center}		
+	dove:
+	\begin{itemize}
+		\item \textbf{TipoRequisito} può assumere valori compresi tra:
+		\begin{itemize}
+			\item F per i requisiti funzionali;
+			\item Q per i requisiti di qualità;
+			\item V per i requisiti di vincolo;
+			\item P per i requisiti prestazionali.
+		\end{itemize}
+		\item \textbf{ImportanzaRequisito} può assumere valori compresi tra:
+		\begin{itemize}
+			\item D per i requisiti desiderabili;
+			\item O per i requisiti di obbligatori;
+			\item F per i requisiti di facoltativi.
+		\end{itemize}
+		\item \textbf{IdRequisito} assume un valore gerarchico che identifica il singolo requisito.
+	\end{itemize}
+	
+	\begin{longtable}[c] { >{\centering\arraybackslash}p{2cm} p{7cm} >{\centering\arraybackslash}p{4cm} >{\centering\arraybackslash}p{2cm}}
+		\toprule
+		\centerline{\textbf{ID test}} & \centerline{\textbf{Descrizione}} & \centerline{\textbf{Stato}} & \centerline{\textbf{Requisito}}\\
+			\midrule
+			TS0F1 & Viene verificato che l'utente possa attivare il sistema tramite comando vocale & Non implementato & R0F1 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F11 & Un amministratore deve poter effettuare il login al sistema & Non implementato & R0F11 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F13 & Un amministratore deve poter confermare la propria email per effettuare il login nel sistema & Non implementato & R0F13 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F14 & Un amministratore deve poter recuperare la propria password & Non implementato & R0F14 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F15 & Un amministratore deve poter inserire la propria email per recuperare la propria password & Non implementato & R0F15 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F16 & Un amministratore deve poter confermare la propria email per recuperare la propria password	 & Non implementato & R0F16 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F17 & Un amministratore deve poter modificare la password inserita per effettuare il login nel sistema	 & Non implementato & R0F17 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F18 & Un amministratore deve poter confermare la password inserita per effettuare il login nel sistema	 & Non implementato & R0F18 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F19 & La password deve essere alfanumerica e deve essere lunga almeno 8 caratteri & Non implementato & R0F19 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F20 & Un amministratore deve poter visualizzare un messaggio di errore se la password inserita non è corretta & Non implementato & R0F20 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F21 & Un amministratore deve poter visualizzare un messaggio di errore se la email inserita non è presente nel sistema & Non implementato & R0F21 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F22 & L'ospite deve poter interagire con il sistema rispondendo alle domande che gli vengono poste & Non implementato & R0F22 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F26 & Il sistema deve poter chiedere all'ospite l'azienda di appartenenza & Non implementato & R0F26 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F27 & Il sistema deve poter rimanere in ascolto, del nome dell'azienda dell'ospite, per un periodo di tempo prefissato	 & Non implementato & R0F27 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em] 
+			TS0F29 & Il sistema deve poter chiedere all'ospite l'interlocutore ricercato	 & Non implementato & R0F29 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F3 & Verificare che il sistema possa disattivarsi in automatico per timeout	 & Non implementato & R0F3 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F30 & Il sistema deve poter rimanere in ascolto, del nome della persona cercata da parte dell'ospite, per un periodo di tempo prefissato & Non implementato & R0F30 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F32 & Il sistema deve poter chiedere all'ospite se desidera un caffè & Non implementato & R0F32 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F33 & Il sistema deve poter rimanere in ascolto di una risposta da parte dell'ospite per un periodo di tempo prefissato	 & Non implementato & R0F33 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F34 & Il sistema deve poter chiedere all'ospite se necessita di qualche materiale & Non implementato & R0F34 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F35 & Il sistema deve poter intrattenere l'ospite con determinati argomenti & Non implementato & R0F35 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F36 & Il sistema deve poter intrattenere l'ospite con il meteo di una località  scelta & Non implementato & R0F36 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F37 & Il sistema deve poter intrattenere l'ospite con alcune news & Non implementato & R0F37 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F38 & Il sistema deve poter intrattenere l'ospite con alcune barzellette & Non implementato & R0F38 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F39 & Un amministratore deve poter effettuare il logout dal sistema solo se ha già  effettuato il login & Non implementato & R0F39 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F41 & Il Super Admin deve poter aver accesso a tutte le funzionalità  di un normale Admin	 & Non implementato & R0F41 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F42 & Un super amministratore può vedere la lista di amministratori del sistema & Non implementato & R0F42 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0F6 & L'utente deve poter identificarsi nel sistema per usufruirne & Non implementato & R0F6 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0V2 & Devono essere documentate e motivate le scelte riguardanti le tecnologie utilizzate & Non implementato & R0V2 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS0V3 & L'applicazione deve essere fruibile su Google Chrome e Firefox & Non implementato & R0V3 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F10 & L'utente deve poter confermare nome e cognome inseriti vocalmente & Non implementato & R2F10 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F2 & Viene verificato che l'utente possa attivare il sistema tramite bottone & Non implementato & R2F2 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F28 & 	L'utente deve poter confermare l'azienda inserita vocalmente & Non implementato & R2F28 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F31 & L'utente deve poter confermare il nome dell'interlocutore inserito vocalmente	 & Non implementato & R2F31 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F43 & Il sistema deve poter visualizzare a schermo le possibili aziende di appartenenza & Non implementato & R2F43 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TS2F5 & L'utente deve poter disattivare il sistema in qualsiasi momento tramite pulsante	 & Non implementato & R2F5 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF43 & L'Admin deve poter gestire gli ospiti & Non implementato & ROF43 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF44 & L'Admin deve poter scegliere un ospite da rinominare & Non implementato & ROF44 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF47 & L'Admin deve poter scegliere un'azienda da rinominare & Non implementato & ROF47 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF48 & L'Admin deve poter rinominare un'azienda & Non implementato & ROF48 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF50 & L'Admin deve poter visualizzare il profilo di un ospite & Non implementato & ROF50 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF51 & L'Admin deve poter gestire le domande & Non implementato & ROF51 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF52 & L'Admin deve poter aggiungere una domanda & Non implementato & ROF52 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF53 & L'Admin deve poter confermare l'inserimento di una domanda & Non implementato & ROF53 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF54 & L'Admin deve poter scegliere una domanda da rimuovere	 & Non implementato & ROF54 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF56 & L'Admin deve poter scegliere una domanda da modificare	 & Non implementato & ROF56 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF57 & L'Admin deve poter gestire le risposte & Non implementato & ROF57 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em] 
+			TSOF58 & L'Admin deve poter aggiungere una risposta & Non implementato & ROF58 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF60 & L'Admin deve poter modificare una risposta & Non implementato & ROF60 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em] 
+			TSOF62 & L'Admin deve poter scegliere una risposta da rimuovere & Non implementato & ROF62 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF64 & L'Admin deve poter scegliere una ACTION da associare ad una risposta & Non implementato & ROF64 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF65 & L'Admin deve poter modificare il testo di una risposta & Non implementato & ROF65 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF67 & L'Admin deve poter modificare l'associazione di un domanda successiva	 & Non implementato & ROF67 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF68 & L'Admin deve poter modificare il testo di una domanda base & Non implementato & ROF68 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF70 & L'Admin deve poter modificare il testo di una domanda ricorrente & Non implementato & ROF70 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF72 & L'Admin deve poter gestire le impostazioni di Slack & Non implementato & ROF72 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF73 & L'Admin deve poter gestire una lista di interlocutori di default per i canali \#azienda che vengono creati & Non implementato & ROF73 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF74 & L'Admin deve poter scegliere un interlocutore da associare alla lista di default	& Non implementato & ROF74 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF76 & L'Admin deve poter scegliere un interlocutore da disassociare dalla lista di default & Non implementato & ROF76 \\
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em] 
+			TSOF78 & L'Admin deve poter aggiornare la lista di interlocutori & Non implementato & ROF78 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF79 & L'Admin deve poter gestire il proprio account & Non implementato & ROF79 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF80 & L'Admin deve poter modificare la propria password di accesso & Non implementato & ROF80 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF84 & Il Super Admin deve poter modificare le email di accesso di un qualsiasi Admin	& Non implementato & ROF84 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF86 & Il Super Admin deve poter modificare le password di accesso di un qualsiasi Admin & Non implementato & ROF86 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF89 & Il Super Admin deve poter aggiungere un nuovo Admin al sistema	 & Non implementato & ROF89 \\ 
+			\addlinespace[0.3em]
+			\midrule
+			\addlinespace[0.3em]
+			TSOF91 & Il Super Admin deve poter rimuovere un qualsiasi Admin dal sistema	 & Non implementato & ROF91 \\
+		\bottomrule
+		\caption{Specifica test di sistema}
+	\end{longtable}
+
+\begin{comment}	
+	\newpage
+	\subsection{Test di validazione}
+	I test di validazione saranno organizzati nel modo seguente:
+	\begin{center}
+		\textbf{ TV[TipoRequisito][ImportanzaRequisito][IdRequisito]}
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item \textbf{TipoRequisito} può assumere valori compresi tra:
+		\begin{itemize}
+			\item F per i requisiti funzionali;
+			\item Q per i requisiti di qualità;
+			\item V per i requisiti di vincolo;
+			\item P per i requisiti prestazionali.
+		\end{itemize}
+		\item \textbf{ImportanzaRequisito} può assumere valori compresi tra:
+		\begin{itemize}
+			\item D per i requisiti desiderabili;
+			\item O per i requisiti di obbligatori;
+			\item F per i requisiti di facoltativi.
+		\end{itemize}
+		\item \textbf{IdRequisito} assume un valore gerarchico che identifica il singolo requisito.
+	\end{itemize}
+\end{comment}
+			
+\end{document}

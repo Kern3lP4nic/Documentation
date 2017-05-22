@@ -1,0 +1,38 @@
+\documentclass[../ManualeSviluppatore_v1.0.0.tex]{subfiles}
+
+\begin{document}
+
+\section{Tecnologie Utilizzate}
+
+	\subsection{AngularJS}
+		Il \gls{framework} Javascript AngularJS, nella sua seconda versione, è stato utilizzato per la realizzazione delle componenti che costituiscono il \gls{front-end} di \atavi. L'architettura di Angular 2 è altamente modulare e favorisce la scrittura di applicazioni modulari, di single web application ed è anche molto utile per l'utilizzo tramite dispositivi mobile, che costituiscono un possibile device sul quale eseguire l'applicazione, poiché Angular supporta di default eventi touch e gesture e promette elevate prestazioni.
+	\subsection{Node.js}
+		Node.js è la piattaforma che è stata utilizzata per sviluppare la parte di codice che costituisce il back-end di \atavi. La scelta del \gls{runtime} da utilizzare è ricaduta su Node.js a causa delle sue allettanti \gls{features}, come il fatto che il modello sul quale si basa non è né sequenziale né implementato grazie a \gls{thread} concorrenti, ma bensì si tratta di un \gls{modello I/O} non bloccante ed \gls{event-driven} che si integra perfettamente con JavaScript poiché costruito sul motore JavaScript v8 di Chrome. Grazie all'utilizzo delle \gls{funzioni di callback} è possibile utilizzare Node.js in maniera \gls{asincrona}, poiché il corpo di queste particolari funzioni viene eseguito soltanto dopo la ricezione della notifica provocata da un evento appena verificatosi. Tutto ciò si integra perfettamente con la realizzazione di un'applicazione web leggera ed efficiente come \atavi.
+	\subsection{Amazon Lambda Function}
+		Le Lambda Function fanno parte di AWS Lambda, ovvero un servizio di elaborazione \gls{serverless} che esegue il codice fornito in risposta a determinati eventi e gestisce automaticamente le risorse di elaborazione in uso. L'utilizzo di questo servizio offerto da Amazon è risultato essere molto efficiente dal punto di vista dello sviluppo di \atavi\ proprio grazie alla possibilità di collegare ogni risorsa ad una specifica Lambda Function, in modo che il sistema riesca a scegliere da solo quale funzione utilizzare, in base alla risorsa gestita. Il fattore che ha direzionato il team di \kpanic\ verso l'uso di questo servizio Amazon è la possibilità da parte di Lambda di eseguire il codice fornito su un'infrastruttura di calcolo ad alta disponibilità e di amministrare le risorse di elaborazione, tra cui il ridimensionamento automatico della capacità, la protezione fornita, il monitoraggio e la creazione di log.
+	\subsection{Amazon DynamoDB}
+		Come \gls{Database Management System} è stato scelto di utilizzare DynamoDB, un servizio che fa parte anch'esso degli Amazon Web Service come Lambda. Proprio questa integrazione con Lambda e con il resto di servizi offerti da Amazon ha fatto ricadere la scelta del team su Dynamo, a discapito di un altro DBMS non relazionale di tipo NoSQL come poteva essere MongoDB. Oltre a quanto detto precedentemente DynamoDB è un servizio veloce e flessibile pensato per le applicazioni che, come \atavi, richiedono una latenza costante, non superiore a una decina di millisecondi, su qualsiasi scala.
+	\subsection{Amazon APIGateway}
+		Sempre a causa della compatibilità ed integrazione con i servizi Amazon sovradescritti, \kpanic\ ha deciso di utilizzare Amazon APIGateway. Questo particolare Gateway semplifica agli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API. In \atavi, APIGateway è stato utilizzato per la creazione di eventi che implicano la gestione e l'invocazione delle opportune Lambda Function in base alle risorse gestite.
+	\subsection{Alexa Voice Service}
+		Il servizio vocale di Alexa, offerto sempre da Amazon, ha permesso al team di \kpanic\ di integrare perfettamente \atavi\ con tutte le funzionalità messe a disposizione da Alexa. Per una maggiore varietà di skill, il prodotto è stato sviluppato utilizzando Alexa Skills Kit (\gls{ASK}), che ha fornito maggiore libertà di movimento e funzionalità ad \atavi.
+	\subsection{Librerie integrate}
+		\subsubsection{RecordRTC}
+			RecordRTC è una libreria utilizzata per la registrazione audio basata su JavaScript e sviluppata per essere utilizzata nei browser moderni. È ottimizzata per diversi device ed utilizzata per la registrazione multimediale lato client.
+		\subsubsection{AJV}
+			Libreria che permette di validare un JSONSchema secondo la sintassi Draft v4.
+		\subsubsection{Crypto}
+			Libreria utilizzata per la crittografia dei dati sensibili come le password o i token. Come algoritmo di cifratura è stato utilizzato SHA-512 per la password dell'area amministrativa, mentre per cryptare i token è stato utilizzato MD5.
+		\subsubsection{Alexa-app}
+			Libreria utilizzata per effettuare il \gls{parsing} delle richieste HTTP contenenti oggetti JSON proveniente dai servizi AWS della piattaforma Alexa e per costruire oggetti JSON da utilizzare come risposta a questi.
+		\subsubsection{Fast Levenshtein}
+			Libreria che implementa l'algoritmo di Levensthein utilizzato per calcolare la distanza delle stringhe. In \atavi\ viene utilizzato per eseguire il \gls{matching} fra la stringa che rappresenta la risposta ricevuta dall'utente e le possibili risposte ammesse dal sistema.
+		\subsubsection{Mocha}
+			Mocha è un framework JavaScript ricco di feature utilizzato per eseguire i test su Node.js, rendendo semplice l'esecuzione di test asincroni. I test eseguiti con Mocha sono caratterizzati da \gls{report} flessibili ed accurati, che hanno aiutato molto \kpanic\ nella fase di verifica.
+		\subsubsection{Chai}
+			Chai è una libreria BDD / TDD per Node.js ed i browser in generale, che può essere facilmente accoppiata con i framework per i test scritti in JavaScript.
+		\subsubsection{Chai-As-Promised}
+			Chai-As-Promised estende le funzionalità di Chai con un linguaggio pratico per effettuare i test che riguardano le \gls{Promise}.
+		\subsubsection{Bootstrap}
+			Bootstrap è una raccolta di strumenti per la creazione di siti e applicazioni Web. Essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell'interfaccia, come moduli, così come alcune estensioni opzionali di JavaScript.
+\end{document}

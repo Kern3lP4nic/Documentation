@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{../../../../KerpanStyle/kerpanVerbali}
+
+\pagestyle{empty}
+\author{Nome Autore}
+\date{2016/12/14}
+\intestazioni{Verbale07-12-16}
+
+\begin{document}
+
+\begin{titlepage}  
+	\centering
+	{\huge\bfseries AtAVi\par}
+	Accoglienza tramite Assistente Virtuale \\*
+	\line(1,0){350} \\
+	%\includegraphics[width=0.15\textwidth]{example-image-1x1}\par\vspace{1cm}
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%deve essere cambiato il titolo ogni volta
+	{\scshape\Large Verbale Riunione interna 2016-12-14\par}
+	\vspace{1.5cm}
+	\logo
+	\vspace{2cm}	
+	\vfill \vfill
+	%devono essere compilati questi campi ogni volta
+	\begin{tabular}{c|c}
+		{\hfill\textbf{Data Redazione}} 		& 2016-12-14		\\
+		{\hfill\textbf{Redazione}} 			& Francesco Fasolato\\ & Giacomo Zecchin \\
+		{\hfill\textbf{Verifica}} 				& Edoardo Zanon 	\\
+		{\hfill\textbf{Approvazione}} 				& Daniele Favaro 	\\
+		{\hfill\textbf{Uso}} 					& Interno			\\
+		{\hfill\textbf{Distribuzione}} 		& \kpanic\			\\
+	\end{tabular}
+\end{titlepage}
+
+	\pagestyle{myfront}
+	\newpage
+	\tableofcontents
+	
+	\label{LastFrontPage}
+	\newpage	
+	\pagestyle{mymain}		
+		\subfile{Sezioni/EstremiRiunione}
+		\subfile{Sezioni/CompitiSvolti}
+		\subfile{Sezioni/OrdineDelGiorno}
+		\subfile{Sezioni/Discussione}
+		\subfile{Sezioni/NuoviArgomenti}
+		\subfile{Sezioni/InSospeso}
+		\subfile{Sezioni/Successiva}
+	
+	\label{LastPage}
+
+\end{document}

@@ -1,0 +1,14 @@
+{
+	"title": "APITrame",
+	"type": "object",
+	"properties": {
+		"Error": {
+			"type": "string"
+		},
+		"TypeError": {
+			"type": "string"
+		},
+		"Object": "object"
+	},
+	"required": ["Error"]
+}

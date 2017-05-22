@@ -1,0 +1,26 @@
+\documentclass[../AnalisiDeiRequisiti.tex]{subfiles}
+
+\begin{document}
+\section{Descrizione Generale}
+	\subsection{Contesto d'uso del prodotto}
+	L'applicativo dovrà essere utilizzabile su un qualsiasi \gl{browser} compatibile con la tecnologia \gl{HTML5}, \gl{CSS3} e \gl{JavaScript}, senza limitazione alcuna sul \gl{sistema} operativo utilizzato.
+	\subsection{Funzioni del prodotto}
+	Il prodotto consiste in un \gl{applicativo Web} per l'accoglienza di un utente presso \prop. L'interazione con il sistema, chiamato  AV (Assistente Virtuale), avviene tramite \gl{Alexa}, che attraverso delle domande, cerca di identificare l'interlocutore per poi poter avvisare la persona da esso cercata tramite un apposito canale Slack. Terminata questa fase si proseguirà con l'intrattenimento dell'ospite attraverso la richiesta di un caffè, dei materiali necessari per la riunione, la somministrazioni di notizie di cronaca, di previsioni meteo, di informazioni su \prop, di notizie riguardo al mondo tecnologico e di barzellette. Le risposte di interesse verranno riportate, nel canale Slack, così da avvisare il dipendente cercato delle necessità dell'ospite. Una volta finita la sessione, nel caso in cui il dipende cercato o nessun al suo posto riceve l'ospite, esso può iniziare una nuova sessione dove verrà identificato senza dover fare una seconda volta la procedura.\\
+	È inoltre possibile accedere come amministratore attraverso una connessione alla rete locale (di \prop) per poter gestire le domande, le risposte, gli interlocutori ed aggiungere un nuovo amministratore.
+	\subsection{Caratteristiche degli utenti}
+	Non sono richieste competenze particolari per poter utilizzare questo prodotto, che deve risultare quindi accessibile ad un'ampia categoria di utenti. L'interazione con l'assistente dovrà essere il più intuitiva e semplice possibile, senza limitare le funzionalità offerte dal \gl{software} stesso. A questo proposito verrà fornito un \textit{Manuale Utente} contente le informazioni necessarie per consentire un utilizzo corretto ed efficace del prodotto.
+	\subsection{Vincoli generali}
+	Tutte le domande che l'assistente virtuale farà dovranno essere predefinite.
+	\subsection{Assunzione dipendenze}
+	Per avere un corretto funzionamento dell'applicazione sarà necessario l'utilizzo di un browser che sia compatibile con lo standard HTML5, CSS3 e JavaScript.
+	\subsection{Attori}
+	Di seguito verranno descritti gli attori che interagiscono con il sistema:
+	\begin{itemize}
+		\item \textbf{Alexa}: è il sintetizzatore vocale impiegato durante l'interazione con gli utenti/ospiti;
+		\item \textbf{Amministratore}: utente autenticato tramite interfaccia web che ha accesso all'area amministrativa;
+		\item \textbf{Database}: \gl{database} in cui vengono salvate le informazioni relative agli ospiti, che interagiscono con il sistema, e alle aziende in cui lavorano;
+		\item \textbf{Ospite}: è un utente prima di essere identificato dal sistema, ovvero prima che il sistema registri i suoi dati;
+		\item \textbf{Slack}: \gl{API} di Slack che permettono la comunicazione delle risposte di interesse alla persona cercata dall'ospite, la verifica dell'esistenza di un canale e la sua creazione;
+		\item \textbf{Utente}: è una persona che interagisce con il sistema e che deve ancora essere identificata.
+	\end{itemize}
+\end{document}

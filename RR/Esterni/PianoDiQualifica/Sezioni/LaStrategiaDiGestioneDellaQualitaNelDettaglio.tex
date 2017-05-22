@@ -1,0 +1,536 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+	\section{La strategia di gestione della qualità nel dettaglio}
+		\subsection{Risorse}
+		Verranno impiegate diverse risorse per garantire un buon processo di funzionamento. Le risorse verranno suddivise in questo modo:
+		\begin{itemize}
+			\item Risorse umane;
+			\item \gl{Risorse hardware};
+			\item \gl{Risorse software}.
+		\end{itemize}
+
+			\subsubsection{Risorse necessarie}
+				\paragraph{Risorse umane}
+				Le risorse umane di cui il processo di verifica avrà bisogno sono il \responsabilediprogetto\ e i \verificatori.
+				\paragraph{Risorse hardware}
+				Ogni componente del gruppo, per poter svolgere la verifica, dovrà avere a disposizione un computer con una sufficiente potenza di calcolo per poter supportare il carico di lavoro richiesto.
+
+				\paragraph{Risorse software}
+				Per effettuare controlli sui documenti e verificare che essi aderiscano alle \normediprogettov\ sono necessari degli strumenti software, questi corrispondono alle risorse software che verranno impiegate.\\
+				Gli strumenti necessari dovranno soddisfare le seguenti caratteristiche:
+				\begin{itemize}
+					\item Rilevare eventuali errori ortografici durante la scrittura;
+					\item Compilare/costruire e visualizzare successivamente il documento scritto in \gl{\LaTeX}.
+				\end{itemize}
+
+		    \subsubsection{Risorse disponibili}
+		    \paragraph{Risorse umane}
+		    Per eseguire le operazioni di verifica il gruppo ha a disposizione tutti i membri. Il ruolo di \responsabilediprogetto\ e di \verificatore, come definito nel \pianodiprogettov, a turno verranno coperti da tutti i componenti del gruppo.
+		    \paragraph{Risorse hardware}
+		    I computer dei singoli componenti del gruppo rappresentano le risorse hardware utilizzate dal \responsabilediprogetto\ e dal \verificatore\ di turno. In caso di necessità vi è la possibilità di utilizzare i computer offerti dal Servizio Calcolo dell'Università di Padova.
+		    \paragraph{Risorse software}
+		    Fanno parte delle risorse software impiegate l'editor di codice \LaTeX\ con i controlli integrati e gli script per controllare la leggibilità e la complessità dei documenti in relazione all'indice \gl{Gulpease}. Nella procedura di verifica, verrà utilizzata un ulteriore strumento software per gestire l'assegnazione delle attività di correzione. Per ulteriori informazioni si vedano le \normediprogettov.
+
+		\subsection{Verifica e validazione}
+			\subsubsection{Verifica}
+			Per eseguire le verifiche si utilizzano tecniche di analisi dinamica e statica. Le prime possono essere applicate solo al software, le seconde invece anche alla documentazione. Le tecniche di controllo descritte in seguito saranno quelle che il gruppo ha deciso di adottare.
+
+				\subparagraph{Analisi statica}
+				L'analisi statica permette di svolgere dei test solamente su oggetti non eseguibili, quindi verrà impiegata per verificare la documentazione ed il software a livello sintattico. Di seguito sono descritti i metodi che verranno utilizzati per la verifica dei documenti:
+				\begin{itemize}
+					\item \textbf{Inspection}: Questa tecnica ha come obiettivi la rilevazione di difetti e l'esecuzione di una lettura mirata del prodotto in esame. I \verificatori\ dovranno stilare una lista di controllo dove saranno elencati gli errori comuni. L'utilizzo dell'inspection permette una verifica più rapida e con un minor impiego di risorse;
+					\item \textbf{Walkthrough}: Questa tecnica ha come obiettivi la rilevazione di difetti e l'esecuzione di una lettura critica del prodotto in esame. Rispetto all'inspection questa tecnica è più dispendiosa di risorse poiché viene applicata all'interno del documento senza avere una precisa idea di quale tipo possa essere l'anomalia e dove ricercarla.
+					\item \textbf{Compilatore}: Alcune porzioni di software potranno essere verificate sintatticamente attraverso l'uso di un opportuno \gl{compilatore}.
+				\end{itemize}
+
+				\subparagraph{Analisi dinamica}
+				A differenza dell'analisi statica, l'analisi dinamica permette di fare test su oggetti a tempo di esecuzione, i test che verranno svolti sono elencati di seguito.
+				\begin{itemize}
+					\item \textbf{Test di unità}: questo di tipo di test consiste nel verificare ogni singola unità del prodotto software, ovvero anche la più piccola parte di software che conviene testare da sola, tramite l'utilizzo di strumenti come \gl{logger}, \gl{stub} o \gl{driver}. Data la sua natura, la dimensione dell'unità da testare verrà definita al momento del test. Lo scopo di questo test è di verificare il corretto funzionamento di un'unità per permettere una precoce individuazione dei \gl{bug}. Un test di unità accurato porta ad avere alcuni vantaggi, come:
+					\begin{itemize}
+						\item Modifiche semplificate;
+						\item Integrazione semplificata;
+						\item Il supporto alla documentazione.
+					\end{itemize}
+
+					\item \textbf{Test di integrazione}: questo tipo di test consiste nel verificare i componenti del sistema che sono formati dalla combinazione di più unità. Lo scopo principale è quello di evidenziare gli eventuali errori residui non individuati durante la realizzazione dei singoli moduli.
+					\item \textbf{Test di sistema}: consiste nell'eseguire nuovamente i test di unità e integrazione per quelle componenti che hanno subito modifiche o per le nuove funzionalità. L'obiettivo di questo test è quello di avere un prodotto di elevata qualità per ogni funzionalità o modifica importante che vengono aggiunte e di soddisfare tutti i requisiti software previsti.
+					\item \textbf{Test di accettazione}: questo test serve per accertare il soddisfacimento dei requisiti utente. Esso consiste nel collaudo del prodotto software in presenza nel proponente così da poter accertare che il soggetto del test soddisfi i requisiti utente. Se l'esito è positivo si può procedere al rilascio ufficiale del prodotto sviluppato.
+				\end{itemize}
+
+			\subsubsection{Validazione}
+				La validazione avviene nel momento in cui il prodotto ha superato i test di verifica ed è pronto al suo rilascio. Dopo aver superato la validazione si conosce che il prodotto in esame è conforme alle aspettative e soddisfa i requisiti, di conseguenza è pronto ad essere rilasciato.
+
+		\subsection{Organizzazione}
+		É molto importante specificare che tipo di verifica effettuare per ogni fase di lavoro e il processo di verifica sarà sempre presente all'interno di quest'ultima. Nel \pianodiprogettov\ vengono riportate in dettaglio le fasi di lavoro.
+
+		\subsection{Misure e metriche}
+			\subsubsection{Misure}
+			Per ogni misura che viene attuata sui processi o sui prodotti si deve rapportarla su di una scala. I valori di quest'ultima vengono riportati di seguito:
+			\begin{itemize}
+				\item \textbf{Negativo}: valore non accettabile, sono necessarie ulteriori verifiche e correzioni degli errori presenti;
+				\item \textbf{Accettabile}: valore accettabile, il soggetto della verifica ha raggiunto una soglia minima di accettazione;
+				\item \textbf{Ottimale}: valore accettabile, l'oggetto sottoposto a verifica ha raggiunto le massime aspettative del team. L'obiettivo dovrebbe essere quello di avere tutti i valori all'interno di tale range.
+			\end{itemize}
+
+			\subsubsection{Metriche per i documenti}
+			Sono i contenuti di un documento a indicarne la qualità. Tuttavia, quest'ultima è difficilmente quantificabile allo stato attuale del progetto, ciò è dovuto all'inesperienza del team in questo ambito. È stata quindi presa la decisione di limitarsi a valutare parametri maggiormente oggettivi e misurabili automaticamente attraverso strumenti software.
+
+			\paragraph{Indice di leggibilità}
+			Per poter stimare la qualità di un documento si è deciso di utilizzare una metrica per misurare l'indice di leggibilità. Quindi verrà preso in considerazione l'indice gulpease, impiegabile per documenti in lingua italiana. Questo indice si basa sulla lunghezza delle parole e sulla lunghezza delle frasi rispetto al numero di lettere.\\La formula per il suo calcolo è la seguente:
+			\begin{equation*}
+				Indice \ Gulpease = 89 + \frac{300*numeroFrasi - 10*numeroLettere}{numeroParole}
+			\end{equation*}
+			Tipicamente il risultato di questa equazione è compreso tra 0 e 100, dove i valori elevati indicano un'alta leggibilità e viceversa.\\
+			In generale, risulta che testi con un indice:
+			\begin{itemize}
+				\item Inferiore a 80 risultano difficili da leggere per chi è provvisto di licenza elementare;
+				\item Inferiore a 60 risultano difficili da leggere per chi è provvisto di licenza media;
+				\item Inferiore a 40 risultano difficili da leggere per chi è provvisto di licenza superiore.
+			\end{itemize}
+			Verranno di seguito riportati i range stabiliti per la metrica appena introdotta. Si vuole far notare che viene tenuto in considerazione il fatto che la documentazione è destinata a persone sufficientemente preparate, competenti ed istruite.
+			\begin{itemize}
+				\item Valori minori di 35 sono considerati negativi;
+				\item Valori compresi tra 35 e 50 sono considerati accettabili;
+				\item Valori superiori a 50 sono considerati ottimali.
+			\end{itemize}
+
+			\paragraph{Errori ortografici rilevati e non corretti}
+			Per capire quando un documento è corretto dal punto di vista ortografico è necessario l'impiego di questa metrica. Supponendo, infatti, che gli strumenti automatici siano in grado di rilevare tutti, o almeno la maggior parte, degli errori ortografici di un testo, la correttezza ortografica deve quindi basarsi sul numero di errori rinvenuti ma non successivamente corretti. Per errori corretti si intende un errore revisionato manualmente da un \verificatore, in quanto le correzioni automatiche non sono attendibili. Inoltre non è accettabile che vi siano errori segnalati ma non corretti da qualche componente del team. Vengono riportati di seguito i range stabiliti per la metrica appena introdotta:
+			\begin{itemize}
+				\item Una percentuale di errori non corretti maggiore dello 0\% è ritenuta negativa;
+				\item Una percentuale di errori non corretti inferiore/pari allo 0\% è ritenuta accettabile;
+				\item Una percentuale di errori non corretti pari allo 0\% è ritenuta ottimale.
+			\end{itemize}
+
+			\paragraph{Errori concettuali rilevati e non corretti}
+			Per capire quando un documento è corretto dal punto di vista concettuale è necessario l'impiego di questa metrica. Supponendo, infatti, che dopo delle revisioni siano stati trovati tutti, o almeno la maggior parte, i maggiori errori di questo tipo, la correttezza concettuale deve quindi basarsi sul numero di errori rinvenuti e segnalati, ma non corretti successivamente. Per errori corretti si intende un errore fatto notare dal committente o da qualche \verificatore\ (con conseguente approvazione del \textit{Responsabile di Progetto} e successivamente corretto (sulla base di discussioni interne o con il committente).\\
+			Vengono riportati di seguito i range stabiliti per la metrica appena introdotta:
+			\begin{itemize}
+				\item Una percentuale di errori non corretti maggiore dello 5\% è ritenuta negativa;
+				\item Una percentuale di errori non corretti inferiore allo 5\% è ritenuta accettabile;
+				\item Una percentuale di errori non corretti pari allo 0\% è ritenuta ottimale.
+			\end{itemize}
+
+			\subsubsection{Metriche per i processi}
+				\paragraph{Schedule Variance}
+				É una metrica per mette di sapere se alla data corrente si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività pianificata.\\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					SV = BCWP - BCWS
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{BCWP}: indica il valore delle attività realizzate alla data corrente;
+					\item \textbf{BCWS}: indica il costo pianificato per realizzare le attività di progetto alla corrente.
+				\end{itemize}
+				Quindi con:
+				\begin{itemize}
+					\item \textbf{SV > 0}: significa che il progetto sta avanzando con maggior velocità rispetto a quando pianificato;
+					\item \textbf{SV < 0}: significa che il progetto è in ritardo;
+					\item \textbf{SV = 0}: significa che il progetto è in linea con quanto pianificato.
+				\end{itemize}
+				\paragraph{Budget Variance}
+				É una metrica utile ad indicare se alla data corrente si è speso di più o di meno rispetto al budget previsto per la data corrente.\\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					BV = BCWS - ACWP
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{BCWS}: indica il costo pianificato per realizzare le attività di progetto alla data corrente;
+					\item \textbf{ACWP}: indica il costo effettivamente sostenuto per realizzare le attività di progetto alla corrente.
+				\end{itemize}
+				Quindi con:
+				\begin{itemize}
+					\item \textbf{BV > 0}: significa che il budget speso è minore di quanto era stato pianificato;
+					\item \textbf{BV < 0}: significa che il budget è superiore rispetto a quanto pianificato;
+					\item \textbf{BV = 0}: significa che il budget è in linea con quanto pianificato.
+				\end{itemize}
+
+				\paragraph{Produttività}
+
+				\textbf{Produttività di documentazione}\\
+				Serve per indicare la produttività media di documentazione delle risorse impiegate, valutando quindi le persone coinvolte durante i diversi stadi del progetto. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Produttivit\grave{a} \ di \ documentazione = \frac{Parole}{Ore \ persona}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{Parole}: indica il numero di parole presenti nei documenti;
+					\item \textbf{Ore persona}: indica il numero di ore produttive dei componenti del gruppo.
+				\end{itemize}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 70);
+					\item \textbf{Accettabile}: valore accettabile (70 - 100);
+					\item \textbf{Ottimale}: valore accettabile (>= 100).
+				\end{itemize}
+				\textbf{Produttività di test}\\
+				É una metrica utilizzata per indicare la produttività media dei test realizzati. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Produttivit\grave{a} \ di \ test = \frac{Numero \ di \ test}{Ore \ persona}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{Parole}: indica il numero di parole presenti nei documenti;
+					\item \textbf{Ore persona}: indica il numero di ore produttive dei componenti del gruppo.
+				\end{itemize}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 5);
+					\item \textbf{Accettabile}: valore accettabile (5 - 10);
+					\item \textbf{Ottimale}: valore accettabile (> 10).
+				\end{itemize}
+
+				\textbf{Produttività di codifica}\\
+				É una metrica utilizzata per indicare la produttività media delle attività di codifica. Una bassa produzione di righe di codice non denota uno scarso impegno, bensì sottolinea l'efficienza di produttività impiegata. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Produttivit\grave{a} \ di \ codifica = \frac{LOCs}{Ore \ persona}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{LOCs}: indica il numero di linee di codice prodotte;
+					\item \textbf{Ore persona}: indica il numero di ore produttive dei componenti del gruppo.
+				\end{itemize}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 20);
+					\item \textbf{Accettabile}: valore accettabile (10 - 20);
+					\item \textbf{Ottimale}: valore accettabile (2 - 10).
+				\end{itemize}
+
+				\paragraph{Impegno}
+				É una metrica utilizzata per indicare l'impegno richiesto dal team per la realizzazione del progetto. \\Il valore si ottiene dalla formula:
+				\begin{equation*}
+					Impegno = \frac{Dimensione}{Produttivit\grave{a}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{Dimensione}: indica il tempo produttivo impiegato;
+					\item \textbf{Produttività}: indica la media della produttività totali (di documentazione, di test e di codifica).
+				\end{itemize}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 0,4);
+					\item \textbf{Accettabile}: valore accettabile (0,5 - 0,6);
+					\item \textbf{Ottimale}: valore accettabile (> 0,6).
+				\end{itemize}
+
+			\subsubsection{Metriche per il software}
+			Il team ha deciso che per garantire la qualità del software utilizzerà delle metriche con il compito di monitorare la qualità interna ed esterna in uso. In base alle risorse a disposizione e agli obiettivi di qualità preposti per il software, si fa quindi riferimento al modello e alle relative metriche citati in precedenza: lo standard ISO/IEC 9126.\\
+			Vengono di seguito elencate le metriche per il software prodotto raggruppate per le relative caratteristiche di qualità che si intendono valutare.\\
+
+			\paragraph{Funzionalità}
+			Il gruppo \kpanic\ si impegnerà affinché vi siano:
+			\begin{itemize}
+				\item \textbf{Adeguatezza}: le funzionalità fornite sono conformi rispetto alle aspettative;
+				\item \textbf{Accuratezza}: il prodotto fornisce i risultati attesi, con il livello di dettaglio richiesto;
+				\item \textbf{Sicurezza}: il prodotto protegge le informazioni e i dati da accessi e modifiche non autorizzate.
+			\end{itemize}
+			Le metriche che verranno impiegate vengono esposte di seguito.
+
+			\subparagraph{Copertura requisiti obbligatori}
+			Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti obbligatori. Essa controlla infatti il rapporto percentuale tra i requisiti obbligatori soddisfatti e il numero totale dei requisiti obbligatori richiesti.\\
+			É possibile calcolarla tramite la formula:
+			\begin{equation*}
+					Copertura \ requisiti \ obbligatori = \frac{Numero \ di \ requisiti \ obbligatori \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ obbligatori}
+				\end{equation*}
+				Soglie utilizzate:
+				\begin{itemize}
+					\item \textbf{Negativo}: soglia non accettabile (<100\%);
+					\item \textbf{Accettabile}: soglia accettabile (100\%);
+					\item \textbf{Ottimale}: soglia accettabile (100\%).
+				\end{itemize}
+
+			\subparagraph{Copertura requisiti desiderabili}
+			Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti desiderabili. Essa controlla infatti il rapporto percentuale tra i requisiti desiderabili soddisfatti e il numero totale dei requisiti obbligatori richiesti.\\
+			É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					Copertura \ requisiti \ desiderabili = \frac{Numero \ di \ requisiti \ desiderabili \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ desiderabili}
+				\end{equation*}
+				Soglie utilizzate:
+				\begin{itemize}
+					\item \textbf{Negativo}: soglia non accettabile (< 100\%);
+					\item \textbf{Accettabile}: soglia accettabile (100\%);
+					\item \textbf{Ottimale}: soglia accettabile (100\%).
+				\end{itemize}
+
+			\subparagraph{Controllo degli accessi}
+			Permetti di conoscere la percentuale di operazioni illegali non bloccate.
+			É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					I = \frac{N_{IE} * 100}{N_{II}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{IE}$}: indica il numero di operazioni illegali eseguibili dal test;
+					\item \textbf{$N_{II}$}: indica il numero di operazioni illegali individuate.
+				\end{itemize}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: soglia non accettabile (> 10\%);
+					\item \textbf{Accettabile}: soglia accettabile (0 - 10\%);
+					\item \textbf{Ottimale}: soglia accettabile (0\%).
+				\end{itemize}
+
+			\paragraph{Manutenibilità}
+
+			Per garantire il più possibile l'agevolezza delle operazioni di manutenzione verranno adottate le seguenti caratteristiche:
+			\begin{itemize}
+				\item \textbf{Analizzabilità}: deve essere permesso, dal software, una rapida identificazione delle possibili cause di errori e malfunzionamenti;
+				\item \textbf{Modificabilità}: devono essere permessi, dal software, dei possibili cambianti in alcune sue parti;
+				\item \textbf{Stabilità}: dopo delle modifiche al software non devono insorgere degli effetti indesiderati;
+				\item \textbf{Testabilità}: il software, dopo eventuali modifiche, deve poter essere facilmente testato.
+			\end{itemize}
+			Le metriche che verranno impiegate vengono esposte di seguito.
+
+			\subparagraph{Numero di metodi per package}
+			Questa metrica, chiamata Number of Methods, permette di calcolare la media delle occorrenze dei metodi per package. Un package non dovrebbe contenere un numero eccessivo di metodi; dei valori superiori al range ottimale massimo potrebbero indicare una necessità di maggiore decomposizione del package.\\
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 10);
+					\item \textbf{Accettabile}: valore accettabile (5 - 10);
+					\item \textbf{Ottimale}: valore accettabile (1 - 5).
+				\end{itemize}
+
+			\subparagraph{Numero di parametri per metodo}
+			Un elevato numero di parametri per metodo potrebbe evidenziare un metodo troppo complesso.\\
+			Non c'è una regola forte per il numero di parametri possibili in un metodo o costruttore, citando Robert Martin, in Clean Code:\\
+\textit{“The ideal number of arguments for a function is zero (niladic). Next comes one (monadic), followed closely by two (dyadic). Three arguments (triadic) should be avoided where possible. More than three (polyadic) requires very special justification – and then shouldn’t be used anyway.“}\\
+e Steve McConnell, in Code Complete:\\
+\textit{“limit the number of a routine’s parameters to about seven, seven is a magic number for people’s comprehension.”}\\
+Vengono quindi seguite le linee guida dei seguenti range.\\
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 0);
+					\item \textbf{Accettabile}: valore accettabile (0);
+					\item \textbf{Ottimale}: valore accettabile (0).
+				\end{itemize}
+
+			\subparagraph{Complessità ciclomatica}
+			Questa metrica software serve per indicare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso. In questo grafo i nodi corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo. È possibile applicare questo indice indistintamente a singole funzioni, \gl{moduli}, metodi e \gl{package} di un programma. Questa metrica viene impiegata per limitare la complessità durante l'attività di sviluppo del prodotto software e può risultare utile durante la fase di test per determinare il numero di casi necessari di questi ultimi. L'indice di complessità, infatti, è un limite superiore al numero di test necessari per raggiungere il coverage completo del modulo testato. Inoltre, uno studio ha mostrato forti corrispondenze tra le metriche di complessità e il livello di coesione nei package presi in esame. (indicare quale)
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 25);
+					\item \textbf{Accettabile}: valore accettabile (10 - 25);
+					\item \textbf{Ottimale}: valore accettabile (0 - 10).
+				\end{itemize}
+
+			\subparagraph{Metriche di Halstead}
+			Oltre a rappresentare indice di complessità, le metriche di \gl{Halstead} , permettono di identificare le proprietà misurabili del software e le relative relazioni. Queste metriche si basano sull'osservazione che una stessa metrica dovrebbe valutare l'implementazione di un algoritmo in linguaggi differenti ed essere indipendente dall'esecuzione su una specifica piattaforma.
+				Sono necessarie le seguenti unità di misura:
+				\begin{itemize}
+					\item \textbf{n1}: numero di operatori distinti usati dal programma;
+					\item \textbf{n2}: numero di operandi distinti usati dal programma;
+					\item \textbf{N1}: numero di occorrenze degli operatori;
+					\item \textbf{N2}: numero di occorrenze degli operandi.
+				\end{itemize}
+				Per determinare:
+				\begin{itemize}
+					\item {Il \textbf{vocabolario} della funzione}:
+					\begin{equation*}
+						n = n1 + n2
+					\end{equation*}
+					\item {La \textbf{lunghezza} della funzione}:
+					\begin{equation*}
+						N = N1 + N2
+					\end{equation*}
+				\end{itemize}
+				Vista la scarsa disponibilità di valori di riferimento reperibili in rete, i range specificati sono frutto di un confronto tra il \gl{report} sulla complessità di una \gl{libreria} \gl{open source} presa di esempio (\href{https://github.com/philbooth/complexity-report/blob/master/EXAMPLE.md}{https://github.com/philbooth/complexity-report/blob/master/EXAMPLE.md}) e i valori dichiarati in \href{http://www.mccabe.com/pdf/McCabe\%20IQ\%20Metrics.pdf}{http://www.mccabe.com/pdf/McCabe\%20IQ\%20Metrics.pdf}. I valori indicati vengono dichiarati momentanei (RR) e verranno rivalutati sia considerando altre fonti che tenendo conto dei valori rilevati in parti del codice che il gruppo considera come riferimento.\\
+
+				\textbf{Halstead difficulty per function}\\
+				Il livello di difficoltà di una funzione misura la propensione all'errore ed è proporzionale al numero di operatori presenti.\\
+				La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					D = \frac{n1}{2} * \frac{N2}{n2}
+				\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 30);
+					\item \textbf{Accettabile}: valore accettabile (15 - 30);
+					\item \textbf{Ottimale}: valore accettabile (0 - 15).\\
+				\end{itemize}
+
+				\textbf{Halstead volume per function}\\
+				Il volume descrive la dimensione dell'implementazione di un algoritmo e si basa sul numero di operazioni eseguite e sugli operandi di una funzione. Il volume di una funzione senza parametri composta da una sola linea è 20, mentre un indice superiore a 1000 indica che probabilmente la funzione esegue troppe operazioni.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					V = N * \log_{2}{n}
+				\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (>1 500);
+					\item \textbf{Accettabile}: valore accettabile (1000 - 1500);
+					\item \textbf{Ottimale}: valore accettabile (20 - 1000).
+				\end{itemize}
+
+				\textbf{Halstead effort per function}\\
+				Lo sforzo per implementare o comprendere il significato di una funzione è proporzionale al suo volume e al livello di difficoltà.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					E = V * D
+				\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 400);
+					\item \textbf{Accettabile}: valore accettabile (300 - 400);
+					\item \textbf{Ottimale}: valore accettabile (0 - 300).
+				\end{itemize}
+
+			\subparagraph{Maintainability index}
+			Questa metrica è una scala logaritmica da -$\infty$ a 171, calcolata sulla base delle linee di codice logiche, della complessità ciclomatica e dall'indice Halstead effort e dove un valore alto indica una maggiore manutenibilità.\\
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 70);
+					\item \textbf{Accettabile}: valore accettabile (70 - 90);
+					\item \textbf{Ottimale}: valore accettabile (> 90).
+				\end{itemize}
+
+			\paragraph{Affidabilità}
+			Il prodotto software durante la sua esecuzione dovrà avere le seguenti caratteristiche:
+			\begin{itemize}
+				\item \textbf{Maturi}: evitare che si verifichino malfunzionamenti, operazioni illegali e restituzione di risultati errati (failure) in seguito a \gl{fault};
+				\item \textbf{Tolleranza agli errori}: nell'eventualità in cui si verifichino degli errori, a causa di guasti o per un uso scorretto dell'applicativo, questi dovranno essere gestiti in modo non avere cali di prestazione.
+			\end{itemize}
+			Le metriche che verranno impiegate vengono esposte di seguito.
+
+			\subparagraph{Densità di failure}
+			Questa metrica serve per indicare la percentuale di operazioni di testing che si sono concluse in \gl{failure} . \\La formula per calcolare il valore è la seguente:
+			\begin{equation*}
+				F = \frac{N_{FR}*100}{N_{TE}}
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{FR}$}: indica il numero di failure rilevati durante la fase di test;
+				\item \textbf{$N_{TE}$}: indica il numero di test eseguiti.
+			\end{itemize}
+			Range utilizzati:
+			\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (> 10 \%);
+					\item \textbf{Accettabile}: valore accettabile (0 - 10 \%);
+					\item \textbf{Ottimale}: valore accettabile (0 \%).
+			\end{itemize}
+
+			\subparagraph{Statement coverage}
+			Questa metrica permette di identificare quante righe di codice, per ogni unità, sono state eseguite almeno una volta.\\La formula per calcolare il valore è la seguente:
+			\begin{equation*}
+				Statement \ coverage = \frac{linee \ eseguite * 100}{linee totali}
+			\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 70 \%);
+					\item \textbf{Accettabile}: valore accettabile (70 - 85 \%);
+					\item \textbf{Ottimale}: valore accettabile (85 - 100 \%).
+				\end{itemize}
+
+			\subparagraph{Branch coverage}
+			Permette di identificare quanti rami di flusso sono stati attraversati almeno una volta durante i test.\\La formula per calcolare il valore è la seguente:
+			\begin{equation*}
+				Branch \ coverage = \frac{rami \ attraversati* 100}{rami totali}
+			\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 70 \%);
+					\item \textbf{Accettabile}: valore accettabile (70 - 85 \%);
+					\item \textbf{Ottimale}: valore accettabile (85 - 100 \%).
+				\end{itemize}
+
+			\subparagraph{Copertura dei test}
+			Questa metrica esamina la percentuale di successo dei test ricavati dai requisiti e dalle relative funzionalità che il software dovrà ottenere.\\La formula per ottenere la percentuale dei test eseguiti con successo è la seguente:
+			\begin{equation*}
+				Copertura \ dei \ test = \frac{Numero \ test \ superati* 100}{Numero \ totale \ test \ painificati}
+			\end{equation*}
+				Range utilizzati:
+				\begin{itemize}
+					\item \textbf{Negativo}: valore non accettabile (< 80 \%);
+					\item \textbf{Accettabile}: valore accettabile (80 - 90 \%);
+					\item \textbf{Ottimale}: valore accettabile (90 - 100 \%).
+				\end{itemize}
+
+			\paragraph{Usabilità}
+			Il team punterà a garantire al prodotto, i seguenti obiettivi di usabilità:
+			\begin{itemize}
+				\item \textbf{Comprensibilità}: le funzionalità offerte saranno riconoscibili dall'utente, che dovrà essere in grado di comprenderne le modalità di utilizzo per poter raggiungere i risultati attesi;
+				\item \textbf{Apprendibilità}: l'utente dovrà avere la possibilità di impararne l'utilizzo senza troppo impegno;
+				\item \textbf{Operabilità}: le funzionalità presenti dovranno essere coerenti con le aspettative dell'utente;
+				\item \textbf{Attrattiva}: dovrà essere piacevole durante il suo utilizzo.
+			\end{itemize}
+			Le metriche impiegate saranno:
+			\begin{itemize}
+				\item Comprensibilità delle funzioni offerte;
+				\item Facilità di apprendimento delle funzionalità;
+				\item Consistenza operazionale in uso.
+			\end{itemize}
+			Le metriche che verranno impiegate vengono esposte di seguito.
+
+			\subparagraph{Comprensibilità delle funzioni offerte}
+			Questa metrica indica la percentuale di operazioni che l'utente riesce a comprendere in modo immediato, senza la consultazione di un manuale.\\La formula per calcolare il valore è la seguente:
+			\begin{equation*}
+				S = \frac{N_{FC}*100}{N_{FO}}
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{FC}$}: indica il numero di funzionalità comprese in modo immediato dall'utente durante l'attività di test del prodotto;
+				\item \textbf{$N_{FO}$}: indica il numero di versioni di funzionalità offerte dal sistema.
+			\end{itemize}
+			Range utilizzati:
+			\begin{itemize}
+				\item \textbf{Negativo}: valore non accettabile (< 80\%);
+				\item \textbf{Accettabile}: valore accettabile (80 - 100\%);
+				\item \textbf{Ottimale}: valore accettabile (90 - 100\%).
+			\end{itemize}
+			\subparagraph{Facilità di apprendimento delle funzionalità}
+			Serve per indicare il tempo medio impiegato dall'utente per imparare ad usare correttamente un data funzionalità del software .\\
+			Per il calcolo di questa metrica viene preso in considerazione il tempo, espresso in minuti, che l'utente impiega per apprendere il corretto funzionamento di una funzionalità offerta dal prodotto.
+			Range utilizzati:
+			\begin{itemize}
+				\item \textbf{Negativo}: valore non accettabile (> 30 minuti);
+				\item \textbf{Accettabile}: valore accettabile (0 - 30 minuti);
+				\item \textbf{Ottimale}: valore accettabile (0 - 15 minuti).
+			\end{itemize}
+			\subparagraph{Consistenza operazionale in uso}
+			Indica la percentuale di funzionalità offerte all'utente che rispettano le sue aspettative. La misurazione viene effettuata con la seguente formula:
+			\begin{equation*}
+				C = (1 - \frac{N_{MFI}}{N_{MFO}}) * 100
+			\end{equation*}
+			dove $	N_{MFI}$ è il numero di funzionalità che non rispettano le aspettative dell'utente, mentre $	N_{MFO}$ indica le funzionalità offerte dal sistema.
+			Range utilizzati:
+			\begin{itemize}
+				\item \textbf{Negativo}: valore non accettabile (<80);
+				\item \textbf{Accettabile}: valore accettabile (80 - 100);
+				\item \textbf{Ottimale}: valore accettabile (90 - 100).
+			\end{itemize}
+			\paragraph{Efficienza}
+			Il prodotto dovrà essere efficiente, in particolare:
+			\begin{itemize}
+				\item \textbf{Utilizzo delle risorse}: quando il software esegue le sue funzionalità, esse dovranno utilizzare un appropriato numero e tipo di risorse.
+			\end{itemize}
+			\paragraph{Portabilità}
+			Il gruppo agevolerà la portabilità del prodotto software adottando quanto segue:
+			\begin{itemize}
+				\item \textbf{Adattabilità}: il prodotto dovrà adattarsi a tutti gli ambienti di lavoro nei quali è stato previsto un suo utilizzo, senza la necessità di dover apportare modifiche allo stesso.
+			\end{itemize}
+			Le metriche impiegate saranno:
+			\begin{itemize}
+				\item Versioni dei browser supportati.
+			\end{itemize}
+			Di seguito verranno trattate nel dettaglio le metriche appena elencate.
+
+			\subparagraph{Versioni dei browser supportate}
+			Questa metrica serve per indicare la percentuale di versioni di \gl{browser} attualmente supportate, fra quelle individuate dai requisiti. \\La formula per calcolare il valore è la seguente:
+			\begin{equation*}
+				S = \frac{N_{VS}*100}{N_{VS}}
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{VS}$}: indica il numero di versioni di browser supportare dal prodotto;
+				\item \textbf{$N_{TE}$}: indica il numero di versioni di browser che devono essere supportare dal prodotto.
+			\end{itemize}
+			Range utilizzati:
+			\begin{itemize}
+				\item \textbf{Negativo}: valore non accettabile (< 100 \%);
+				\item \textbf{Accettabile}: valore accettabile (100 \%);
+				\item \textbf{Ottimale}: valore accettabile (100 \%).
+			\end{itemize}
+
+\end{document}

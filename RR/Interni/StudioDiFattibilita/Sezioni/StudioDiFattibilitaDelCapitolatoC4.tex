@@ -1,0 +1,28 @@
+\documentclass[../StudioDiFattibilita.tex]{subfiles}
+
+\begin{document}
+\section{Studio di fattibilità del capitolato C4}
+	\subsection{Descrizione}
+	Il capitolato \gl{eBread}, applicazione di lettura per dislessici, proposto da Mivoq consiste nella realizzazione di un'applicazione in ambiente \gl{Android} per smartphone e tablet, che sia in grado di agevolare la lettura delle persone affette da dislessia, grazie a vari aiuti come la sintesi vocale o \gl{font} particolari. Per rendere il prodotto facilmente riusabile, il proponente consiglia di suddividerlo in due componenti distinte, quali una libreria per accedere alle varie funzioni di sintesi vocale o altro, e l'applicazione che ne fa uso. Mivoq inoltre propone due tipologie di prodotto finale, un lettore di \gl{eBook} o un \gl{client} di messaggistica. Dovranno essere implementate obbligatoriamente alcune funzionalità, quali la lettura di almeno una sorgente di testo con riproduzione dell'audio sintetizzato, ed evidenziare del testo in modo sincronizzato con la sua riproduzione in audio.
+
+	\subsection{Studio di dominio}
+	  	\subsubsection{Dominio applicativo}
+		Il prodotto finale è destinato a tutte le persone affette da dislessia. Ad oggi questa tecnologia non viene ancora pienamente sfruttata, ma è utilizzata solo in pochi ambiti come le voci dei navigatori satellitari, gli avvisi dei mezzi di trasporto pubblico, le risponderie telefoniche automatiche e poco altro.
+
+	 	\subsubsection{Dominio tecnologico}
+		Le tecnologie consigliate dal proponente per lo sviluppo del progetto sono:
+				\begin{itemize}
+					\item \textbf{FA-TTS\gl (\textbf{F}lexible and \textbf{A}daptive \textbf{T}ext-\textbf{T}o-\textbf{S}peech):} motore di \gl{sintesi vocale} \gl{open source}, e core del progetto;
+					\item \textbf{\gl{Android}:} piattaforma ed ambiente di sviluppo;
+					\item \textbf{\gl{Java}:} linguaggio di programmazione per lo sviluppo dell'applicazione;
+					\item \textbf{\gl{ePub}:} libreria open-source per lo sviluppo di un e-book reader;
+					\item \textbf{\gl{Telegram}:} client di messaggistica open-source da cui partire per l'implementazione di un client di messaggistica.
+				\end{itemize}
+
+		\subsection{Potenziali criticità}
+		Il team ritiene che i servizi di sintesi vocale su dispositivi mobili non forniscono informazioni sufficienti alla sincronizzazione di audio e testo per lo scopo di questo progetto, come nemmeno l'engine FA-TTS suggerito dal committente a meno di modifiche alle relative librerie. Secondo \kpanic\ queste operazioni potrebbero risultare onerose in termini di tempo, e quindi portare a ritardi di sviluppo del prodotto, in quanto servizi di sintesi vocale come questo sono del tutto sconosciuti al gruppo.
+
+	\subsection{Valutazione finale}
+	Questo capitolato è stato scartato perché, seppure interessante a livello di utilità, per \kpanic\ non lo è altrettanto per il suo potenziale utilizzo data la sua limitazione a dispositivi Android. Inoltre Android è una piattaforma molto vasta e secondo il team sarebbe meglio avere una buona e solida formazione al riguardo prima di applicarsi a questo capitolato. Per questi motivi in generale il gruppo si è dimostrato disinteressato a questo progetto.
+
+\end{document}

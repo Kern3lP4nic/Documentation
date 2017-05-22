@@ -1,0 +1,276 @@
+\documentclass[../NormeDiProgetto_v4.0.0.tex]{subfiles}
+\begin{document}	
+\section{Processi organizzativi}
+	\subsection{Pianificazione di progetto}
+		\subsubsection{Pianificazione dell'organizzazione}
+			\paragraph{Descrizione}
+				La pianificazione dell'organizzazionè è l'attività che gestisce le risorse umane ed economiche per poter raggiungere lo scopo del progetto.
+				L'intera attività è svolta dal \responsabilediprogetto\ che può appoggiarsi ad \amministratori\ per la redazione della documentazione necessaria.
+				Il prodotto di quest'attività deve andare ad aggiornare il \pianodiprogetto.
+			
+			\paragraph{Obiettivi di qualità}
+				Durante la pianificazione il \responsabilediprogetto\ deve garantire i seguenti vincoli di qualità: 
+				\begin{itemize}
+					\item La pianificazione non deve superare il numero di ore persona disponibili per ruolo e per candidato;
+					\item Le ore persona devono essere distibuite equamente tra i mebri del team;
+					\item La pianificazione deve anticipare il più possibile la data di consegna, ma non superare in alcun modo il limite imposto dallle milestone definite nella pianificazione di progetto;
+					\item Ogni membro del team durante lo svolgimento del progetto deve ricoprire più di tre cariche differenti.
+				\end{itemize}
+	
+			\paragraph{Procedure}
+				Ognuna delle operazioni descritte in seguito deve essere eseguita avendo come riferimento l'analisi dei rischi (prodotta dalla gestione dei rischi appartenete al processo di gestione di progetto), e programmando anticipamente le scadenze e la gestione delle risorse in base al contenuto.
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item Assegnare ad ogni membro del team uno o più ruoli che dovrà ricoprire in quel periodo, con il numero di ore da svolgere per ogni singolo ruolo;
+					\item Sulla base dei punti precedenti va effettuata una schedulazione dello sviluppo e dell'avanzamento dei processi utilizzando i Gantt chart con unità di consumo, ovvero l'unità giornaliera;
+					\item Sulla base del punto precedente deve essere effettuata una distribuzione del carico lavorativo ai ruoli;
+					\item Sulla base del carico lavorativo dei ruoli e del numero ore per quel ruolo ricoperto da ogni membro, gli viene affidata una tasklist da completare.
+				\end{itemize}
+
+			\paragraph{Strumenti}
+				Gli stumenti messi a disposizione sono:
+				\begin{itemize}
+					\item \textbf{Excel}: Software appartente al pacchetto office utilizzato per generare tabelle e grafici. 
+				\end{itemize}
+				
+
+		\subsubsection{Consuntivazione}
+			\paragraph{Descrizione}
+				La consuntivazione è l'attività di fine periodo la quale, presa in input la pianificazione e i dati raccolti dalla gestione di processo, ne stima l'andamento e genera eventualmente una ripianificazione dei periodi seguenti, senza però poter modificare le milestone.
+				Il prodotto di quest'attività dovrà andare ad aggiornare il \pianodiprogetto.
+			\paragraph{Obiettivi di qualità}
+				Durante la consuntivazione il \responsabilediprogetto\ deve garantire i seguenti vincoli di qualità: 
+				\begin{itemize}
+					\item I dati forniti in uscita devono essere il più coerenti possibile;
+					\item Deve essere fornito un resoconto dettagliato dei problemi riscontrati.
+				\end{itemize}
+			\paragraph{Procedure}
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item La consuntazione deve avvenire subito dopo la terminazione del periodo per riconsentire la pianificazione;
+					\item Deve venir fatto un raffronto tra ore previste e lavorate, per ruolo;
+					\item In caso di non coerenza, se ne devono descrivere le cause, ricercandole tra i rischi o l'avanzamento anticipato;
+					\item Deve essere inserita nell'Analisi dei Rischi la lista dei rischi realmente riscontrati;
+					\item Se presente nell'Analisi dei Rischi una metodologia da utilizzare in risposta al verificarsi di un problema, è necessario attenersi a questa;
+					\item Analisi delle motivazioni e redazione di una lista di modifiche e contromisure da apportare;
+					\item Va reiterata la pianificazione senza cambiare milestone sulla base dei cambiamenti da effettuare.
+				\end{itemize}
+
+
+	\subsection{Gestione di progetto}
+
+		\subsubsection{Gestione delle attività}
+			\paragraph{Descrizione}
+			Le attività di progetto, verranno divise in unità logiche denominate task che devono essere assegnati e svolti da una sola persona. 
+			Un'attività sarà quindi rappresentata da una lista di task e ne verrà creata una per ogni attività da svolgere.
+			Un'attività dovrà essere assegnata ad una o più persone, con il ruolo adeguato.
+
+			\subparagraph{Obiettivi di qualità}
+			L'intero sviluppo del progetto dovrà seguire la pianificazione prodotta, in particolare:
+			\begin{itemize}
+				\item Ogni attività verrà svolta da colui al quale è stata assegnata, rispettando le tempistiche fissate e svolgendo tutti i compiti nei quali essa è stata suddivisa;
+				\item Il costo necessario allo svolgimento di un periodo in cui è stata suddivisa la realizzazione del progetto non dovrà eccedere quanto preventivato per essa.
+			\end{itemize}
+	
+			\paragraph{Procedure}
+			Durante tutta l'attività di sviluppo del progetto la pianificazione effettuata dovrà essere aggiornata costantemente per essere sempre coerente con la situazione corrente. Qualsiasi eventuale valore negativo a livello di Schedule Variance o Budget Variance rilevato in un periodo di lavoro dovrà essere assolutamente compensato entro la fine dell'attività di progetto, in quanto non è assolutamente ammesso eccedere le ore di lavoro finali e il preventivo dei costi finale indicato nella pianificazione.
+
+			\paragraph{Creazione task e lista di task}
+			Le liste di task e gli stessi task vengono creati dal \responsabilediprogetto\ e sono assegnati ad un singolo o a più membri del gruppo, in quest'ultimo caso, essi potranno suddividerseli in task più ristretti ed assegnarseli tra loro.
+			Verrà affiancato un \verificatore\ ad ogni lista di task, esso sarà segnalato come partecipante e ci sarà un task dedicato alla verifica, che sarà dipendente dalla terminazione di tutti i task di quella lista.
+			Una volta che si ritiene il proprio task completato, si deve segnalarlo come completato su Teamwork.
+			Ogni task dovrà integrare il numero di ore previste per quel lavoro.
+
+			\paragraph{Chiusura di una lista di task}
+			Quando tutti i task di una lista saranno completati, il task di verifica verrà sbloccato e i \verificatori\ ed il \responsabilediprogetto\ riceveranno una notifica.
+			Terminati tutti i task di quella lista quel modulo può considerarsi concluso e verrà chiuso dal \responsabilediprogetto.
+			A seguito del completamento di ogni task, dovrà essere noto quanto tempo è stato effettivamente utilizzato per completare quel task attraverso l'apposita funzione integrata nello strumento o come elemento della descrizione.
+			Lo strumento utilizzato per questa gestione di task sarà Teamwork che verrà descritto nella sezione strumenti.
+		
+
+			\paragraph{Strumenti}
+			\begin{itemize}
+				\item \textbf{Teamwork}: per gestire nella maniera più opportuna e centralizzata la divisione del lavoro, si è scelto di utilizzare il sistema di pianificazione delle attività chiamato Teamwork.
+				Quest'ultimo è di supporto in diversi modi:
+				\begin{itemize}
+				\item Permette di suddividere i task in diversi sottogruppi;
+				\item Permette di gestire le milestone;
+				\item Permette di avere un calendario comune dove annotare gli impegni che vanno rispettati e gestirne i promemoria;
+				\item Aiuta nella pianificazione, grazie alla presenza di un Gantt chart;
+				\item Permette di registrare il tempo reale utilizzato per eseguire un determinato task.
+				\end{itemize}
+			\end{itemize}
+
+		\subsubsection{Controllo di rischio}
+			\paragraph{Descrizione}
+			L'obiettivo dell'attività è quello di identificare, analizzare, trattare e monitorare continuamente i rischi che possono insorgere durante l'intero periodo di lavoro.
+		
+			\paragraph{Obiettivi di qualità}
+			Il gruppo dovrà gestire correttamente i rischi, in particolare:
+			\begin{itemize}
+				\item All'inizio di ogni periodo, l'analisi dei rischi porterà all'individuazione di nuovi rischi specifici per ognuna di esse;
+				\item I rischi analizzati che si incontreranno saranno trattati secondo le strategie individuate in fase di individuazione e il loro impatto sarà controllato;
+				\item I dati riguardanti i rischi analizzati dovrà essere riportata nel \pianodiqualifica\ assieme agli avvenimenti che li causano.
+			\end{itemize}
+
+			\paragraph{Procedure}
+			\begin{itemize}
+			\item All'inizio dell'attività di progetto, verranno individuati i principali fattori di rischio riguardanti l'organizzazione delle attività;
+			Dovrà sempre essere tenuto sotto controllo il livello di probabilità dei rischi analizzati. Anche se con basso livello di pericolosità, in caso il rischio di manifestasse, il team dovrà attuare le contromisure previste al fine di mitigare i suoi effetti ed evitare che la sua pericolosità aumenti.
+			\end{itemize}
+			\paragraph{Metriche}\mbox{}\\
+				\paragraph{Rischi non preventivati}
+				Serve per evidenziare i rischi non preventivati.
+				\begin{equation*}
+				\begin{split}
+					&Indice \ numerico \ che \ viene \ incrementato \ nel \ momento \ in \ cui \ si \ manifesta \ un \ rischio \\ 
+					&non \ individuato \ nell'attivit\grave{a} \ di \ analisi \ dei \ rischi
+				\end{split}
+				\end{equation*}	
+	
+
+	\subsection{Coordinamento}
+		\subsubsection{Comunicazione}
+			\paragraph{Descrizione}
+				Possiamo suddividere l'attività di comunicazione in due tipologie:
+				\begin{itemize}
+					\item \textbf{Interne}: comunicazioni formali o meno tra uno o più membri del team.
+					\item \textbf{Eterne}: comunicazioni formali o meno tra i membri del team e terze parti.
+				\end{itemize}
+			
+			\paragraph{Obiettivi di qualità}
+				Le comunicazioni formali, di importanza per il progetto ed esterne devono essere tracciate, in particolare:
+				\begin{itemize}
+					\item Deve essere presente uno storico di tutte le comunicazioni esterne per impedire il trapelare di informazioni importanti;
+					\item Deve essere presente uno storico di tutte le comunicazioni di rilevanza per la progettazione e l'organizzazione.
+				\end{itemize}
+
+			\paragraph{Procedure}
+				Le comunicazioni interne ed esterne prevedono modalità differenti, inoltre le comunicazioni interne avranno diversi gradi, per filtrare le informazioni importanti da quelle surpeflue.
+			\paragraph{Comunicazioni interne}
+				La modalità di comunicazione interna che deve essere utilizzata dipende della quantità e importanza delle informazioni che si vogliono trasmettere.
+				Nessuna comunicazione inviata attraverso gli appositi strumenti deve essere eliminata.
+				In base a questi criteri, le forme di comunicazione interna che possono essere adottate sono:
+				\begin{itemize}
+					\item Comunicazione formale scritta: questa modalità di comunicazione viene adottate per tutte le comunicazioni di fondamentale importanza per la corretta gestione del progetto. Per questo tipo di comunicazione si utilizzeranno i verbali riunione o il documento \pianodiprogetto;
+					\item Comunicazione verbale formale: le comunicazioni a carattere divulgativo o di presentazione. Per questo tipo comunicazione verranno indetti dei discorsi all'interno delle riunioni, in seguito specificate nel verbale;
+					\item Comunicazione informale scritta: comunicazioni che riguardano due o più persone del quale si vuole dare tracciamento o che possono servire a puntualizzare o chiarire alcuni aspetti. Per questo tipo comunicazione si utilizeranno email o la piattaforma di messaggistica Slack;
+					\item Comunicazione informale orale: comunicazioni che sono di minor importanza nel quale vengono scambiate opinioni o consigli. Per questo tipo di conversazione non sono necessari particolari protocolli.
+				\end{itemize}
+
+			\paragraph{Comunicazioni esterne}
+				Per comunicare uniformemente con terze parti viene deve essere utilizzata una casella di posta elettronica denominata:\\
+				\begin{equation*}
+				kern3lp4nic.team@gmail.com
+				\end{equation*}
+				La redazione delle mail per comunicare con i committenti è affidata al \responsabilediprogetto, mentre la comunicazione a tutti i membri avverrà mediante inoltro automatico.
+				Nessuna mail inviata o ricevuta deve essere mai eliminata, a tal scopo verrà predisposta un'apposita cartella archiviate.
+			\paragraph{Strumenti}
+				\begin{itemize}
+					\item \textbf{Slack}: strumento di messaggistica istantanea aziendale organizzato a canali che verranno creati per contesto;
+					\item \textbf{Telegram}: strumento di messaggistica istantanea, mediante il quale sarà possibile scrivere nel gruppo di \kpanic;
+					\item \textbf{Gmail}: servizio di posta elettronica offerta da Google, accessibile da web.
+				\end{itemize}
+		
+		\subsubsection{Riunioni}
+			\paragraph{Descrizione}
+				Le riunioni sono uno strumento di coordinamento importante perchè permettono l'approvazioni di proste e di decidere come procedere nell'organizzazione del lavoro. 
+			\paragraph{Riunioni interne}
+				La convocazione delle riunioni avrà cadenza settimanale, il \responsabilediprogetto\ invierà una email ad ogni membro del gruppo informandolo della riunione oltre che informare, ove possibile, mediante altre piattaforme.
+				Affinché una riunione abbia validità è necessario che siano presenti almeno la metà più uno dei membri del team, in caso contrario la riunione sarà annullata.
+				Le riunioni interne si dividono in quattro tipi:
+				\begin{itemize}
+					\item Riunioni per informare;
+					\item Riunioni per valutare;
+					\item Riunioni per decidere;
+					\item Riunioni per progettare.
+				\end{itemize}
+
+			\paragraph{Riunioni esterne}
+				Le riunioni esterne, che sono tenute con il/i committente/i, sono ritenute di fondamentale importanza per instaurare un rapporto di fiducia tra le parti, condividere gli obiettivi e i bisogni.
+				L'organizzazione delle riunioni esterne sarà affidata al \responsabilediprogetto\ in carica o da qualunque altro membro del team che abbia avuto l'incarico.
+				Al termine di ogni riunione, il \responsabilediprogetto\ o un suo delegato dovrà verbalizzare quanto emerso, eventuali richieste di cambiamenti riguardanti elementi che possono avere degli impatti negativi sulla realizzazione del progetto e porre le necessarie misure ove necessario;
+					\paragraph{Ruoli}
+						\begin{itemize}
+							\item \textbf{Moderatore}: il \responsabilediprogetto\ ha il compito di convocare le riunioni interne, incontri nel quale partecipano esclusivamente i membri del team. Deve fare da guida nella discussione degli argomenti, essere fonte di ispirazione e avere l'autorità per seguire l'ordine del giorno.
+				Essendo il coordinatore della riunione, il \responsabilediprogetto, è tenuto ad essere serio, ma di cedere alla mediazione ove possibile;
+							\item \textbf{Segretario}: il \segretario\ ha il compito di tenere la minuta dell'incontro, controllare che siano stati discussi tutti i punti previsti dalla riunione e di redigere il verbale. Alla fine di ogni riunione deve inviare ai partecipanti una copia del verbale dell'incontro. Ciò consentirà di mantenere informato anche chi non ha potuto partecipare al \gl{meeting};
+							\item \textbf{Partecipanti}: ad ogni incontro i membri del gruppo devono sentirsi responsabili ad arrivare informati per affrontare al meglio l'ordine del giorno.
+				Ogni membro del gruppo può richiedere al \responsabilediprogetto\ di indire una riunione interna extra a quelle già previste, motivando la richiesta e spetterà sempre al \responsabilediprogetto\ decidere se approvare o meno la richiesta.
+				\end{itemize}
+	
+	\subsection{Gestione dell'infrastruttura}
+	\subsubsection{Gestione server}
+      \paragraph{Descrizione}
+        La gestione dei server comprende la configurazione e la manutenzione dei server in uso ai membri del team.
+      \paragraph{Obiettivi di qualità}
+          \begin{itemize}
+            \item Uptime elevato: i server devono essere attivi e funzionanti ad ogni occasione di necessità da parte di un membro del team;
+            \item Stabilità: i server devono svolgere le funzioni a cui sono delegati in modo corretto e efficace;
+            \item Efficienza di risorse: dato che i server hanno risorse limitate, ci poniamo l'obbiettivo di limitare lo spreco di queste;
+            \item Scalabilità: i server devono permettere l'adattamento di ciò che il team ha intenzione di utilizzare;
+            \item Costi adeguati al servizio.
+          \end{itemize}
+      \paragraph{Procedure}
+        \begin{itemize}
+            \item Per garantire stabilità e uptime alti bisogna utilizzare software stabile e con supporto prolungato;
+            \item Tutti i server devono utilizzare l'ultima versione di Ubuntu Linux LTS;
+            \item I server devono essere virtualizzati e devono essere installati in un'istanza EC2 di Amazon Web Services;
+            \item I server devono utilizzare solo software proveniente da fonti verificate;
+            \item I servizi installati nei server devono essere gestiti tramite il gestore di servizi standard Systemd;
+            \item Le password e i file di autenticazione devono essere condivisi tra tutti i membri del team;
+            \item É vietato caricare file personali non legati al progetto o al team sui server;
+        \end{itemize}
+		
+		\subsubsection{Gestione dei strumenti}
+			\paragraph{Descrizione}
+				Attività che decide quali strumenti verranno utilizzati e in che versione.
+			\paragraph{Obiettivi di qualità}
+				Gli obiettivi di qualità prefissati per lo quest'attività sono:
+				\begin{itemize}
+					\item Uniformità: il team deve avere il software uniforme e disponisponibile;
+					\item Aggiornamento: il team deve disporre di software supportato e aggiornato all'ultima versione stabile.
+				\end{itemize}
+			\paragraph{Procedure}
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item Quando sopraggiunge la necessità di utilizzare un software l'amministratore viene avvisato;
+					\item L'amministratore deve ricercare il software più opportuno alla necessità;
+					\item L'amministratore deve fornire le installazioni e le licenze per l'utilizzo della versione stabile più aggiornata;
+					\item Il software scelto deve essere supportato per la durata prevista del progetto;
+					\item Il software viene inserito come strumento all'interno delle \normediprogetto;
+					\item Ogni qualvolta la versione stabile si aggiornerà, l'amministratore ne fornirà l'installazione.
+				\end{itemize}
+
+		\subsubsection{Manutenzione trender}
+			\paragraph{Descrizione}
+				Attività che gestisce e mantiene il software di tracciamento Trender.
+				L'attività è svolta dagli amministratori, che dovranno controllarne lo stato e corrergerlo nel caso di malfunzionamenti.			
+			\paragraph{Obiettivi di qualità}
+				Gli obiettivi di qualità prefissati per lo quest'attività sono:
+				\begin{itemize}
+					\item Fornire una disponibilità continua del servizio con un sistema di tracciamento affidabile e funzionale.
+				\end{itemize}
+			\paragraph{Metriche}
+			\subparagraph{Disponibilità di Trender}
+				É una metrica usata per conoscere la percentuale di disponibilità di utilizzo della piattaforma Trender rispetto alle richieste di accesso.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					D = \frac{A}{R} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{A}: indica il numero di accessi avvenuti correttamente alla pagine di login di Trender;
+					\item \textbf{R}: indica il numero totale di richieste di accesso alla pagina di login inoltrate a Trender.
+				\end{itemize}
+				
+			\subparagraph{Tempo di correzione di Trender}
+				Serve per indicare il periodo (misurato in giorni) medio intercorso fra l'individuazione di un'incoerenza nella piattaforma Trender da parte di un verificare ed il suo aggiornamento da parte di un altro componente di \kpanic.\\Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					T =\frac{\sum_{i=1}^n C_{i}}{n}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$C_{i}$}: indica il tempo trascorso fra il momento di individuazione dell'incoerenza \textit{i} in Trender e l'istante in cui tale dato viene corretto;
+					\item \textbf{n}: indica il numero totale di incoerenze.
+				\end{itemize}
+\end{document}

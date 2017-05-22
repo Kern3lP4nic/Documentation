@@ -1,0 +1,51 @@
+/* QUESTION */  
+{  
+    "id": (int),  
+    "baseText": (String),  
+    "recurrentText": (String),  
+    "answers": [{  
+        "text": (String),  
+        "id_nextQuestion": (int),  
+        "action": {  
+            "id": (String),  
+            "text": (String)  
+        }  
+    }]  
+}  
+  
+/* FIRM */  
+{  
+    "id": (int)  
+    "name": (String),  
+    "guests": [{
+        "id": (int)
+        "name": (String)
+    }]  
+}  
+  
+/* AMDIN */  
+{  
+    "id": (int),  
+    "username": (String),  
+    "email": (String),  
+    "password": (String)  
+}  
+  
+/* INTERLOCUTOR */  
+{  
+    "id": (int),  
+    "id_slack": (String),  
+    "name": (String),  
+    "joinChannel": (boolean)  
+}
+
+/* CONVERSATION */  
+{  
+    "id_session": (int),  
+    "log": [{
+        "id_guest": (int),
+        "question": (String),
+        "answer": (String),
+        "date": (String)
+    }]
+}

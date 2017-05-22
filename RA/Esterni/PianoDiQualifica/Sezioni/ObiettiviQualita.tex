@@ -1,0 +1,418 @@
+\documentclass[../PianoDiQualifica_v4.0.0.tex]{subfiles}
+
+\begin{document}
+
+\section{Obiettivi di qualità}
+
+	La qualità dei processi e di prodotto verrà perseguita tramite l'utilizzo delle metriche spiegate nel documento \normediprogettov.\\
+	Di seguito verranno riportati i valori obiettivo che vogliamo raggiungere per mantenere un livello qualitativo adeguato.
+	Le attività di verifica sono descritte nello specifico nell'\hyperref[sec:verifica]{\underline{appendice A}}.
+
+	\subsection{Valori obiettivo della qualità di processo}
+		In questa sezione verranno elencati i valori prefissati per garantire un adeguato livello di qualità dei processi messi in atto dal nostro gruppo per la realizzazione del prodotto finale.
+		\subsubsection{Disponibilità di Trender}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 80\% &	Per la quasi totalità del tempo Trender dovrà funzionare, ma sono tollerati sporadici e piccoli malfunzionamenti \\
+				\bottomrule
+				\caption{Disponibilità di Trender}
+			\end{longtable}
+
+		\subsubsection{Tempo di correzione di Trender}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 3 giorni &	 Non si dovranno superare i 3 giorni di inattività di Trender per non rallentare eccessivamente le attività che dovrebbero essere svolte \\
+				\bottomrule
+				\caption{Tempo di correzione di Trender}
+			\end{longtable}
+
+		\subsubsection{Rischi non preventivati}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 5 rischi &	È normale che durante le attività svolte si verifichino dei rischi non preventivati, ma per non rallentare le varie attività si dovranno prendere le dovute precauzioni onde evitare un numero di rischi eccessivo  \\
+				\bottomrule
+				\caption{Rischi non preventivati}
+			\end{longtable}
+
+		\subsubsection{Copertura requisiti obbligatori}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					100\% &	Essendo questi requisiti obbligatori essi dovranno essere tutti obbligatoriamente implementati \\
+				\bottomrule
+				\caption{Copertura requisiti obbligatori}
+			\end{longtable}
+
+		\subsubsection{Structural Fan-In}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 1 modulo &	Se un modulo viene usato almeno un'altra volta da altri moduli si garantisce un buon livello di riuso  \\
+				\bottomrule
+				\caption{Structural Fan-In}
+			\end{longtable}
+
+		\subsubsection{Structural Fan-Out}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 5 moduli &	Un modulo che non usa un numero eccessivo durante la sua esecuzione garantisce un basso livello di accoppiamento \\
+				\bottomrule
+				\caption{Structural Fan-Out}
+			\end{longtable}
+
+		\subsubsection{Numero di metodi per classe}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 10 metodi & Un valore molto alto potrebbe indicare una cattiva decomposizione delle funzionalità a livello di progettazione \\
+				\bottomrule
+				\caption{Numero di metodi per classe}
+			\end{longtable}
+
+		\subsubsection{Numero di parametri per metodo}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 8 parametri & Un elevato numero di parametri per metodo potrebbe evidenziare un metodo troppo complesso \\
+				\bottomrule
+				\caption{Numero di parametri per metodo}
+			\end{longtable}
+
+		\subsubsection{Complessità ciclomatica}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 25 & Per limitare la complessità durante l'attività di sviluppo del software \\
+				\bottomrule
+				\caption{Complessità ciclomatica}
+			\end{longtable}
+
+		\subsubsection{Halstead difficulty per function}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 30 & Avendo un valore non troppo elevato si garantisce un grado difficoltà di una funzione non eccessivamente elevata  \\
+				\bottomrule
+				\caption{Halstead difficulty per function}
+			\end{longtable}
+
+		\subsubsection{Halstead volume per function}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 1500 & Questo valore garantisce un adeguato numero di operazioni eseguibili \\
+				\bottomrule
+				\caption{Halstead volume per function}
+			\end{longtable}
+
+		\subsubsection{Halstead effort per function}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 400 & Avendo un valore non troppo elevato si garantisce uno sforzo non eccessivo per la comprensione della funzione \\
+				\bottomrule
+				\caption{Halstead effort per function}
+			\end{longtable}
+
+		\subsubsection{Maintainability index}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 70 &	Valore adeguato a garantire una buona manutenibilità del codice prodotto \\
+				\bottomrule
+				\caption{Maintainability index}
+			\end{longtable}
+
+		\subsubsection{Produttività di codifica}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 20 & Per avere una buona efficienza di produttività impiegata non è necessario avere un'alta produzione di righe di codice \\
+				\bottomrule
+				\caption{Produttività di codifica}
+			\end{longtable}
+
+		\subsubsection{Numero di livelli di annidamento}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 6 &	Con questo valore si garantisce un'adeguata complessità ed un non eccessivo livello di astrazione del codice \\
+				\bottomrule
+				\caption{Numero di livelli di annidamento}
+			\end{longtable}
+
+		\subsubsection{Variabili inutilizzate}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					0 variabili &	Avere variabili dichiarate ma non utilizzate è sinonimo di un lavoro poco attento \\
+				\bottomrule
+				\caption{Variabili inutilizzate}
+			\end{longtable}
+
+		\subsubsection{Componenti integrate}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					90\% &	Per evitare il fatto di aver lavorato inutilmente, la quasi totalità di ciò che è stato progettato deve essere implementata ed integrata nel sistema\\
+				\bottomrule
+				\caption{Componenti integrate}
+			\end{longtable}
+
+		\subsubsection{Test di unità eseguiti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 90\% &	La quasi totalità dei test di unità pianificati devono essere eseguiti \\
+				\bottomrule
+				\caption{Test di unità eseguiti}
+			\end{longtable}
+
+		\subsubsection{Test di integrazione eseguiti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 60\% & Buona parte dei test di integrazione pianificati devono essere eseguiti \\
+				\bottomrule
+				\caption{Test di integrazione eseguiti}
+			\end{longtable}
+
+		\subsubsection{Test di sistema eseguiti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 70\% & Gran parte dei test di sistema pianificati devono essere eseguiti\\
+				\bottomrule
+				\caption{Test di sistema eseguiti}
+			\end{longtable}
+
+		\subsubsection{Test di validazione eseguiti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					100\% &	La totalità dei test di validazione deve essere eseguita \\
+				\bottomrule
+				\caption{Test di validazione eseguiti}
+			\end{longtable}
+
+		\subsubsection{Copertura dei test}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					90\% & Per garantire il corretto funzionamento del prodotto, la quasi totalità dei test eseguiti devono essere superati \\
+				\bottomrule
+				\caption{Copertura dei test}
+			\end{longtable}
+
+		\subsubsection{Indice di leggibilità}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 50 &	Per garantire un grado leggibilità a chi ha una licenza d'istruzione superiore ed una parziale per chi ne ha una media \\
+				\bottomrule
+				\caption{Indice di leggibilità}
+			\end{longtable}
+
+		\subsubsection{Errori ortografici rilevati e non corretti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					0\% & Non devono esserci errori ortografici individuati ma non corretti \\
+				\bottomrule
+				\caption{Errori ortografici rilevati e non corretti}
+			\end{longtable}
+
+		\subsubsection{Errori concettuali rilevati e non corretti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					5\% & Può capitare che un errore di concetto risulti erroneamente corretto durante la verifica di un documento \\
+				\bottomrule
+				\caption{Errori concettuali rilevati e non corretti}
+			\end{longtable}
+
+		\subsubsection{Statement coverage}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 70\% & Per garantire che gran parte del codice venga testato \\
+				\bottomrule
+				\caption{Statement coverage}
+			\end{longtable}
+
+		\subsubsection{Branch coverage}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 70\% & Per garantire che buona parte delle strutture di controllo (ad esempio gli "if") vengano eseguite durante i test \\
+				\bottomrule
+				\caption{Branch coverage}
+			\end{longtable}
+
+
+	\subsection{Valori obiettivo della qualità di prodotto}
+	\label{ssec:qualitaprodotto}
+		In questa sezione saranno elencati i valori prefissati per garantire un adeguato livello di qualità del prodotto finale.
+
+		\subsubsection{Completezza dell'implementazione funzionale}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					100\% &	Tutti i requisiti funzionali individuati dovranno essere implementati così da avere un prodotto il più completo possibile\\
+				\bottomrule
+				\caption{Completezza dell'implementazione funzionale}
+			\end{longtable}
+
+		\subsubsection{Accuratezza rispetto alle attese}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 90\% & La quasi totalità dei test eseguiti deve rispettare le attese \\
+				\bottomrule
+				\caption{Accuratezza rispetto alle attese}
+			\end{longtable}
+
+		\subsubsection{Controllo degli accessi}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 10\% & Le operazioni illegali concesse devono essere ridotte al minimo per evitare malfunzionamenti \\
+				\bottomrule
+				\caption{Controllo degli accessi}
+			\end{longtable}
+
+		\subsubsection{Copertura requisiti desiderabili}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					80\% &	Nel caso in cui per realizzarli non si rientri nei costi preventivati o risulti troppo difficile rispetto a quanto previsto la loro realizzazione risulterebbe controproducente \\
+				\bottomrule
+				\caption{Copertura requisiti desiderabili}
+			\end{longtable}
+
+		\subsubsection{Densità di failure}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 10\% & Il numero di failure durante la l'esecuzione di test deve essere ridotto al minimo per evitare malfunzionamenti sul prodotto \\
+				\bottomrule
+				\caption{Densità di failure}
+			\end{longtable}
+
+		\subsubsection{Blocco di operazioni non corrette}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 80\% & I fault che si verificano durante l'attività di test devo essere in buona parte gestiti così da evitare futuri malfunzionamenti nel prodotto \\
+				\bottomrule
+				\caption{Blocco di operazioni non corrette}
+			\end{longtable}
+
+		\subsubsection{Comprensibilità delle funzioni offerte}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 80\% & Avere funzionalità facilmente comprensibili facilita l'utilizzo del prodotto da parte dell'utente \\
+				\bottomrule
+				\caption{Comprensibilità delle funzioni offerte}
+			\end{longtable}
+
+		\subsubsection{Facilità di apprendimento delle funzionalità}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 30 minuti & Avere funzionalità comprensibili in un lasso di tempo non eccessivamente ampio aiuta l'utente nell'utilizzo del prodotto \\
+				\bottomrule
+				\caption{Facilità di apprendimento delle funzionalità}
+			\end{longtable}
+
+		\subsubsection{Consistenza operazionale in uso}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 80\% & Soddisfare le aspettative dell'utente migliora l'opinione che ha sul prodotto e aumenta le possibilità di un suo riutilizzo  \\
+				\bottomrule
+				\caption{Consistenza operazionale in uso}
+			\end{longtable}
+
+		\subsubsection{Capacità di analisi di failure}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 60\% & Per buona parte delle failure si dovranno individuare le cause per permetterne la correzione e garantire un corretto funzionamento dell'applicativo  \\
+				\bottomrule
+				\caption{Capacità di analisi di failure}
+			\end{longtable}
+
+		\subsubsection{Impatto delle modifiche}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					massimo 20\% & Apportare modifiche a failure che, a loro volta, ne introducono altre è controproducente ma è tollerato in minima parte \\
+				\bottomrule
+				\caption{Impatto delle modifiche}
+			\end{longtable}
+
+		\subsubsection{Versioni dei browser supportate}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					95\% &	Per garantire una maggior diffusione la quasi totalità dei moderni browser dovrà essere supportata \\
+				\bottomrule
+				\caption{Versioni dei browser supportate}
+			\end{longtable}
+
+		\subsubsection{Inclusione di funzionalità da altri prodotti}
+			\begin{longtable}[c] { >{\centering\arraybackslash}p{4cm} p{7cm} }
+				\toprule
+				\centerline{\textbf{Valore obiettivo}} & \centerline{\textbf{Motivo della scelta}} \\
+				\midrule
+					almeno 80\% & In caso di modifiche al prodotto dovranno essere garantite le medesime funzionalità  offerte in precedenza, così da garantire continuità sulle possibilità offerte dal prodotto \\
+				\bottomrule
+				\caption{Inclusione di funzionalità da altri prodotti}
+			\end{longtable}
+
+\end{document}

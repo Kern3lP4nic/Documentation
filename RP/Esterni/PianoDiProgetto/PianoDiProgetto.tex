@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{../../../KerpanStyle/kerpan}
+\titlepage{}
+\usepackage{graphicx}
+\graphicspath{{../}}
+
+\date{12/12/2016}
+\intestazioni{Piano di Progetto}
+\pagenumbering{gobble}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \pianodiprogettoi\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 2.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-03-05 		\\ 
+			{\hfill\textbf{Redazione}} 			& Edoardo Zanon \\
+			{\hfill\textbf{Verifica}} 			& Daniele Favaro \\ & Marco Franceschini \\ 
+			{\hfill\textbf{Approvazione}} 		& Giacomo Zecchin \\
+			{\hfill\textbf{Uso}} 				& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage	
+		\include{DiarioModifichePP}	
+
+	\newpage
+		\tableofcontents 	% produce l'indice delle sezioni del documento
+	\newpage
+		\listoftables 		% produce l'indice delle tabelle del documento
+	\newpage	
+		\listoffigures		% produce l'indice delle figure del documento	
+	
+	\label{LastFrontPage}
+		\newpage
+		\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}	
+		\newpage
+			\subfile{Sezioni/ModelloDiSviluppo}
+		\newpage	
+			\subfile{Sezioni/AnalisiDeiRischi}
+		\newpage			
+			\subfile{Sezioni/Pianificazione}
+		\newpage			
+			\subfile{Sezioni/Preventivo}
+		\newpage			
+			\subfile{Sezioni/ConsuntivoDiPeriodo}
+		\newpage
+			\subfile{Sezioni/Organigramma}
+
+	\label{LastPage}
+
+\end{document}

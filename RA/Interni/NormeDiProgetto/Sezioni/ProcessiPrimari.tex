@@ -1,0 +1,792 @@
+\documentclass[../NormeDiProgetto_v4.0.0.tex]{subfiles}
+\begin{document}
+\section{Processi primari}
+	\subsection{Processo di fornitura}
+		\subsubsection{Studio di fattibilità}
+			\paragraph{Descrizione}
+				Alla pubblicazione dei capitolati d'appalto il responsabile di progetto dovrà fissare un numero di riunioni volte alla discussione e al confronto tra i membri del team.
+				Quest'attività di baserà sull'Analisi dei seguenti punti:
+				\begin{itemize}
+					\item \textbf{Dominio applicativo}: descrizione dell'ambito di utilizzo del prodotto richiesto;
+					\item \textbf{Dominio tecnologico}: descrizione delle tecnologie impiegate nello sviluppo del progetto richiesto;
+					\item \textbf{Criticità}: elenco delle possibili problematiche che potrebbero sorgere durante lo sviluppo del prodotto richiesto, individuando quindi punti critici ed eventuali rischi;
+					\item \textbf{Valutazione finale}: piccolo riassunto finale nel quale verranno spiegate le motivazioni per cui sia stato scelto o scartato il suddetto capitolato.
+				\end{itemize}
+				Dopo uno studio accurato delle tecnologie e delle problematiche gli \analisti\ dovranno redigere lo \studiodifattibilitav\ in base a quanto emerso nelle riunioni. 
+
+		\subsubsection{Pianificazione}
+			\paragraph{Descrizione}
+				La pianificazione è l'attività che gestisce le scadenze temporali. Il prodotto di quest'attività sarà un documento chiamato \pianodiprogetto.
+				La pianificazioni, si suddivide in due attività principali:
+				\begin{itemize}
+					\item Decidere le scadenze per la partecipazione all'appalto, che deve prevedere l'attività di anlisi dei requisiti e della produzione di materiale richiesto per la partecipazione;
+					\item Decidere la schedulazione per i periodi successivi, per lo sviuluppo del prodotto, su questa si avrà quindi anche a disposizione il preventivo con il budget.
+				\end{itemize}
+			\paragraph{Obiettivi di qualità}
+				Durante la pianificazione il \responsabilediprogetto\ deve garantire i seguenti vincoli di qualità: 
+				\begin{itemize}
+					\item La pianificazione non deve superare il budget o il numero di ore persona disponibili;
+					\item La pianificazione deve tenere conto di eventuali rischi;
+					\item La pianificazione non deve sforare le date concordate con il cliente e deve quindi essere abbastanza ampia;
+				\end{itemize}
+	
+			\paragraph{Procedure}
+				Ogniuna delle operazioni descritte in seguito deve essere eseguita avendo come riferimento l'analisi dei rischi (prodotta dalla gestione dei rischi appartenete al processo di gestione di progetto), programmando anticipamente le scadenze e la gestione delle risorse in base al contenuto.
+				Le operazioni stabilite per perseguire gli obiettivi di qualità sono:
+				\begin{itemize}
+					\item La pianificazione deve tenere conto dei rischi descritti nell'analisi dei rischi;
+					\item Prima vanno scelte le milestone, che devono corrispondere alle date di revisione;
+					\item Il progetto va suddiviso in periodi, che avvranno dei prodotti da produrre;
+					\item Lo sviluppo dei prodotti all'interno dei periodi, va pianificato tenendo conto dei requisiti richiesti dal capitolato, e in seguito dall'analisi dei requisiti;
+					\item L'unità di misura è il giorno.
+				\end{itemize}
+
+			\paragraph{Strumenti}
+				Gli stumenti messi a disposizione sono:
+				\begin{itemize}
+					\item \textbf{Gantt Project}: uno strumento open sorce che pemette lo sviluppo di diagrammi Gantt.
+				\end{itemize}
+		\subsubsection{Preventivazione}
+			\paragraph{Descrizione}
+				La preventivazione è l'attività di stima dei costi, e si basa sull'analisi dei requisiti. Questa viene eseguita prima la partecipazione alla gara d'apparto.
+				Durante l'attività i risultati verranno documentati nel \pianodiprogetto, che verrà poi presentato.
+		
+			\paragraph{Procedure}
+				L'attività deve rispettare i seguenti criteri:
+				\begin{itemize}
+					\item Il preventivo deve essere fatto basandosi sui requisiti obbligatori e opzionali riportati nell'utima versione del documento \analisideirequisiti;
+					\item Il preventivo deve prima calcolare il numero di ore necessario per ogni ruolo, e seguire il costo imposto dal proponente.
+				\end{itemize}
+
+			\paragraph{Ruoli}
+			Durante l'intero sviluppo del progetto didattico ogni componente del gruppo dovrà obbligatoriamente cimentarsi in tutti i ruoli elencati di seguito.
+			Inoltre non potrà mai accadere che un membro del gruppo risulti redattore e verificatore di un medesimo documento o lavoro.
+			Un membro può inoltre ricoprire più ruoli contemporaneamente.
+			
+			\subparagraph{Responsabile di progetto}
+			Il \responsabilediprogetto\ è colui che si assume la responsabilità del
+			lavoro svolto. Rappresenta inoltre colui che mantiene i contatti tra il fornitore e il cliente e funge da mediatore tra i membri del gruppo. Più in dettaglio, ha responsabilità su:
+			\begin{itemize}
+			\item Pianificazione, coordinamento e controllo generale delle attività;
+			\item Gestione delle risorse;
+			\item Gestione e approvazione della documentazione;
+			\item Contatti con i soggetti esterni.
+			\end{itemize}
+			Il \responsabilediprogetto\ ha l'incarico di creare, assegnare ad ogni membro e gestire i singoli task. É l'unica persona in grado di approvare in modo definitivo un documento.
+			Può essere abbreviato con \textbf{Rp}.
+			
+			\subparagraph{Amministratore}
+			L'\amministratore\ è il responsabile di tutto ciò che riguarda l'ambiente di lavoro. Più in dettaglio, egli si occupa di:
+			\begin{itemize}
+			\item Controllo dell'ambiente di lavoro;
+			\item Gestione del versionamento della documentazione;
+			\item Controllo delle versioni e delle configurazioni del prodotto;
+			\item Risoluzione dei problemi legati alla gestione dei processi.
+			\end{itemize}
+			Può essere abbreviato con \textbf{Am}.
+			
+			\subparagraph{Progettista}
+			Il \progettista\ è il responsabile di tutto ciò che riguarda la progettazione.
+			Più in dettaglio, egli si occupa di:
+			\begin{itemize}
+			\item Produrre una soluzione attuabile e robusta;
+			\item Effettuare scelte progettuali volte a garantire la manutenibilità e la modularità del prodotto software.
+			\end{itemize}
+			Può essere abbreviato con \textbf{Pt}.
+			
+			\subparagraph{Analista}
+			L'\analista\ si occupa di tutto ciò che riguarda l'analisi del problema da affrontare. Le mansioni principali sono quelle di:
+			\begin{itemize}
+			\item Studiare a fondo e capire le problematiche del prodotto da realizzare;
+			\item Produrre una specifica di progetto comprensibile per il proponente, per il committente e per il \progettista.
+			\end{itemize}
+			Può essere abbreviato con \textbf{An}.
+			
+			\subparagraph{Verificatore}
+			Il \verificatore\ è responsabile di tutto ciò che riguarda l'attività di verifica.
+			Effettua la verifica dei documenti utilizzando gli strumenti e i metodi proposti nel
+			\pianodiqualifica.
+			Egli ha il compito di garantire la conformità rispetto le \normediprogetto\ dei documenti verificati.
+			Può essere abbreviato con \textbf{Ve}.
+			
+			\subparagraph{Programmatore}
+			Il \programmatore\ si occuperà di implementare le soluzioni, è quindi
+			responsabile dell'attività di codifica. In dettaglio, i suoi compiti sono:
+			\begin{itemize}
+			\item Implementare le soluzioni descritte dal \progettista\ in maniera
+			rigorosa;
+			\item Scrivere il codice rispettando le convenzioni prese nel presente documento;
+			\item Implementare i test per il codice scritto da utilizzare per l'attività di verifica.
+			\end{itemize}
+			Può essere abbreviato con \textbf{Pm}.
+
+		\subsubsection{Preparazione al collaudo}
+			\paragraph{Descrizione}
+				In questa sottosezione si procederà a descrivere gli obiettivi perseguiti e le procedure adottate per preparare al meglio il collaudo. Questa fase è utilizzata per individuare le carenze di correttezza, completezza ed affidabilità delle componenti software prima del loro rilascio. Il collaudo verrà eseguito con la presenza di tutti gli stakeholders, in maniera particolare fornitore, proponente e committente.
+			\paragraph{Obiettivi di qualità}
+				Durante il collaudo il gruppo \kpanic\ dovrà garantire i seguenti vincoli di qualità: 
+				\begin{itemize}
+					\item Devono essere eseguiti tutti i test di validazione previsti;
+					\item Si deve verificare che almeno tutti i requisiti obbligatori presenti all'interno del documento \analisideirequisitiRA\ siano soddisfatti;
+					\item Si deve verificare che i requisiti classificati come desiderabili od opzionali nel documento \analisideirequisitiRA, ma richiesti espressamente dal proponente, siano soddisfatti.
+				\end{itemize}
+	
+			\paragraph{Attività}
+				Le attività da adottare per il perseguimento degli obiettivi di qualità sovradescritti sono le seguenti:
+				\begin{itemize}
+					\item Dovranno essere predisposti dei test che dimostrino la corretta validazione del prodotto finale. Questi test saranno tutti correlati da un opportuna documentazione che ne descriva il dominio, l'ambiente in cui devono essere eseguiti ed i risultati attesi;
+					\item Ad ogni requisito descritto all'interno dell'\analisideirequisitiRA è stata correlata un'opportuna porzione di codice od un determinato microservizio. Il gruppo \kpanic dovrà dimostrare la correttezza di queste determinate parti, in modo da garantire il corretto soddisfacimento di tutti i requisiti richiesti espressamente e non.
+				\end{itemize}
+	
+	\subsection{Processo di Sviluppo}
+		\subsubsection{Analisi dei requisiti}
+			\paragraph{Descrizione}
+			L'attività di analisi dei requisiti è svolta dagli \analisti\ che hanno il compito di trovare i requisiti non espressi dal capitolato, studiando la realtà di interesse e fornendo una lista dettagliata.
+			In seguito si occuperà di trovare i casi d'uso e le carratteristiche necessarie al software per poter soddisfare i requisiti.
+
+ 			\paragraph{Obiettivi di qualità}
+				I requisiti identificati dovranno essere gestiti in maniera tale da raggiungere i seguenti traguardi:
+				\begin{itemize}
+					\item Per ogni requisito verrà tenuta traccia della fonte da cui è stato ricavato;
+					\item Per ogni requisito dovrà essere possibile indicare dei test, da effettuare per verificare il soddisfacimento da parte del prodotto;
+					\item Per ogni requisito sarà possibile ricostruire i cambiamenti principali effettuati nella sua formulazione, durante tutto il ciclo di sviluppo del prodotto;
+					\item Nessun requisito dovrà risultare superfluo o ambiguo;
+					\item Tutti i requisiti che il prodotto andrà a soddisfare saranno stati precedentemente approvati dal committente;
+					\item Ogin caso d'uso deve soddisfare almeno uno o più requisiti e ne dovrà tracciare le associazioni.
+				\end{itemize}
+
+			\paragraph{Classificazione dei requisiti}
+                  Dovrà essere redatto un elenco di requisiti emersi durante le riunioni interne e/o esterne. Questo compito spetta agli \analisti. I requisiti dovranno essere classificati secondo la seguente codifica:
+                  \begin{equation*}
+                        R[Tipo][Importanza][Codice]
+                  \end{equation*}
+                  dove:
+                  \begin{itemize}
+                        \item \textbf{Tipo}: può avere i seguenti valori:
+                        \begin{itemize}
+                              \item \textbf{F}: indica un requisito funzionale;
+                              \item \textbf{Q}: indica un requisito di qualità;
+                              \item \textbf{P}: indica un requisito prestazionale;
+                              \item \textbf{V}: indica un requisito di vincolo.
+                        \end{itemize}
+                        \item \textbf{Importanza}: può assumere i seguenti valori:
+                        \begin{itemize}
+                              \item \textbf{O}: indica un requisito obbligatorio;
+                              \item \textbf{D}: indica un requisito desiderabile;
+                              \item \textbf{F}: indica un requisito facoltativo.
+                        \end{itemize}
+                        \item \textbf{Codice}: indica il codice identificativo del requisito, è univoco e deve essere indicato in forma gerarchica.
+                  \end{itemize}
+                  Per ogni requisito si dovrà inoltre indicare:
+                  \begin{itemize}
+                        \item \textbf{Descrizione}: una breve descrizione, deve essere meno ambigua possibile;
+                        \item \textbf{Fonte}: la fonte può essere una delle seguenti:
+                        \begin{itemize}
+                              \item \textbf{Capitolato}: deriva direttamente dal testo del capitolato;
+                              \item \textbf{Verbale}: deriva da un incontro verbalizzato;
+                              \item \textbf{Interno}: deriva da discussioni interne al team;
+                              \item \textbf{Casi d'uso}: deriva da uno o più casi d'uso.
+                        \end{itemize}
+                  \end{itemize}
+                  
+
+            \paragraph{Classificazione dei casi d'uso}
+                  I casi d'uso identificati devono essere descritti nel seguente modo:
+                  \begin{equation*}
+                       UC[Codice padre].[Codice identificativo]
+                  \end{equation*}
+                  dove:
+                  \begin{itemize}
+                        \item \textbf{Codice padre}: indica il codice del caso d'uso padre di quello in esame, se non è identificabile è da omettere;
+                        \item \textbf{Codice identificativo}: codice univoco e progressivo del caso d'uso in esame.
+                  \end{itemize}
+                  Per ogni caso d'uso devono inoltre essere identificate le seguenti informazioni:
+                  \begin{itemize}
+                        \item \textbf{Nome}: indica il nome del caso d'uso;
+                        \item \textbf{Attori}: indica gli attori coinvolti nel caso d'uso;
+                        \item \textbf{Descrizione}: chiara, precisa e concisa descrizione del caso d'uso;
+                        \item \textbf{Precondizione}: indica la situazione che deve essere vera prima dell'esecuzione del caso d'uso;
+                        \item \textbf{Postcondizione}: indica la situazione che deve essere vera dopo l'esecuzione del caso d'uso;
+                        \item \textbf{Scenario principale}: descrizione composta dal flusso dei casi d'uso figli;
+                        \item \textbf{Scenari alternativi}: descrizione composta dai casi d'uso che non appartengono al flusso principale di esecuzione;
+                        \item \textbf{Estensioni}: indica quali sono tutte le estensioni, se presenti;
+                        \item \textbf{Inclusioni}: indica quali sono tutte le inclusioni, se presenti;
+                        \item \textbf{Generalizzazioni}: indica quali sono tutte le generalizzazioni, se presenti.
+                  \end{itemize}
+
+			\paragraph{Strumenti}
+				\subparagraph{Trender}: Verrà utilizzato per tracciare, descrivere e correlare tra loro:
+					\begin{itemize}
+						\item \gl{Casi d'uso};
+						\item \gl{Requisiti};
+						\item \gl{Attori};
+						\item \gl{Test dei requisiti}.
+					\end{itemize}
+				\subparagraph{Astah}: verrà utilizzato per la modellazione nel linguaggio UML dei diagrammi di casi d'uso.
+
+			\paragraph{Metriche}\mbox{}\\
+				\subparagraph{Copertura requisiti obbligatori}
+					Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti obbligatori. Essa controlla infatti il rapporto percentuale tra i requisiti obbligatori soddisfatti e il numero totale dei requisiti obbligatori richiesti.\\
+					É possibile calcolarla tramite la formula:
+					\begin{equation*}
+						Copertura \ requisiti \ obbligatori = \frac{Numero \ di \ requisiti \ obbligatori \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ obbligatori}
+					\end{equation*}
+
+	\subsubsection{Progettazione}
+		\paragraph{Descrizione}
+		L'attività di progettazione descrive come deve essere realizzata la struttura dell'architettura software. I requisiti delineati, all'interno del documento \analisideirequisiti, devono essere utili a realizzare la documentazione specifica e a determinare le linee guida da seguire durante l'attività di codifica. Tale attività deve essere svolta in maniera ottimale e precisa dai \progettisti.
+		La progettazione è basata sull'\analisideirequisiti e deve essere prodotta soddisfando appieno quelli definiti come obbligatori.
+		
+		\paragraph{Obiettivi di qualità}
+			La progettazione deve perseguire i seguenti obiettivi:
+			\begin{itemize}
+				\item Progettare un software con le caratteristiche di qualità che sono state dettagliate nella fase di analisi e specifica dei requisiti;
+				\item Capacità di poter far fronte a modifiche da effettuare senza che l'intera struttura del software già costruita debba essere messa nuovamente in discussione ed elaborata;
+				\item Soddisfare appieno i requisiti di qualità fissati dal committente;
+				\item Soddisfare appieno i requisiti obbligatori;
+				\item Soddisfare tutte le funzionalità previste dai casi d'uso forniti dagli analisti.
+			\end{itemize}
+
+		\paragraph{Requisiti per i \progettisti}
+			I \progettisti\ sono responsabili delle attività di progettazione. Essi sono tenuti ad avere:
+			\begin{itemize}
+				\item Profonda conoscenza di tutto ciò che riguarda il processo di sviluppo del software;
+				\item Capacità di saper anticipare i cambiamenti;
+				\item Notevole inventiva per riuscire a trovare una soluzione progettuale accettabile anche in mancanza di una metodologia che sia sufficientemente espressiva;
+				\item Capacità di individuare con rapidità e sicurezza le soluzioni più opportune.
+			\end{itemize}
+
+		\paragraph{Progettazione architetturale}
+			Nella progettazione architetturale i \progettisti\ si occupano di offrire una soluzione architetturale di alto livello, analizzando l'utilizzo di possibili \gl{design pattern} e librerie già presenti sul mercato.
+			L'output di quest'attività sarà un documento chiamato specifica tecnica, i quali contenuti principali saranno quindi:
+			\begin{itemize}
+				\item \textbf{Design pattern}: i \progettisti\ devono fornire una descrizione dei design pattern adottati
+				nella definizione dell'architettura. Questa descrizione dovrà essere accompagnata da un
+				diagramma UML, che ne esemplifichi il funzionamento, e dalle motivazioni che hanno
+				portato all'adozione di tale pattern;
+				\item \textbf{Tracciamento delle componenti}: ogni componente dovrà essere tracciato ed associato
+				ad almeno un requisito. In tal modo sarà possibile avere la certezza che tutti i requisiti
+				siano soddisfatti. Tale tracciamento dovrà essere effettuato tramite Trender, che si occupa
+				di generare in modo automatico le relative tabelle;
+				\item \textbf{Test d'integrazione}: i \progettisti\ devono definire delle strategie di verifica per poter
+				dimostrare la corretta integrazione tra le varie componenti definite.
+			\end{itemize}
+
+			I tipi di diagrammi che dovranno essere prodotti sono:
+			\begin{itemize}
+				\item Diagrammi dei package;
+				\item Diagrammi di sequenza;
+				\item Diagrammi di attività.
+			\end{itemize}
+
+		\paragraph{Progettazione di dettaglio}
+			La progettazione di dettaglio del sistema ha lo scopo di
+			definire dettagliatamente ogni singola unità di cui è composto il sistema in modo da semplificare
+			l'attività di codifica e allo stesso tempo di non fornire libertà al Programmatore.
+			Parallelamente alla progettazione di dettaglio dei componenti software dovranno essere progettati
+			i relativi test di unità che verranno descritti nel \pianodiqualifica.
+			L'output di quest'attività sarà un documento chiamato \definizionediprodotto, i quali contenuti principali saranno:
+			\begin{itemize}
+				\item \textbf{Definizione delle classi}: ogni classe precedentemente progettata viene descritta più nel
+				dettaglio, fornendo una descrizione più approfondita dello scopo, delle sue funzionalità e del
+				suo funzionamento. Per ogni classe dovranno essere anche definiti i vari metodi e attributi
+				che la caratterizzano;
+				\item \textbf{Tracciamento delle classi}: ogni classe deve essere tracciata ed associata ad almeno un
+				requisito, in questo modo è possibile avere la certezza che tutti i requisiti accettati siano
+				soddisfatti e che ogni classe presente nell'architettura soddisfi almeno un requisito;
+				\item \textbf{Test di unità}: i \progettisti\ devono definire le strategie di verifica delle varie classi in modo
+				che durante l'attività di codifica sia possibile verificare che la classe si comporti in modo
+				corretto.
+			\end{itemize}
+
+			I tipi di diagrammi che potranno essere contenuti nel documento sono:
+			\begin{itemize}
+				\item Diagrammi dei package;
+				\item Diagrammi delle classi;
+				\item Diagrammi di sequenza.
+			\end{itemize}
+
+		\paragraph{Strumenti}
+			\subparagraph{Trender}: Verrà utilizzato per tracciare, descrivere e correlare tra loro:
+					\begin{itemize}
+						\item \gl{Package};
+						\item \gl{Classi};
+						\item \gl{Funzioni};
+						\item \gl{Classi-casi d'uso}.
+					\end{itemize}
+			\subparagraph{Astah}: Verrà utilizzato per la modellazione nel linguaggio UML dei diagrammi di Classi, package, diagrammi di attività e sequenza.
+		
+		\paragraph{Metriche}
+            
+			\subparagraph{Facilità di apprendimento delle funzionalità}
+				Serve per indicare il tempo medio impiegato dall'utente per imparare ad usare correttamente una data funzionalità del software.\\
+				Per il calcolo di questa metrica viene preso in considerazione il tempo, espresso in minuti, che l'utente impiega per apprendere il corretto funzionamento di una funzionalità offerta dal prodotto.
+
+			\subparagraph{Versioni dei browser supportate}
+				Questa metrica serve per indicare la percentuale di versioni di \gl{browser} attualmente supportate, fra quelle individuate dai requisiti. \\La formula per calcolarne il valore è la seguente:
+					\begin{equation*}
+						S = \frac{N_{VS} * 100}{N_{VS}}
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$N_{VS}$}: rappresenta il numero di versioni di browser supportare dal prodotto;
+						\item \textbf{$N_{TE}$}: indica il numero di versioni di browser che devono essere supportare dal prodotto.
+					\end{itemize}
+					
+			\subparagraph{Inclusione di funzionalità da altri prodotti}
+				Questa metrica serve per indicare la percentuale di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto da sviluppare. La formula per calcolare questo valore è la seguente:
+					\begin{equation*}
+						I = \frac{N_{FPA}}{N_{FPP}} * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$N_{FPA}$}: indica il numero di funzionalità del software utilizzato in precedenza dall'utente che produce risultati simili a quelli ottenuti dal prodotto in sviluppo;
+						\item \textbf{$N_{FPP}$}: indica il numero di funzionalità offerte dal software utilizzato in precedenza dall'utente.
+					\end{itemize}
+		
+
+
+		\subsubsection{Codifica}
+			\paragraph{Descrizione}
+        	L'attività di codifica ha come obiettivo quello di passare dalla descrizione della soluzione in termini di architettura alla descrizione della soluzione in formato eseguibile da un calcolatore. \\ 
+			I \programmatori, responsabili di questa attività, sono tenuti a seguire le linee guida, delineate nell'attività di progettazione, con lo scopo di produrre in output il software designato.
+			L'attività di programmazione è basata sul documento prodotto dall'attività di progettazione, e deve rispettare rigorosamente nomi e funzionalità descritti nel documento \definizionediprodotto.
+
+			\paragraph{Obiettivi di qualità}
+			Le unità software dovranno risultare di qualità. A questo fine ci siamo posti i seguenti obiettivi:
+			\begin{itemize}
+				\item L'implementazione delle classi e dei metodi definiti in progettazione dovrà puntare a produrre codice a bassa complessità, così che ciò che sarà prodotto sia facilmente comprensibile e testabile;
+				\item L'uso di costrutti e tecniche che creano sdoppiamenti del flusso di esecuzione verrà valutato attentamente ed attuato solo se strettamente necessario;
+				\item Il codice prodotto dovrà risultare facilmente manutenibile;
+				\item Il codice prodotto dovrà risultare privo di elementi inutilizzati;
+				\item L'integrazione delle varie parti del sistema sarà completamente automatizzata utilizzando lo strumento di integrazione continua \gl{Jenkins};
+				\item Il livello di integrazione raggiunto dal sistema sarà sempre consultabile grazie all'utilizzo dello strumento di integrazione continua Jenkins;
+				\item Funzionalità: il prodotto funzionerà sulla base dei requisiti indicati nel documento \analisideirequisiti;
+				\item Affidabilità: il prodotto dovrà essere robusto in presenza di eventuali situazioni di difficoltà;
+				\item Usabilità: il prodotto dovrà risultare semplice nell'utilizzo per gli utenti a cui è destinato;
+				\item Efficienza: il prodotto dovrà essere performante e rispondere alle richieste dell'utente utilizzando il minor numero di risorse e tempo;
+				\item Manutenibilità: il prodotto dovrà essere verificato, stabile e testato ad ogni estensione o modifica;
+				\item Portabilità: il prodotto si adatterà con facilità ad ogni trasferimento in diversi sistemi.
+			\end{itemize}
+
+            \paragraph{Tecniche di scrittura}
+                  La definizione di tecniche di scrittura è importante per avere una maggiore comprensione del codice sorgente. Le tecniche di scrittura del codice sono suddivise in tre categorie:
+                  \begin{itemize}
+                        \item Nomi;
+                        \item Commenti;
+                        \item Formattazione.
+                  \end{itemize}
+                  Si è scelto di adottare i metodi proposti nel primo capitolo \textit{Style Guidelines} del libro \gl{\textit{Maintainable JavaScript}} di Nicholas C. Zakas (\url{http://shop.oreilly.com/product/0636920025245.do}(2017-01-29)).
+                  
+                  \subparagraph{Nomi}
+                  Lo schema di denominazione rappresenta uno dei supporti più determinanti per la comprensione del flusso logico del software. Di seguito sono riportate le tecniche di denominazione raccomandate:
+                  \begin{itemize}
+                        \item Assegnare ad ogni elemento un nome univoco e consono alla funzione svolta;
+                        \item Evitare nomi poco chiari e suscettibili di interpretazioni soggettive; questo tipo di nome può contribuire a creare ambiguità piuttosto che astrazione;
+                        \item Utilizzare la struttura verbo - nome per la denominazione di routine che consentono di eseguire operazioni specifiche su determinati oggetti;
+                        \item Poiché la maggior parte dei nomi viene creata concatenando più parole, utilizzare una combinazione di caratteri maiuscoli e minuscoli per semplificarne la lettura;
+                        \item Utilizzare un nome significativo anche per le variabili che vengono visualizzate solo in poche righe di codice;
+                        \item Utilizzare nomi di variabili composti da una singola lettera, come "i" o "j", esclusivamente per gli indici a ciclo breve;
+                        \item Ridurre l'utilizzo delle abbreviazioni ma utilizzare quelle create in maniera coerente. È opportuno che ad ogni abbreviazione corrisponda un solo significato e che a ciascuna parola abbreviata sia associata una sola abbreviazione. Se, ad esempio, si utilizza min come abbreviazione di minimum, in altri contesti non è possibile utilizzare la stessa abbreviazione per minute;
+                        \item Nella denominazione di funzioni inserire una descrizione del valore restituito;
+                        \item Evitare di utilizzare gli stessi nomi per elementi diversi, ad esempio una routine e una variabile denominate rispettivamente Getname() e iGetname;
+                        \item Nella denominazione degli elementi non utilizzare omonimi per evitare ambiguità durante le revisioni del codice;
+                        \item Per la denominazione degli elementi evitare l'uso di parole ortograficamente errate;
+                        \item È opportuno che nei nomi di file e cartelle sia contenuta una descrizione precisa della relativa funzione.
+                  \end{itemize}
+
+                  \subparagraph{Formattazione}
+                  Una buona e uniforme formattazione facilita la comprensione dell'organizzazione logica del codice. Per consentire agli sviluppatori la decifrazione del codice sorgente è fondamentale una formattazione logica e coerente.
+                  Di seguito sono suggeriti alcuni metodi di formattazione:
+                  \begin{itemize}
+                        \item Definire una dimensione standard per i rientri e utilizzarla in maniera coerente. Allineare le sezioni di codice utilizzando il rientro predefinito;
+                        \item Allineare le parentesi di apertura e chiusura utilizzando lo stile \gl{JavaScript}, ovvero con la parentesi di apertura alla fine della linea e quella di chiusura all'inizio della linea. Vari esempi di questo stile possono essere trovati nel libro di riferimento Maintainable JavaScript;
+                        \item Rientrare le righe di codice secondo la relativa costruzione logica. Se non viene utilizzato il rientro, il codice risulterà di difficile comprensione;
+                        \item Utilizzare spazi prima e dopo la maggior parte degli operatori, se ciò non altera la funzione del codice, per migliorare la leggibilità;
+                        \item Utilizzare linee vuote per separare strutturalmente i blocchi di codice sorgente. In questo modo sarà possibile creare "paragrafi" di codice, che consentono di semplificare la comprensione della segmentazione logica del software da parte del lettore;
+                        \item Suddividere logicamente il codice sorgente tra diversi file fisici;
+                        \item Suddividere le sezioni complesse ed estese di codice in moduli comprensibili di dimensioni minori.
+                  \end{itemize}
+
+ 			\paragraph{Commenti}
+                  All'interno del codice sorgente è di fondamentale importanza l'inserimento di commenti al fine di
+                  facilitare la comprensione del flusso logico. Di seguito sono suggeriti alcuni metodi di inserimento
+                  dei commenti:
+                  \begin{itemize}
+                        \item Quando si modifica il codice mantenere sempre aggiornati i relativi commenti;
+                        \item All'inizio di ogni routine è utile fornire commenti predefiniti standard in cui siano indicati
+                        le limitazioni, i presupposti e lo scopo della routine. Per commento predefinito si intende
+                        una breve introduzione in cui siano illustrate le funzionalità della routine;
+                        \item Evitare l'aggiunta di commenti alla fine di una riga di codice; la presenza di commenti a fine
+                        riga può rendere più difficoltosa la lettura del codice. Tuttavia questo tipo di commento è
+                        valido per l'annotazione di dichiarazioni di variabili. In tal caso è necessario allineare tutti
+                        i commenti di fine riga a una tabulazione comune;
+                        \item Evitare commenti confusi come righe intere di asterischi. Utilizzare invece spazi vuoti per
+                        separare i commenti dal codice;
+                        \item Evitare di racchiudere blocchi di commenti in cornici grafiche. Si tratta di un espediente
+                        interessante ma di difficile gestione;
+                        \item Quando si scrivono commenti, utilizzare frasi di senso compiuto. La funzione dei commenti
+                        consiste nel chiarire il significato del codice senza aggiungere alcun tipo di ambiguità;
+                        \item Inserire commenti in fase di scrittura del codice, in quanto ciò potrebbe non essere possibile
+                        in un secondo momento. Inoltre, se dovesse presentarsi l'opportunità di rivedere il codice
+                        scritto, tenere presente che ciò che può essere evidente al momento della stesura potrebbe
+                        non esserlo più in futuro;
+                        \item Evitare commenti superflui o inappropriati, come annotazioni umoristiche;
+                        \item Indicare il funzionamento di tutto ciò che non è chiaro nel codice tramite commenti;
+                        \item Per evitare problemi ricorrenti, è opportuno utilizzare sempre i commenti nel caso di codice
+                        relativo a correzioni di errori e a potenziali soluzioni;
+                        \item Aggiungere commenti al codice costituito da cicli e diramazioni logiche. Si tratta di aree
+                        di fondamentale importanza che facilitano la lettura del codice sorgente;
+                        \item Creare commenti adottando uno stile uniforme ed una struttura e una punteggiatura coerenti;
+                        \item Separare i commenti dai delimitatori di commento con spazi vuoti. In questo modo i
+                        commenti saranno chiari e facili da individuare.
+                  \end{itemize}
+
+            \paragraph{Ricorsione}
+            La ricorsione va evitata quando possibile. Per ogni funzione ricorsiva sarà necessario fornire una prova di terminazione e sarà necessario valutare il costo in termini di occupazione della memoria. \\
+            Nel caso l'utilizzo di memoria risulti troppo elevato la ricorsione dovrà essere rimossa.
+			
+			\paragraph{Strumenti}
+			\begin{itemize}
+				\item \textbf{\gl{Firefox}}: browser Open Sourse sostenuto dalla società Mozzilla;
+
+				\item \textbf{\gl{Google Chrome}}: il browser sviluppato dalla software house Google ed è tuttora uno di più affidabili ed efficienti browser web, inoltre è attualmente il browser che supporta al meglio gli standard web HTML5, \gl{CSS3} e JavaScript. Fornisce inoltre ottimi strumenti integrati per lo sviluppo.
+
+				\item \textbf{\gl{Swagger}}: un insieme di specifiche e di strumenti che mirano a semplificare e standardizzare i processi di documentazione di API per servizi web \gl{RESTful}. Il cuore di Swagger consiste in un file testuale dove sono descritte tutte le funzionalità di un'applicazione web e i dettagli di input e output in un formato studiato per essere interpretabile correttamente.
+
+				\item \textbf{\gl{npm}}: il principale software utilizzato per maneggiare i moduli di Node.js e consente di condividere il codice per problemi tipici tra gli sviluppatori JavaScript. npm suddivide il codice in package o moduli e si dimostra utilissimo poiché ne facilita il riuso e la manutenzione.
+
+				%\item \textbf{Amazon DynamoDB}
+				%\gl{Amazon DynamoDB} è un servizio che fa parte del pacchetto di Amazon Web Services offerti da Amazon. DynamoDB è una tipologia di database che supporta lo storage, le query e l'aggiornamento di documenti. La funzionalità che suscita il nostro interesse è la possibilità di creare applicazioni, attraverso l'SDK AWS, che memorizzano documenti JSON direttamente nelle tabelle Amazon DynamoDB. 
+
+				%\item \textbf{AWS APIGateway}
+				%\gl{AWS APIGateway} è un servizio che fa parte del pacchetto di Amazon Web Services offerti da Amazon. APIGateway è un'interfaccia per applicazioni di tipo Rest e permette la semplice interazione con Amazon Lambda. 
+			
+				%\item \textbf{AWS Lambda}
+            	%\gl{AWS Lambda} è un servizio di elaborazione serverless che esegue il codice in risposta a determinati eventi su un'infrastruttura di calcolo ad alta disponibilità e amministra automaticamente le risorse di elaborazione in uso.
+
+				\item \textbf{\gl{Amazon AWS}}: suite di servizi cloud resi disponibili da Amazon.
+				
+				\item \textbf{\gl{Node.js}}: un runtime JavaScript costruito sul motore JavaScript V8 di Google Chrome. Node.js usa un modello I/O non bloccante e ad eventi, che lo rende efficace ed efficiente.
+			
+				\item \textbf{VisualStudioCode}: IDE open source prodotto da Microsoft;
+
+				\item \textbf{WebStorm}: IDE per il web sviluppato da JetBrains;
+
+				\item \textbf{TypeScript/typescript-compiler}: framework per lo sviluppo di JavaScript con un linguaggio di markup a più ad alto livello.
+			\end{itemize}
+
+			\paragraph{Metriche}\mbox{}\\
+			\subparagraph{Complessità ciclomatica}
+			Questa metrica software serve per indicare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso. In questo grafo i nodi corrispondono a gruppi indivisibili di istruzioni, mentre gli archi connettono due nodi se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo. È possibile applicare questo indice indistintamente a singole funzioni, \gl{moduli}, metodi e \gl{package} di un programma. Questa metrica viene impiegata per limitare la complessità durante l'attività di sviluppo del prodotto software e può risultare utile durante la fase di test per determinare il numero di casi necessari di questi ultimi. L'indice di complessità, infatti, è un limite superiore al numero di test necessari per raggiungere il coverage completo del modulo testato. Inoltre, uno studio ha mostrato forti corrispondenze tra le metriche di complessità e il livello di coesione nei package presi in esame.\\
+			
+			\subparagraph{Halstead difficulty per function}
+				Il livello di difficoltà di una funzione misura la propensione all'errore ed è proporzionale al numero di operatori presenti.\\
+				La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					D = \frac{n1}{2} * \frac{N2}{n2}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{n1}: indica il numero di operatori distinti;
+					\item \textbf{N2}: indica il numero totale di operandi;
+					\item \textbf{n2}: indica il numero di operandi distinti.
+				\end{itemize}
+
+			\subparagraph{Halstead volume per function}
+			Il volume descrive la dimensione dell'implementazione di un algoritmo e si basa sul numero di operazioni eseguite e sugli operandi di una funzione. Il volume di una funzione senza parametri composta da una sola linea è 20, mentre un indice superiore a 1000 indica che probabilmente la funzione esegue troppe operazioni.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					V = N * \log_{2}{n}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{N}: indica il numero di operatori e di operandi;
+					\item \textbf{n}: indica il numero totale di operandi e operatori distinti.
+				\end{itemize}
+
+			\subparagraph{Halstead effort per function}
+				Lo sforzo per implementare o comprendere il significato di una funzione è proporzionale al suo volume e al livello di difficoltà.
+				\\La formula per il calcolo di questo valore è la seguente:
+				\begin{equation*}
+					E = V * D
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{V}: indica l'Halstead Volume;
+					\item \textbf{D}: indica l'Halstead Difficulty.
+				\end{itemize}
+				
+			\subparagraph{Maintainability index}
+			Questa metrica è una scala logaritmica da -$\infty$ a 171, calcolata sulla base delle linee di codice logiche, della complessità ciclomatica e dall'indice Halstead effort e dove un valore alto indica una maggiore manutenibilità.\\
+
+			\subparagraph{Numero di livelli di annidamento}
+				Serve per indicare il numero di funzioni o procedure chiamate all'interno di un metodo. Un valore elevato di tale indice denota un'alta complessità ed un basso livello di astrazione del codice.
+				\begin{equation*}
+					\begin{split}
+						&Indice \ numerico \ che \ indica \ il \ numero \ di \ chiamata \ a \ funzioni \ o \ procedure \ presenti \\ 								&all'interno \ di \ un \ metodo
+					\end{split}
+				\end{equation*}
+			
+			\subparagraph{Variabili inutilizzate}
+				Serve per indicare la percentuale di variabili dichiarate che non vengono mai utilizzate durante l'esecuzione.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					P = \frac{N_{VI}}{N_{VD}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{VI}$}: indica il numero di variabili che non vengono mai utilizzate;
+					\item \textbf{$N_{VD}$}: indica il numero di varibili dichiarate.
+				\end{itemize}
+			
+
+			\subparagraph{Accuratezza rispetto alle attese}
+				Serve per rilevare la percentuale di risultati che rispecchiano le attese.
+				Si può calcolare con la seguente formula:
+				\begin{equation*}
+					A = (1 - \frac{N_{RD}}{N_{TE}})*100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{RD}$}: rappresenta il numero di test che producono risultati discordanti rispetto alle attese;
+					\item \textbf{$N_{TE}$}: indica il numero di test eseguiti.
+				\end{itemize}
+				
+
+			\subparagraph{Controllo degli accessi}
+				Permette di conoscere la percentuale di operazioni illegali non bloccate.
+				É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					I = \frac{N_{IE} * 100}{N_{II}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{IE}$}: rappresenta il numero di operazioni illegali eseguibili dal test;
+					\item \textbf{$N_{II}$}: indica il numero di operazioni illegali individuate.
+				\end{itemize}
+				
+			\subparagraph{Densità di failure}
+				Questa metrica serve per indicare la percentuale di operazioni di testing che si sono concluse in failure. \\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					F = \frac{N_{FR} * 100}{N_{TE}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FR}$}: indica il numero di failure rilevati durante la fase di test;
+					\item \textbf{$N_{TE}$}: indica il numero di test eseguiti.
+				\end{itemize}
+				
+			\subparagraph{Blocco di operazioni non corrette}
+				Serve per indicare la percentuale di funzionalità in grado di gestire correttamente i fault che potrebbero verificarsi.
+				\begin{equation*}
+					B = \frac{N_{FE}}{N_{ON}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FE}$}: indica il numero di failure evitati durante la fase di test;
+					\item \textbf{$N_{ON}$}: indica il numero di test eseguiti che prevedono l'esecuzione di operazioni non corrette e che possono causare failure.
+				\end{itemize}
+
+			\subparagraph{Comprensibilità delle funzioni offerte}
+				Questa metrica indica la percentuale di operazioni che l'utente riesce a comprendere in modo immediato, senza la consultazione di un manuale.\\La formula per calcolare il valore è la seguente:
+				\begin{equation*}
+					S = \frac{N_{FC} * 100}{N_{FO}}
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FC}$}: indica il numero di funzionalità comprese in modo immediato dall'utente durante l'attività di test del prodotto;
+					\item \textbf{$N_{FO}$}: indica il numero di versioni di funzionalità offerte dal sistema.
+				\end{itemize}
+				
+	
+			\subparagraph{Consistenza operazionale in uso}
+				Indica la percentuale di funzionalità offerte all'utente che rispettano le sue aspettative. La misurazione viene effettuata con la seguente formula:
+				\begin{equation*}
+					C = (1 - \frac{N_{MFI}}{N_{MFO}}) * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{MFI}$}:  rappresenta il numero di funzionalità che non rispettano le aspettative dell'utente;
+					\item \textbf{$	N_{MFO}$}:  indica le funzionalità offerte dal sistema.
+				\end{itemize}
+			
+			\subparagraph{Capacità di analisi di failure}
+				È la percentuale di failure registrate delle quali sono state individuate le cause. Si calcola con la seguente formula:
+					\begin{equation*}
+						I = (\frac{N_{FI}}{N_{FR}}) * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$	N_{FI}$}: rappresenta il numero di failure di cui sono state individuate le cause;
+						\item \textbf{$N_{FR}$}: indica il numero di failure rilevate.
+					\end{itemize}
+
+			\subparagraph{Impatto delle modifiche}
+				È la percentuale di modifiche effettuate in risposta a failure che hanno portato all'introduzione di nuove failure in altre componenti del sistema. Si calcola con la seguente formula:
+					\begin{equation*}
+						I = (\frac{N_{FRF}}{N_{FR}}) * 100
+					\end{equation*}
+					Dove:
+					\begin{itemize}
+						\item \textbf{$	N_{FRF}$}: rappresenta il numero di failure risolte, ma che hanno introdotto nuove failure;
+						\item \textbf{$N_{RF}$}: indica il numero di failure risolte.
+					\end{itemize}
+
+	     		\subparagraph{Componenti integrate}
+				Indica la percentuale di componenti progettate, attualmente implementate e correttamente integrate nel sistema.
+				Tale valore si ottiene dalla formula:
+				\begin{equation*}
+					I = \frac{N_{CI}}{N_{CP}} * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{CI}$}: indica il numero di componenti integrate nel sistema;
+					\item \textbf{$N_{CP}$}: indica il numero di componenti delineate nell'attività di progettazione.
+				\end{itemize}
+				
+			\subparagraph{Completezza dell'implementazione funzionale}
+				Indica la percentuale di requisiti funzionali coperti dall'implementazione.
+				È possibile calcolarla con la formula seguente:
+				\begin{equation*}
+					C = (1 - \frac{N_{FM}}{N_{FI}}) * 100
+				\end{equation*}
+				Dove:
+				\begin{itemize}
+					\item \textbf{$N_{FM}$}: rappresenta il numero di funzionalità mancanti nell'implementazione;
+					 \item \textbf{$N_{FI}$}: indica il numero di funzionalità individuate nell'attività di analisi.
+				\end{itemize}
+ 
+            
+            \subparagraph{Copertura requisiti desiderabili}
+				Questa metrica permette di verificare in ogni momento lo stato dell'implementazione dei requisiti desiderabili. Essa controlla infatti il rapporto percentuale tra i requisiti desiderabili soddisfatti e il numero totale dei requisiti desiderabili richiesti.\\
+				É possibile calcolarla tramite la formula:
+				\begin{equation*}
+					Copertura \ requisiti \ desiderabili = \frac{Numero \ di \ requisiti \ desiderabili \ soddisfatti \ * \ 100}{Numero \ totale \ di \ requisiti \ desiderabili}
+				\end{equation*}
+
+		\subsubsection{Testing}
+		\paragraph{Descrizione}
+			Quest'attività ha lo scopo di verificare che le funzioni codificate dai \programmatori, abbiamo i parametri descritti nella progettazione, e che ne rispettino gli output previsti in determinati input.
+
+		\paragraph{Obiettivi di qualità}
+			\kpanic\ si impegnerà affinché vengano perseguiti, durante le attività, i seguenti obiettivi:
+			\begin{itemize}
+				\item Per ogni componente integrata nel sistema, deve essere fornito un'apposito test di integrazione;
+				\item Tutti i requisiti funzionali obbligatori descritti nell'analisi dei requisiti verranno testati;
+				\item Ogni funzione utilizzata all'infuori di uno stesso modulo o classe deve essere testato.
+			\end{itemize}
+				
+		\paragraph{Procedure}
+			Per perseguire gli obiettivi di qualità sarà necessario:
+			\begin{itemize}
+				\item Implementare il maggior livello possibile di automatizzazione nell'esecuzione dei test di sistema, per ridurre i costi ed errori;
+				\item Utilizzo dello sturmento di integrazione continua Jenkins, che eseguirà i test stabiliti ogni qualvolta un programmatore utilizzi lo strumento di versionamento.
+				\item La decisione sui test da fare, sugli input e sugli output aspettati, spetta al progettista.
+			\end{itemize}
+
+		\paragraph{Classificazione dei test}
+			\begin{itemize}
+			\item \textbf{Test di unità}:
+			i test di unità verificano che una singola componente funzioni correttamente. Effettuando questi test si riduce al minimo la presenza di errori di singole funzioni o moduli. Essi verranno marcati con seguente sintassi:\\
+			\begin{equation*}
+				TU[Codice \ Test]
+			\end{equation*}
+			\item \textbf{Test di integrazione}:
+			i test di integrazione verificano che più unità, validate singolarmente, funzionino correttamente una volta assemblate. Essi verranno marcati con seguente sintassi:\\
+			\begin{equation*}
+			TI[Codice \ Test]
+			\end{equation*}
+			\item \textbf{Test di regressione}:
+			il test di regressione viene effettuato su tutte le componenti software che subiscono delle modifiche e a tutte le sue dipendenze.
+			Essi verranno marcati con seguente sintassi:\\
+			\begin{equation*}
+			TR[Codice \ Test]
+			\end{equation*}
+			\item \textbf{Test di sistema}:
+			i test di sistema vengono eseguiti sul prodotto che verrà rilasciato. E conterrà tutti i requisiti richiesti al prodotto. Se questo test verrà superato con successo, il prodotto verrà considerato completo.
+			Essi verranno marcati con seguente sintassi:\\
+			\begin{equation*}
+			TS[Codice \ Requisito]
+			\end{equation*}
+			\item \textbf{Test di validazione}:
+			il test di validazione viene effettuato con il proponente. Se tutti i requisiti sono soddisfatti e il proponente lo approva, allora il prodotto verrà rilasciato.
+			Essi verranno marcati con seguente sintassi:\\
+			\begin{equation*}
+			TV[Codice \ Requisito]
+			\end{equation*}
+			\end{itemize}
+
+		\paragraph{Strumenti per test}
+            \subparagraph{Jenkins}
+            Jenkins è un servizio di integrazione continua per aggiornare applicazione e infrastruttura in modo rapido. Jenkins crea, esegue il test del codice ogni volta che viene modificato, in base a modelli e processi personalizzati configurati.
+            
+            \subparagraph{Istanbul}
+            Istanbul è un applicativo che permette di svolgere branch coverage sul codice che verrà prodotto durante le sessioni di codifica.
+            
+			\subparagraph{Chai}
+			Chai è un modulo disponibile su npm per effettuare test su JavaScript.
+
+			\subparagraph{npm test}
+			Strumento incluso in npm che permette di testare funzioni JavaScript.
+
+		\paragraph{Metriche}\mbox{}
+			\subparagraph{Test di unità eseguiti}
+			Indica la percentuale di test di unità che sono stati eseguiti.
+			Tale valore si ottiene dalla formula:
+			\begin{equation*}
+				UE = \frac{N_{TU}}{N_{TUP}} * 100
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{TU}$}: indica il numero di test di unità eseguiti;
+				\item \textbf{$N_{TUP}$}: indica il numero di test di unità pianificati.
+			\end{itemize}
+			
+			\subparagraph{Test di integrazione eseguiti}
+			Indica la percentuale di test di integrazione che sono stati eseguiti.
+			Tale valore si ottiene dalla formula:
+			\begin{equation*}
+				IE = \frac{N_{TI}}{N_{TIP}} * 100
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{TI}$}: indica il numero di test di integrazione eseguiti;
+				\item \textbf{$N_{TIP}$}: indica il numero di test di integrazione pianificati.
+			\end{itemize}
+			
+			\subparagraph{Test di sistema eseguiti}
+			Indica la percentuale di test di sistema che sono stati eseguiti.
+			Tale valore si ottiene dalla formula:
+			\begin{equation*}
+				SE = \frac{N_{TS}}{N_{TSP}} * 100
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{TS}$}: indica il numero di test di sistema eseguiti;
+				\item \textbf{$N_{TSP}$}: indica il numero di test di sistema pianificati.
+			\end{itemize}
+			
+			\subparagraph{Test di validazione eseguiti}
+			Indica la percentuale di test di validazione che sono stati eseguiti.
+			Tale valore si ottiene dalla formula:
+			\begin{equation*}
+				VE = \frac{N_{TV}}{N_{TVP}} * 100
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{TV}$}: indica il numero di test di validazione eseguiti;
+				\item \textbf{$N_{TVP}$}: indica il numero di test di validazione pianificati.
+			\end{itemize}
+			
+			\subparagraph{Copertura dei test}
+			Questa metrica esamina la percentuale di successo dei test ricavati dai requisiti e dalle relative funzionalità che il software dovrà ottenere.\\La formula per ottenere la percentuale dei test eseguiti con successo è la seguente:
+			\begin{equation*}
+				CT = \frac{N_{TS}}{N_{TP}} * 100
+			\end{equation*}
+			Dove:
+			\begin{itemize}
+				\item \textbf{$N_{TS}$}: indica il numero di test superati;
+				\item \textbf{$N_{TP}$}: indica il numero di test pianificati.
+			\end{itemize}
+\end{document}

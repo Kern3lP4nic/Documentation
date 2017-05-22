@@ -1,0 +1,121 @@
+menu
+pre: L'utente si è autenticato
+post: L'utente ha scelto una delle 3 opzioni
+attori: Utente
+scenario1: 1- L'utente è autenticato
+2- vengono proposte le informazioni
+3- L'utente seleziona una delle opzioni proposte
+scenario2: l'amministratore esegue il logout
+
+Info Ospiti dettagliato
+pre: L'utente è autenticato, ha scelto info ospiti e ha letto 
+post: L'utente riceve tutte le informazioni su un'utente
+attori: utente, database
+descrizione:1-L'utente ha cliccato su un'utente
+2- ricevo l'identificativo su un'utente e ne richiedo le informazioni al database
+scenario1: 
+3- il database ritorna le informazioni
+4- le visualizzo a schermo
+scenario2: la richiesta fallisce
+
+
+Gestione Operatori 
+pre: L'amministratore è autenticato
+post: L'utente ha modificato, aggiunto , canzellato un utente o meno ma ha sempre visualizzato la lista degli utenti
+attori: Amministratore, database
+scenario1:
+1- l'amministratore, visualizza la lista di utenti
+2- l'amministratore seleziona un'utente o compila i dati per la registrazione
+3- l'amministratore sceglie un'azione su quell'utente o aggiunge l'utente
+scenario2: 1-L'amministratore visualizza la lista di utenti
+2-l'amministratore esegue il logout
+
+Modifica Operatore (no schema)
+pre: L'amministratore è autenticato e ha selezionato un'utente
+post: L'utente selezionato dall'amministratore viene modificato
+attori: Amministratore, database
+Descrizione:L'utente modifica uno o più campi tra Nome e ID Slack
+Viene effettuata la chiamata al database per modificare i campi
+visualizzo la risposta
+scenario1: la richiesta va a buon fine
+scenario2: la richiesta fallisce
+
+Aggiunta Operatore (no schema)
+pre: L'amministratore è autenticato e ha compilato i dati           
+post: L'utente compilato dall'amministratore viene aggiunto
+attori: Amministratore, database
+descrizione: Vengono inviati i dati al database per l'inserimento
+scenario1:la richiesta va a buon finessssssss
+scenario2:la richiesta fallisce
+
+Cancellazione Operatore (no schema)
+pre: L'amministratore è autenticato e ha selezionato un'utente
+post: L'utente selezionato dall'amministratore viene cancellato
+attori: Amministratore, database
+descrizione: viene effettuata la chiamata al database per l'eliminazione utente
+scenario1: La richiesta va a buon fine
+scenario2: La richiesta fallisce
+
+Richiesta Database
+pre: Mi viene fatta una richiesta da parte dell'AV al database con tutti i dati	
+post: Viene restituito il risultato
+attori: database
+descrizione: 
+scenario1:  Arriva la richiesta e viene tornato il risultato corretto
+scenario2: Arriva la richiesta, ma questa fallisce
+
+Richiesta Database fallista
+pre: Mi viene fatta una richiesta da parte dell'AV al database con tutti i dati	
+post: Viene restituito l'errore
+attori: database
+descrizione: 
+scenario1:  Arriva la richiesta e viene tornato l'errore
+scenario2: 
+
+Gestione domande risposte
+pre: L'amministratore è autenticato
+post: L'utente ha modificato le domande e le risposte o meno
+attori: Utente
+descrizione: 
+scenario1:  
+scenario2: 
+
+Modificata domanda
+pre: Viene scelta una domanda
+post: La domanda viene modificata
+attori: Utente
+descrizione: utente
+scenario1:  si seleziona la domanda,si ricevono i dati,si modificano i dati,si manda la richiesta al databse
+scenario2: 
+
+Modificata risposta
+pre: Ci sono risposte
+post: La risposta che si è scelta viene modificata
+attori: Utente
+descrizione: 
+scenario1: si seleziona la risposta,si ricevono i dati,si modificano i dati,si manda la richiesta al databse
+scenario2: 
+
+Aggiunta risposta
+pre: 
+post: La risposta viene aggiunta 
+attori: Utente
+descrizione: 
+scenario1:  Si compilano i dati, si manda la richiesta al database
+scenario2: 
+
+Cancellata risposta
+pre: ci sono risposte
+post: La risposta viene cancellata
+attori: Utente
+descrizione: 
+scenario1:  Si seleziona una risposta, si manda la richiesta al db
+scenario2: 
+
+Requisiti:
+L'amministratore deve poter vedere i dati sugli utenti
+L'amministratore deve poter sloggare
+L'amministratore deve potersi autenticare
+L'amministratore deve poter aggiungere-rimuovere o modificare gli operatori e la loro funzione nel sistema
+(gestione amministratori?)
+

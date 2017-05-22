@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{../../../KerpanStyle/kerpan}
+\titlepage{}
+\usepackage{graphicx}
+\graphicspath{{../}}
+
+\date{2017/05/05}
+\intestazioni{\manualesviluppatoreRA}
+\pagenumbering{gobble}
+
+
+\usepackage[automake,section,shortcuts,nonumberlist,toc,numberedsection=autolabel]{glossaries}
+%%%%%%%%%%%%%%%%%%%%%%%% STILE GLOSSARIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossarystyle{myaltlistgroup}{%
+  \setglossarystyle{altlistgroup}%
+  \renewcommand*{\glsgroupheading}[1]{%
+    \vspace*{0,5cm}
+    \item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}%
+    \vspace*{-\baselineskip}%
+    \item\makebox[\linewidth]{\hspace*{4cm}\hrulefill\hspace*{4cm}}%
+  }%
+}
+
+\loadglsentries{glossaryEntries}
+
+\makeglossaries
+
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \manualesviluppatoreRA\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 2.0.0			\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-05-05 		\\ 
+			{\hfill\textbf{Redazione}} 			& Francesco Fasolato \\ & Filippo Berto \\
+			{\hfill\textbf{Verifica}} 				& Antonino Macrì \\
+			{\hfill\textbf{Approvazione}} 		& Giacomo Zecchin \\
+			{\hfill\textbf{Uso}} 						& Esterno 			\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage	
+		\include{DiarioModificheMS}	
+
+	\newpage
+		\tableofcontents 	% produce l'indice delle sezioni del documento
+	\newpage
+		\listoftables 		% produce l'indice delle tabelle del documento
+	\newpage	
+		\listoffigures		% produce l'indice delle figure del documento	
+	
+	\label{LastFrontPage}
+		\newpage
+		\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}
+		\newpage
+		\subfile{Sezioni/RequisitiDiSistema}
+		\newpage
+		\subfile{Sezioni/ModalitaDiUtilizzo}
+		\newpage
+		\subfile{Sezioni/TecnologieUtilizzate}
+		\newpage
+		\subfile{Sezioni/ConfigurazioneAmbiente}
+		\newpage
+		\subfile{Sezioni/Architettura}
+		\newpage
+		\subfile{Sezioni/Action}
+		\newpage
+		\subfile{Sezioni/Documentazione}
+		\newpage
+		\subfile{Sezioni/AtaviFrontEnd}
+		\newpage
+		\subfile{Sezioni/Models}
+		\newpage
+		\subfile{Sezioni/AtaviBackEnd}
+
+		\glsaddall	%If all entries are to be printed
+		\newpage
+
+			\appendix
+			
+			\printglossary[style=myaltlistgroup] %title è il titolo che do al glossario, toc è il nome che appare nell'indice
+
+	\label{LastPage}
+
+
+
+\end{document}

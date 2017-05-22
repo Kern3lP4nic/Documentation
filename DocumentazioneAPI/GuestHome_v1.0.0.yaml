@@ -1,0 +1,98 @@
+---
+swagger: "2.0"
+info:
+  version: "2017-04-04T07:53:24Z"
+  title: "GuestHome_v1.0.0"
+  description: API used to execute authentication with "Login With Amazon"
+  contact:
+    name: Kern3lP4nic Team
+    email: kern3lp4nic.team@gmail.com
+    #url: http://kern3lp4nic.github.io
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+host: "kzc6ts5w59.execute-api.us-east-1.amazonaws.com"
+basePath: "/AmazonLogin"
+schemes:
+- "https"
+paths:
+  /gettoken:
+    get:
+      tags: [get]
+      description: Chiamata necessaria al reperimento del token per l'utilizzo di AVS
+      summary: 
+      operationId: getToken
+      produces:
+      - "application/json"
+      parameters:
+      - name: "queryString"
+        description: codice reperito su LWA
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/tokencode"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:GetToken/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+  /refreshtoken:
+    get:
+      tags: [get]
+      description: |
+        Funzione che ritorna un nuovo condice di autenticazione per AVS partendoda quello vecchio
+      summary: 
+      operationId: refreshToken
+      produces:
+      - "application/json"
+      parameters:
+      - name: "queryString"
+        description: Vecchio codice di autenticazione
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/tokencode"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:RefreshToken/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"
+  tokencode:
+    type: "string"
+    title: "tokencode"
+    

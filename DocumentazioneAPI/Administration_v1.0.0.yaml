@@ -1,0 +1,1350 @@
+---
+swagger: "2.0"
+info:
+  version: "2017-04-04T08:57:45Z"
+  title: "Administration_v1.0.0"
+  description: API used to manage administration services.
+  contact:
+    name: Kern3lP4nic Team
+    email: kern3lp4nic.team@gmail.com
+    url: http://kern3lp4nic.io
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+host: "by8yv1gxqg.execute-api.us-east-1.amazonaws.com"
+basePath: "/Administration"
+schemes:
+- "https"
+paths:
+  /ManageAdministrators:
+    get:
+      tags: [get]
+      description: |
+        Service for get entire administrators list on range selected with parameters
+      summary: Get all administrators
+      operationId: getAdmins
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Admin"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAdministrators/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "9qzcq1"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limits"
+        - "method.request.querystring.up_limits"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      tags: [post]
+      description: |
+        Service to add an admin passed as parameter
+      summary: add an admin
+      operationId: addAdmin
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Admin"
+        required: true
+        description: Object that represents the admin to add to the array
+        schema:
+          $ref: "#/definitions/Admin"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAdministrators/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "9qzcq1"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    put:
+      tags: [put]
+      description: |
+        Service for update an admin passed as parameter
+      summary: update an admin
+      operationId: updateAdmin
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Admin"
+        description: Object that represents the admin to update
+        required: true
+        schema:
+          $ref: "#/definitions/Admin"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAdministrators/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "9qzcq1"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      tags: [delete]
+      description: |
+        Service for delete admin passed as parameter
+      summary: delete an admin
+      operationId: deleteAdmin
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Admin"
+        description: Object that represents the admin to delete
+        required: true
+        schema:
+          $ref: "#/definitions/Admin"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Admin"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAdministrators/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "9qzcq1"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,POST,GET,PUT,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /Authentication:
+    get:
+      tags: [get]
+      description: |
+        Service used to verify if the token passed is correct
+      summary: Verify the token
+      operationId: verifyLogin
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Admin"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAuth/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "z0sljc"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      tags: [get]
+      description: |
+        Service used to get the login data in order to verify them
+      summary: get login data
+      operationId: login
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "Admin"
+        description: Object used to retrive login information
+        required: true
+        schema:
+          $ref: "#/definitions/Admin"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Admin"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAuth/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    put:
+      tags: [put]
+      description: |
+        Service used to recover lost password for an Admin
+      summary: Service for recover lost password
+      operationId: recoverPassword
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "header"
+        name: "token"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "RecoveryPassword"
+        description: Object used to generate a new password
+        required: true
+        schema:
+          $ref: "#/definitions/RecoveryPassword"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAuth/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      tags: [delete]
+      description: |
+        Service used to remove the security token
+      summary: remove token
+      operationId: logout
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageAuth/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "z0sljc"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,POST,GET,PUT,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageFirm/Conversation:
+    get:
+      tags: [get]
+      description: |
+        Service for get conversation related to a guest passed as a parameter
+      summary: get conversation
+      operationId: getConversation
+      produces:
+      - "application/json"
+      parameters:
+      - name: "guest_name"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "down_limit"
+        in: "query"
+        required: true
+        type: "string"
+      - name: "token"
+        in: "header"
+        required: true
+        type: "string"
+      - name: "up_limit"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Firm"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageFirm/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "xoyzub"
+        cacheKeyParameters:
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        - "method.request.querystring.Guest"
+        - "method.request.querystring.down_limit"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageFirm/Firm:
+    get:
+      tags: [get]
+      description: |
+        Service for get all firms on range selected with parameters
+      summary: get firms
+      operationId: getFirms
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Firm"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+    put:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Firm"
+        description: Object that represents the firm to update
+        required: true
+        schema:
+          $ref: "#/definitions/Firm"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad Request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageFirm/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "w257d2"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'GET,PUT,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageQuestions/Actions:
+    get:
+      tags: [get]
+      description: |
+        Service used to get the entire list of actions related to avaible questions
+      summary: Get actions
+      operationId: getActions
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/action"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      security:
+      - sigv4: []
+      - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageQuestions/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "88ihli"
+        cacheKeyParameters:
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageQuestions/Questions:
+    get:
+      tags: [get]
+      description: |
+        Service for get the list of question between value of paramenters passed
+      summary: Get questions
+      operationId: getQuestions
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Question"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      security:
+      - sigv4: []
+      - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageQuestions/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "b3y9rl"
+        cacheKeyParameters:
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      tags: [post]
+      description: |
+        Service used to add a Question in the array of Questions
+      summary: Add a new question
+      operationId: addQuestion
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "Question"
+        in: "body"
+        description: Object that represents the question to add
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageQuestions/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "b3y9rl"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    put:
+      tags: [put]
+      description: |
+        Service used to update a specific question passed as a parameter
+      summary: update a question
+      operationId: updateQuestion
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Question"
+        description: Object that represents the question to update
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      security:
+      - sigv4: []
+      - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageQuestions/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "b3y9rl"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      tags: [delete]
+      description: |
+        Service used to delete a specific question passed as a paramater
+      summary: delete a question
+      operationId: deleteQuestion
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Question"
+        description: Object that represents the question to delete
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      security:
+      - sigv4: []
+      - api_key: []
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageQuestions/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "b3y9rl"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,POST,GET,PUT,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageSlack/DefaultInterlocutors:
+    get:
+      tags: [get]
+      description: |
+        Service for get the default interlocutors queue on a channel
+      summary: get the interlocutors queue
+      operationId: getDefaultInterlocutors
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Interlocutor"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageSlack/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "c704jj"
+        cacheKeyParameters:
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    post:
+      tags: [post]
+      description: |
+        Service for add a default interlocutor
+      summary: add a default interlocutor
+      operationId: addToDefault
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Interlocutor"
+        description: Object to add as a default interlocutor
+        required: true
+        schema:
+          $ref: "#/definitions/Interlocutor"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageSlack/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "c704jj"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    delete:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Interlocutor"
+        description: Object that represents the default interlocutor to delete
+        required: true
+        schema:
+          $ref: "#/definitions/Interlocutor"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageSlack/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "c704jj"
+        cacheKeyParameters:
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,POST,GET,OPTIONS'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+  /ManageSlack/Interlocutors:
+    get:
+      tags: [get]
+      description: |
+        Services for get the interlocutor queue on a channel
+      summary: get interlocutor queue
+      operationId: getInterlocutors
+      produces:
+      - "application/json"
+      parameters:
+      - name: "down_limit"
+        description: first value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      - name: "token"
+        in: "header"
+        description: Object used to verify the admin identity
+        required: true
+        type: "string"
+      - name: "up_limit"
+        description: second value of the desired range
+        in: "query"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Interlocutor"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageSlack/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        cacheNamespace: "3yy4hc"
+        cacheKeyParameters:
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        - "method.request.querystring.down_limit"
+        - "method.request.querystring.up_limit"
+        - "method.request.header.token"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    put:
+      tags: [put]
+      description: |
+        Services for update intelocutor queue on a channel
+      summary: update interlocutor queue
+      operationId: updateInterlocutors
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+        400:
+          description: "Bad request"
+        401:
+          description: "Unauthorized"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:321411950107:function:ManageSlack/invocations"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        contentHandling: "CONVERT_TO_TEXT"
+        type: "aws_proxy"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+        
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-api-key"
+    in: "header"
+  sigv4:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+    x-amazon-apigateway-authtype: "awsSigv4"
+    
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"
+  Interlocutor:
+    type: "object"
+    required:
+    - "id_slack"
+    - "joinChannel"
+    - "name"
+    properties:
+      name:
+        type: "string"
+      id_slack:
+        type: "string"
+      joinChannel:
+        type: "boolean"
+  Question:
+    type: "object"
+    required:
+    - "id"
+    - "baseText"
+    - "answers"
+    properties:
+      id:
+        type: "integer"
+      baseText:
+        type: "string"
+      recurrentText: 
+        type: "string"
+      answers:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            text: 
+              type: "string"
+            id_nextQuestion:
+              type: "integer"
+            actions:
+              type: "array"
+              items:
+                type: "object"
+                properties:
+                  id:
+                    type: "integer"
+                  text:
+                    type: "string"
+  action:
+    type: "array"
+    items:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+        text:
+          type: "string"
+  Admin:
+    type: "object"
+    required:
+    - "email"
+    - "password"
+    properties:
+      username:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+  RecoveryPassword:
+    type: "object"
+    required:
+    - "password"
+    - "recoveryToken"
+    properties:
+      recoveryToken:
+        type: "string"
+        pattern: "^[a-zA-Z0-9+-]{5,30}$"
+      password:
+        type: "string"
+        pattern: "^[a-zA-Z0-9]{8,16}$"
+  apiTrame:
+    type: "object"
+    properties:
+      Error:
+        type: "string"
+      TypeError:
+        type: "string"
+      Object:
+        type: "object"
+        properties: {}
+  Firm:
+    type: "object"
+    required:
+    - "guests"
+    - "name"
+    properties:
+      name:
+        type: "string"
+      guests:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            name:
+              type: "string"
+          required:
+          - "name"

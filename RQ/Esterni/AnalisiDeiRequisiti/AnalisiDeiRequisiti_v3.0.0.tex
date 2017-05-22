@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{verbatim}
+\usepackage{../../../KerpanStyle/kerpan}
+\usepackage{color}
+\titlepage{}
+
+\date{2017-04-03}
+\intestazioni{\analisideirequisitiRQ}
+\pagestyle{empty}
+
+% COMANDI PER TABELLE ESPORTATE DA TRENDER
+% Intestazione tabelle
+\definecolor{I}{HTML}{B40404}
+% Intestazione gruppi
+\definecolor{G}{HTML}{AB5454}
+% Righe dispari tabelle
+\definecolor{D}{HTML}{E6E6E6}
+% Righe pari tabelle
+\definecolor{P}{HTML}{FFFFFF}
+% Riga di separazione tra le colonne
+\newcommand\VRule[1][\arrayrulewidth]{\color{white} \vrule width 1pt}
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries AtAVi\par}
+		Accoglienza tramite Assistente Virtuale \\*
+		\line(1,0){350} \\
+		{\scshape\LARGE Università di Padova \par}
+		\vspace{1cm}
+		{\scshape\Large \analisideirequisitiRQ\ \par}
+		\logo
+		\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 3.0.0						\\ 
+			{\hfill\textbf{Data Redazione}} 	& 2017-04-03 		\\ 
+			{\hfill\textbf{Redazione}} 			& Daniele Favaro \\ & Filippo Berto \\ & Francesco Fasolato \\ 
+			{\hfill\textbf{Verifica}} 			& Antonino Macrì \\  & Giacomo Zecchin \\ 
+			{\hfill\textbf{Approvazione}} 		& Edoardo Zanon		\\
+			{\hfill\textbf{Uso}} 				& Esterno 				\\
+			{\hfill\textbf{Distribuzione}} 		& \vardanega \\ & \cardin \\ & \prop \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\pagestyle{myfront}
+	\newpage
+	\include{DiarioModificheAR}
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoftables
+	\newpage
+	\listoffigures
+	
+	\label{LastFrontPage}	
+	\newpage	
+	\pagestyle{mymain}
+		\subfile{Sezioni/Introduzione}		
+	\newpage	
+		\subfile{Sezioni/DescrizioneGenerale}
+	\newpage	
+		\subfile{Sezioni/CasiDUso}	
+	\newpage	
+		\subfile{Sezioni/Requisiti}
+		
+	\label{LastPage}
+
+\end{document}

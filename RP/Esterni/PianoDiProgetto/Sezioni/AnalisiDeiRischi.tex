@@ -1,0 +1,270 @@
+\documentclass[../PianoDiProgetto.tex]{subfiles}
+
+\begin{document}
+
+\section{Analisi dei rischi}
+Al fine di migliorare l’avanzamento del progetto è stata effettuata un’attenta analisi dei rischi per individuarli. Essa si divide in quattro attività:
+
+\begin{enumerate}
+	\item \textbf{Identificazione}: identificare i rischi che possono interessare il progetto, indicandone le cause e cercando di prevedere le conseguenze;
+	\item \textbf{Analisi}: stimare la probabilità di occorrenza di un rischio e determinarne l’impatto sul progetto;
+	\item \textbf{Realizzazione del Piano di Contingenza}: definire un metodo per il controllo dei rischi al fine di evitarli. Nel caso in cui fossero inevitabili, verrà effettuata un'operazione di mitigazione per poter minimizzare i danni prodotti;
+	\item \textbf{Verifica dei rischi}: indicare per ogni rischio quando si è effettivamente verificato, cosa ha causato e come il gruppo ha reagito.
+\end{enumerate}
+	Ogni rischio verrà monitorato nel tempo e ne verrà indicato l'effettivo riscontro nella fase in corso.
+    Nel registro dei rischi (tabella~\ref{tab:rischi}) si elencheranno tutti i rischi, suddivisi per livello, identificati durante tutto il periodo di progetto fino alla fase corrente.\\\\
+    Ogni rischio identificato avrà le seguenti informazioni:
+	\begin{itemize}
+		\setlength\itemsep{1pt}
+		\item Nome;
+		\item Descrizione;
+		\item Probabilità di occorrenza;
+		\item Grado di pericolosità;
+		\item Conseguenze;
+		\item Gestione;
+		\item Riscontro.
+	\end{itemize}
+\newpage
+	Qualora il Responsabile di progetto lo ritenesse necessario, l'analisi dei rischi potrà essere riveduta ed estesa attraverso la ripetizione delle attività sopra elencate.
+	\begin{table}[h!]
+		\centering
+		\begin{longtabu} to \textwidth {X[l 0.3cm] X[l]}
+			\toprule
+			\textbf{Livello} & \multicolumn{1}{c}{\textbf{Tipologia}} \\
+			\midrule
+			Tecnologico (\ref{sec:Livello tecnologico})	& Tecnologie sofware sconosciute (\ref{sec:Tecnologie software sconosciute})\\
+						\arrayrulecolor{lightgray}
+						\cmidrule{2-2}
+						\arrayrulecolor{gray}
+						& Inesperienza nell'utilizzo di strumenti collaborativi (\ref{sec:Inesperienza utilizzo di strumenti collaborativi}) \\
+						\arrayrulecolor{lightgray}
+						\cmidrule{2-2}
+						\arrayrulecolor{gray}
+						& Guasti hardware (\ref{sec:Guasti hardware}) \\
+			\midrule
+			Requisiti (\ref{sec:Livello di requisiti}) & Errata comprensione (\ref{sec:Errata comprensione}) \\
+						\arrayrulecolor{lightgray}
+						\cmidrule{2-2}
+						\arrayrulecolor{gray}
+						& Modifica dei requisiti (\ref{sec:Modifica dei requisiti}) \\
+			\midrule
+			Economico (\ref{sec:Livello economico}) & Valutazione delle risorse (\ref{sec:Valutazione delle risorse}) \\
+			\midrule
+			Organizzativo (\ref{sec:Livello organizzativo}) & Rotazione dei ruoli (\ref{sec:Rotazione dei ruoli}) \\
+						\arrayrulecolor{lightgray}
+						\cmidrule{2-2}
+						\arrayrulecolor{gray}
+						& Errata pianificazione (\ref{sec:Errata pianificazione}) \\
+			\midrule
+			Personale (\ref{sec:Livello personale}) & Problemi dei componenti del team (\ref{sec:Problemi dei componenti del team}) \\
+					\arrayrulecolor{lightgray}
+					\cmidrule{2-2}
+					\arrayrulecolor{gray}
+					& Problemi tra componenti del team (\ref{sec:Problemi tra componenti del team}) \\
+			\arrayrulecolor{black}
+			\bottomrule
+		\end{longtabu}
+		
+		\caption{Registro dei rischi}
+		\label{tab:rischi}
+
+	\end{table}
+
+\newpage
+	\subsection{Livello tecnologico}\label{sec:Livello tecnologico}
+	Fanno parte di questo livello tutti i rischi che derivano dalla stabilità e dalla funzionalità della piattaforma di sviluppo e/o di esecuzione, dalle tecnologie adottate per realizzare il prodotto e dagli strumenti utilizzati per la sua pianificazione e progettazione.
+		\subsubsection{\hfil Tecnologie software sconosciute \hfil}\label{sec:Tecnologie software sconosciute}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & Per la progettazione e l'implementazione del software da realizzare il team avrà la necessità di utilizzare una serie di tecnologie software quasi o del tutto sconosciute \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Media \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & Un utilizzo errato di tali tecnologie comporterebbe la correzione delle parti che presentano un errore, la quale porterebbe ad un rallentamento generale della parte di codifica e quindi un'alta probabilità di dover ripianificare il lavoro per rispettare le varie consegne ed i termini prestabiliti per ogni attività \\
+				\hline
+				\textbf{Gestione} & Ogni componente del gruppo dovrà, quanto prima ed in maniera autonoma, istruirsi riguardo le tecnologie indispensabili alla realizzazione del prodotto, facendo uso dei documenti forniti dall’\amministratore. Inoltre, il \responsabilediprogetto, in caso di necessità, potrà organizzare degli incontri con il proponente, in modo da approfondire la formazione in tali tecnologie ottimizzando i tempi \\
+				\hline
+				\textbf{Riscontro} & Il rischio non si è verificato visto che non sono state
+				usate tali tecnologie software fino a questo momento \\
+			\bottomrule
+			\end{longtable}\medskip
+
+		\subsubsection{\hfil Inesperienza nell'utilizzo di strumenti collaborativi \hfil}\label{sec:Inesperienza utilizzo di strumenti collaborativi}
+			\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & Per equipaggiare, organizzare e gestire l’ambiente di lavoro e di produzione del progetto didattico, il team dovrà servirsi di alcuni strumenti collaborativi che nessun membro ha mai utilizzato prima \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Alta \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & Un utilizzo errato di tali strumenti comprometterebbe la pianificazione delle varie attività assegnate ad ogni componente del team, oltre ad un ritardo nei termini di consegna generale \\
+				\hline
+				\textbf{Gestione} & Ogni componente del gruppo dovrà il prima possibile essere in grado di utilizzare completamente e  correttamente tale strumento informandosi in modo autonomo o meno \\
+				\hline
+				\textbf{Riscontro} & l'utilizzo dello \emph{\gl{strumento di pianificazione}}\ \emph{\gl{Teamwork}}\ è stato preferito a \emph{\gl{ZenHub}}, decisione presa principalmente a causa della mancanza di quest'ultimo alcune funzionalità utili.
+				Qualche membro del team ha inoltre trovato iniziale difficoltà ad interfacciarsi con il linguaggio \gl{\LaTeX}; a tal proposito è stata creata una cartella all'interno dello spazio d'archiviazione \gl{Google Drive} del team \kpanic\ dove sono stati riportati documenti e guide utili al più rapido apprendimento di tale linguaggio.
+				Tuttavia ciò non ha provocato rallentamenti rilevanti \\
+				\bottomrule
+		\end{longtable}
+
+		\subsubsection{\hfil Guasti hardware \hfil}\label{sec:Guasti hardware}
+			\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & Ogni componente del gruppo è provvisto di un computer portatile. Il rischio insito è un guasto tecnico ad uno o più di essi \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Bassa \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & Un guasto improvviso potrebbe mettere in grave pericolo la possibilità di consegna dell'offerta secondo i tempi previsti. Per il suddetto motivo si rivaluta il \emph{grado di pericolosità} da medio ad alto \\
+				\hline
+				\textbf{Gestione} & Nel caso in cui si verificassero uno o più guasti hardware, verranno utilizzati i computer dei laboratori informatici messi a disposizione dall'Università di Padova \\
+				\hline
+				\textbf{Riscontro} & Non si è al momento verificato alcun guasto tecnico ad una o più macchine \\
+				\bottomrule
+			\end{longtable}
+	
+\newpage		
+	 \subsection{Livello di requisiti}\label{sec:Livello di requisiti}
+	 Fanno parte di questo livello tutti i rischi che derivano dalla comprensione del capitolato, di riunioni esterne con il proponente oltre che dalle revisioni interne con il committente al fine di comprendere ed estrapolare tutti i requisiti del progetto didattico.
+
+	 	\subsubsection{\hfil Errata comprensione \hfil}\label{sec:Errata comprensione} 
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & I requisiti possono non essere compresi completamente \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Alta \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & La necessità di rivedere i requisiti rallenterebbe molto la realizzazione ultima del progetto\\
+				\hline
+				\textbf{Gestione} & Prevedendo l'impossibilità di comprendere appieno i requisiti nel corso di una prima analisi, sarà necessario ottenere ulteriori confronti con il committente in modo da confutare tutti i dubbi \\
+				\hline
+				\textbf{Riscontro} & Ogniqualvolta sono emersi dubbi, questi sono stati raccolti all'interno di un documento e i relativi chiarimenti sono stati  chiesti al committente durante l'incontro prefissato. Attualmente i requisiti sono stati solo esposti, quindi il rischio di incomprensione non si è ancora verificato \\
+				\bottomrule
+			\end{longtable}
+
+
+		\subsubsection{\hfil Modifica dei requisiti \hfil}\label{sec:Modifica dei requisiti}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & In qualunque momento, durante lo sviluppo del prodotto, vi è la possibilità che i requisiti possano subire delle variazioni in seguito a verifiche o correzioni da parte del committente o del proponente \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Media \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & La modifica di un requisito porta alla sua rivisitazione e di conseguenza all'intera variazione della sua implementazione. Nei casi più gravi, sarà necessario rivedere completamente il requisito e la sua realizzazione, ciò potrebbe generare un consistente aumento dei costi preventivati ed un grave slittamento dei tempi pianificati\\
+				\hline
+				\textbf{Gestione} & Durante i vari incontri svoltisi di volta in volta con il proponente, sarà compito del \responsabilediprogetto\ assicurarsi che esso non voglia modificare i requisiti proposti inizialmente. Nel caso in cui vi sia la necessità di modificare un requisito che comporti un grande cambiamento ed un aumento spropositato dei costi, sarà sempre compito del \responsabilediprogetto\ contrattare con il proponente per attenuare la richiesta. In caso il proponente non accetti di diminuire l’impatto della modifica, allora non si potrà che sottostare alle richieste del proponente \\
+				\hline
+				\textbf{Riscontro} & Al momento non si è verificato alcun rischio di questo tipo \\
+				\bottomrule
+			\end{longtable}
+
+\newpage
+	\subsection{Livello economico}\label{sec:Livello economico}
+	Fanno parte di questo livello tutti i rischi che derivano dalle stime delle risorse e dei costi previsti per le ore persona collegate ai ruoli che ogni componente del gruppo svolge durante l'intero sviluppo del prodotto.	
+
+		\subsubsection{\hfil Valutazione delle risorse \hfil}\label{sec:Valutazione delle risorse}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+			\toprule
+				\textbf{Descrizione} & La stima dei tempi per le attività pianificate potrà essere errata a causa dell'inesperienza del gruppo \\
+				\hline
+				\textbf{Probabilità di occorrenza} & Media \\
+				\hline
+				\textbf{Grado di pericolosità} & Alto \\
+				\hline
+				\textbf{Conseguenze} & Questo può comportare un cambiamento nei costi preventivati\\
+				\hline
+				\textbf{Gestione} & Sono stati previsti dei tempi di slack per limitare il ritardo causato dalla dipendenza tra fasi. Nel caso questi tempi non si rivelino ampi a sufficienza, la pianificazone delle attività sarà rivista, in modo da recuperare il tempo aggiuntivo speso rispetto a quello previsto. Se risulterà impossibile recuperarli, allora avverrà una posticipazione della consegna \\
+				\hline
+				\textbf{Riscontro} & Al momento non si è verificato alcun rischio di questo tipo \\
+				\bottomrule
+			\end{longtable}
+
+\newpage		  
+	\subsection{Livello organizzativo}\label{sec:Livello organizzativo}
+	Fanno parte di questo livello tutti i rischi che derivano dall'ambiente di lavoro e dalle necessità organizzative per la realizzazione finale del prodotto.
+
+		\subsubsection{\hfil Rotazione dei ruoli \hfil}\label{sec:Rotazione dei ruoli}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+		\toprule
+			\textbf{Descrizione} & Durante la realizzazione del prodotto ogni singolo componente può, contemporaneamente, coprire più ruoli, con competenze e responsabilità anche molto differenti tra loro, per ristretti periodi temporali e con scarsa, se non nulla, esperienza a riguardo.
+
+			I ruoli da assumere comprendono: il \responsabilediprogetto, l'\amministratore, l'\analista, il \progettista, il \programmatore\ ed il \verificatore.
+
+			La rotazione dei ruoli deve garantire assenza di conflitti di interesse \\
+			\hline
+			\textbf{Probabilità di occorrenza} & Bassa \\
+			\hline
+			\textbf{Grado di pericolosità} & Basso \\
+			\hline
+			\textbf{Conseguenze} & La difficoltà nella rotazione dei ruoli o nella loro esercitazione può causare un rallentamento dello sviluppo del prodotto ed un abbassamento del suo livello di qualità\\
+			\hline
+			\textbf{Gestione} & La rotazione dei ruoli viene prestabilita, dando così modo ad ogni membro del gruppo di prepararsi anticipatamente a ricoprire quello che gli verrà assegnato. Il \responsabilediprogetto\ deve assicurarsi man mano che il gruppo segua il piano di rotazione dei ruoli predisposto \\
+			\hline
+			\textbf{Riscontro} & Al momento non si è verificato alcun rischio di questo tipo \\
+			\bottomrule
+		\end{longtable}
+
+		\subsubsection{\hfil Errata pianificazione \hfil}\label{sec:Errata pianificazione}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+		\toprule
+			\textbf{Descrizione} & I compiti e l'ordine in cui verranno svolti possono essere soggetti a cambiamenti dovuti all'inesperienza del gruppo. Questi cambiamenti influenzerebbero la pianificazione, che potrebbe essere soggetta a modifiche più frequenti di quelle previste \\
+			\hline
+			\textbf{Probabilità di occorrenza} & Alta \\
+			\hline
+			\textbf{Grado di pericolosità} & Alto \\
+			\hline
+			\textbf{Conseguenze} & Rallentamento nello svolgimento delle attività possono causare un cambiamento nei costi preventivati ed uno spreco di risorse messe a disposizione, oltre a possibili ritardi sulla consegna dei materiali\\
+			\hline
+			\textbf{Gestione} & La difficoltà nella rilevazione del rischio impone che si effettuino controlli periodici delle attività, in modo da ridurre al minimo la portata dei cambiamenti da effettuare nella pianificazione \\
+			\hline
+			\textbf{Riscontro} & Effettuando maggiori controlli periodici è stato possibile ridurre le modifiche dei tempi attesi nella pianificazione. La consegna è avvenuta nei tempi stabiliti \\
+			\bottomrule
+		\end{longtable}
+
+\newpage		
+	\subsection{Livello personale}\label{sec:Livello personale}	
+	Fanno parte di questo livello tutti i rischi che derivano dai rapporti umani, dalle interazioni sociali tra i componenti del gruppo oltre che dagli impegni personali ed extrascolastici di ognuno di essi.
+
+		\subsubsection{\hfil Problemi dei componenti del team \hfil}\label{sec:Problemi dei componenti del team}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+		\toprule
+			\textbf{Descrizione} & Ogni elemento del gruppo avrà inevitabilmente impegni personali, accademici e lavorativi durante le attività di sviluppo. Viene presa in considerazione anche il caso in cui un componente del gruppo si ammali \\
+			\hline
+			\textbf{Probabilità di occorrenza} & Media \\
+			\hline
+			\textbf{Grado di pericolosità} & Alto \\
+			\hline
+			\textbf{Conseguenze} & Rallentamento nello svolgimento delle attività possono causare un cambiamento nei costi preventivati, oltre a possibili ritardi sulla consegna dei materiali\\
+			\hline
+			\textbf{Gestione} & Quotidianamente ogni membro del gruppo segnalerà eventuali impegni od indisponibilità al \responsabilediprogetto, il quale rielaborerà la pianificazione. Nel caso di indisponibilità improvvisa ci si attiverà per ridistribuire al meglio il lavoro in modo equo \\
+			\hline
+			\textbf{Riscontro} & La seconda settimana dall'inizio della progettazione, un membro del team è rimasto una settimana indisponibile causa malattia. Tuttavia non ci sono stati rallentamenti nelle attività previste \\
+			\bottomrule
+		\end{longtable}
+
+		\subsubsection{\hfil Problemi tra componenti del team \hfil}\label{sec:Problemi tra componenti del team}
+		\begin{longtable}{p{.18\textwidth} | p{.82\textwidth}}
+		\toprule
+			\textbf{Descrizione} & Per tutti i componenti del team è la prima esperienza di lavoro ad un progetto con così tanti membri con cui collaborare \\
+			\hline
+			\textbf{Probabilità di occorrenza} & Media \\
+			\hline
+			\textbf{Grado di pericolosità} & Alto \\
+			\hline
+			\textbf{Conseguenze} & I problemi di collaborazione potrebbero rendere difficile la cooperazione, generando ritardi nei lavori\\
+			\hline
+			\textbf{Gestione} & Si cercherà di instaurare un dialogo costruttivo tra i membri del gruppo in modo da risolvere pacificamente i contrasti. Se questo non si rivelasse sufficiente, allora il \responsabilediprogetto\ farà da mediatore, e, nel caso non risulti possibile, allora il lavoro sarà ripartito evitando il più possibile il contatto tra i componenti \\
+			\hline
+			\textbf{Riscontro} & Al momento non si è verificato alcun rischio di questo tipo \\
+			\bottomrule
+		\end{longtable}
+
+\end{document}

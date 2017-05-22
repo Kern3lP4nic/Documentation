@@ -1,0 +1,101 @@
+\documentclass[../ManualeUtente_v2.0.0.tex]{subfiles}
+
+\begin{document}
+
+\section{Area Amministrativa}
+    Di seguito in questa sezione verranno specificati degli indirizzi url locali con una struttura del tipo:
+    \begin{center}
+    https://<host>:<port>/<nome della pagina>
+    \end{center}
+    Nel caso in cui l'applicazione venga ospitata in un server diverso da quello specificato, è necessario inserire nei campi <host> e <port> quelli corretti appena creati, mentre il campo <nome della pagina> rimane lo stesso.
+	\subsection{Login}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.4]{Screenshot/admin-login.png}
+		\caption{Pagina di Login}
+	\end{figure}
+	\textbf{link}: \url{https://<host>:<port>/login}
+	\newline
+	\newline
+	Questa pagina permette di accedere a tutte le funzionalità messe a disposizione dal nostro sistema nell'area Amministrativa attraverso l'immissione delle credenziali d'accesso corrette da parte di un Admin o SuperAdmin. Le credenziali richieste sono lo username e la password immesse al momento della registrazione da parte un secondo SuperAdmin. Il sistema riconoscerà automaticamente se le credenziali afferiscono ad un SuperAdmin o ad un Admin, disabilitando alcune funzionalità in quest'ultimo caso.
+	\newpage
+	\subsection{Pannello d'Amministrazione - Admin}
+	\textbf{link}: \url{http://localhost:4200/admin}
+	\newline
+	\newline
+	L'Home Page del Pannello Amministrativo presenta all'Admin le seguenti opportunità di utilizzo:
+	\begin{itemize}
+		\item{Logout};
+		\item{Gestione del proprio profilo};
+		\item{Visualizzazione aziende};
+		\item{Gestione Slack};
+		\item{Gestione work-flow}.
+	\end{itemize}
+	
+	\subsubsection{Logout}
+	La pressione sul bottone "Log out" in qualsiasi delle pagine che compongono l'area amministrativa provoca la disconnessione dell'utente dal sistema ed il successivo reindirizzamento alla pagina di Login.
+	
+	\subsubsection{Il tuo profilo}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.25]{Screenshot/admin-manageProfile.png}
+		\caption{Pagina di Gestione del Profilo personale}
+	\end{figure}
+	Questa pagina permette la visualizzazione dei propri dati personali inseriti all'interno del sistema al momento della registrazione. Di questi dati è resa possibile la modifica delle proprie credenziali di accesso.
+	
+	\subsubsection{Gestione Aziende}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.25]{Screenshot/admin-manageFirms.png}
+		\caption{Pagina di Gestione delle aziende}
+	\end{figure}
+	Questa pagina permette di visualizzare tutte le conversazioni fatte dai vari ospiti con l'\gls{AV}. Per visualizzare una conversazione è necessario scegliere l'azienda di cui l'ospite fa parte, il nome di quest'ultimo e la data in cui è avvenuta, dopodiché verrà visualizzata la domanda seguita dalla risposta data.
+	
+	\newpage
+	\subsubsection{Gestione Slack}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.25]{Screenshot/admin-manageSlack.png}
+		\caption{Pagina di Gestione degli interlocutori di Slack}
+	\end{figure}
+	Questa pagina permette di visualizzare la lista di tutti gli interlocutori presenti all'interno del team dell'Azienda creato su Slack e, a fianco di essa, la lista degli interlocutori di default di Slack, ovvero gli interlocutori che vengono inseriti in un canale Slack al momento della sua creazione.
+	\newline
+	È possibile inoltre aggiungere o togliere degli interlocutori dalla lista di default ed aggiornare il Database tramite l'apposito pulsante di "refresh".
+
+	\newpage
+	\subsubsection{Gestione work-flow}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.24]{Screenshot/admin-manageWorkflow1.png}
+		\caption{Pagina di Gestione work-flow}
+	\end{figure}
+	\newpage
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.24]{Screenshot/admin-manageWorkflow2.png}
+		\caption{Pagina di Gestione work-flow - Aggiunta domande e risposte}
+	\end{figure}
+	Questa pagina permette la gestione di tutte le domande, le risposte ad esse correlate e le azioni corrispondenti.\\
+	Sarà possibile inserire una nuova domanda, modificare una domanda già inserita o rimuoverla. Per ogni domanda presente all'interno del sistema è possibile prevedere delle risposte da parte dell'ospite. A loro volta le risposte saranno legate, come le domande, ad una o più azioni specifiche. Per quanto riguarda le risposte, è previsto il loro inserimento e l'eliminazione. Le risposte possibili esistono però solo nel contesto della singola domanda e non è possibile far afferire la stessa risposta a domande diverse. Funzionalità che è invece possibile per quanto riguarda le Action, che sono selezionabili da una lista di default.\\
+	Quando viene aggiunta una nuova risposta è possibile aggiungere due tipi di risposte:
+	\begin{itemize}
+		\item \textbf{Testo prefissato}: ovvero la risposta deve corrispondere esattamente al testo inserito;
+		\item \textbf{Testo generico}: ovvero viene accettata una qualsiasi risposta data inserendo nell'apposita casella di testo la stringa "null".
+	\end{itemize}
+	
+	\newpage
+	\subsection{Pannello d'Amministrazione - SuperAdmin}
+	Oltre alle funzionalità per un normale Admin sovradescritte, un SuperAdmin può accedere anche ad una particolare sezione, realizzata appositamente per la gestione degli Admin.
+	\subsubsection{Lista Amministratori}
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.25]{Screenshot/admin-manageAdmins.png}
+		\caption{Pagina di Gestione degli Amministratori}
+	\end{figure}
+	La pagina "Lista Amministratori" mostra a video la lista completa degli amministratori. Selezionando uno degli Admin presenti all'interno di questa lista, un SuperAdmin può entrare nella visualizzazione del profilo dello specifico amministratore ed apportare le seguenti modifiche ai suoi dati:
+	\begin{itemize}
+		\item{Campo Email};
+		\item{Campo Password}.
+	\end{itemize}
+
+\end{document}

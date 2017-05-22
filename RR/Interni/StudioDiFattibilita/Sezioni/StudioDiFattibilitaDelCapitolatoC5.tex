@@ -1,0 +1,35 @@
+\documentclass[../StudioDiFattibilita.tex]{subfiles}
+
+\begin{document}
+\section{Studio di fattibilità del capitolato C5}
+	\subsection{Descrizione}
+	Il capitolato \gl{Monolith} presentato da Red Babel richiede la realizzazione di un framework impiegabile sulla \gl{piattaforma} \gl{Rocket.Chat}. L'applicativo desiderato deve permettere la creazione di particolari messaggi chiamati bubble che permettano la condivisione di contenuti (link, \gl{GIF} o video) all'interno di una \gl{chat}. Queste bubble devono avere la possibilità di aggiornare automaticamente le informazioni al proprio interno, come ad esempio la variazione dell'orario di un volo, delle condizioni atmosferiche o il prezzo di un prodotto. Inoltre, anche il ricevente del messaggio può modificarne il contenuto, marcando ad esempio la sua risposta all'interno della bubble ricevuta, spuntare un elemento da un elenco o caricare un file.
+
+	\subsection{Studio di dominio}
+	  	\subsubsection{Dominio applicativo}
+		Essendo \gl{Rocket.Chat} rivolto principalmente ad un impiego in ambiente lavorativo, questo progetto cerca di facilitare la comunicazione in determinate situazioni dove si necessita ad esempio di avere risposte rapide e precise, eseguire un sondaggio, oppure discutere tra colleghi o con clienti di determinati argomenti in maniera semplice ed intuitiva.
+
+	 	\subsubsection{Dominio tecnologico}
+		Le tecnologie consigliate dal proponente per lo sviluppo del progetto sono:
+            	\begin{itemize}
+            		\item\textbf{\gl{NodeJS}:} sviluppo del framework;
+            		\item\textbf{\gl{MeteorJS}:} estensione di NodeJS ;
+            		\item\textbf{\gl{AngularJS}:} framework JavaScript per lo sviluppo intero di Applicazioni Web cross-platform\gl;
+            		\item\textbf{\gl{React}:} libreria JavaScript per lo sviluppo del \gl{front-end};
+            		\item\textbf{\gl{SCSS}:} estensione di CSS3;
+            		\item\textbf{\gl{Heroku}:} piattaforma di appoggio su cui implementare il progetto;
+            		\item\textbf{\gl{Rocket.Chat} API:} API da utilizzare per l'integrazione con Rocket.Chat.
+				\end{itemize}
+
+		\subsection{Potenziali criticità}
+		Il gruppo ha evidenziato alcune potenziali difficoltà critiche, tra le quali:
+        	\begin{itemize}
+        		\item non tutti i membri del team hanno piena conoscenza delle tecnologie da utilizzare, come \gl{NodeJS}, \gl{AngularJS} e \gl{React};
+        		\item le possibili interazioni con le bubble vanno limitate in base al contenuto;
+        		\item gli aggiornamenti automatici richiedono un'attenta gestione delle risorse;
+        	\end{itemize}
+
+	\subsection{Valutazione finale}
+	Malgrado questo capitolato risulti essere interessante per le tecnologie impiegate che oggigiorno trovano un grande utilizzo, \kpanic\ ha scelto di scartarlo perché l'impiego del prodotto si limita solamente a \gl{Rocket.Chat} che, rispetto a concorrenti, risulta meno diffuso avendo quindi un bacino di utenti nettamente inferiore e suscitando nel gruppo poco interesse. Di conseguenza anche ciò che viene richiesto di realizzare avrà un impiego numericamente inferiore e non è ciò a cui punta il team.
+
+\end{document}
